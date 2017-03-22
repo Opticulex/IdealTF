@@ -8,7 +8,7 @@ echo You are running v1.0.0 and build 230217
 :: Sets "x", the value use to count how many cycles the bot has done to 0.
 set x=0
 
-:: Checks to see if autohotkey and bluestacks is installed.
+:: Checks to see if AutoHotKey and BlueStacks is installed.
 if not exist "C:\Program Files\AutoHotkey" goto err_AHK
 if not exist "C:\Program Files (x86)\Bluestacks" goto err_BSK
 
@@ -16,12 +16,13 @@ if not exist "C:\Program Files (x86)\Bluestacks" goto err_BSK
 :LOOP
 :: Starting point of file and where the file refreshes to.
 
-:: Increments the "x" value by +1.
+:: Increments the "x" value for cycle count by +1.
 set /a x+=1
 
 :: Sets to root directory.
 cd C:\OpticTradeBot
 
+:: Prints cycle number, time and date.
 echo.
 echo.
 echo [%time%] Cycle #%x% began at %time% %date%
@@ -37,12 +38,12 @@ echo [%time% %date%] [%x%] [%TRADEID%] Cycle Began... >> Log.txt
 :LOOP1
 :: Checks config files and resets all temorary information that may cause issues.
 echo.
-:: Deletes Trade Status Variable file and resets it empty.
+:: Deletes Trade Status Variable files and resets it empty.
 del Var.bat && echo. > Var.bat
 del hold.bat && echo. > hold.bat
 echo [%time%] Resetting cached data...
 
-:: Sets config values to "Null".
+:: Sets config and database values to "Null".
 set Trade_Bot=Null
 set Trade_Bot_S64=Null
 set Trade_Admin=Null
@@ -64,7 +65,7 @@ set CraftHat=Null
 :: Resets File location for good measure
 cd C:\OpticTradeBot
 
-:: Resets itemPrices
+:: Resets itemPrices/database
 echo [%time%] Reloading database..
 if exist itemPrices.bat del itemPrices.bat
 start databaseDL.vbs
@@ -86,6 +87,7 @@ if %CraftHatHi2%==Null goto CONFIG_ERR
 if %CraftHatLo1%==Null goto CONFIG_ERR
 if %CraftHatLo2%==Null goto CONFIG_ERR
 
+:: Prints downloaded database values
 echo [%time%] Took %y% tries to get database.
 echo.
 echo PriceRef: %PriceRef%, PriceRec: %PriceRec%, PriceScr: %PriceScr%, KeyPrice: %KeyPrice%
@@ -138,6 +140,7 @@ start PageRefresh.ahk
 :: Waits 5 seconds for page to refresh.
 echo [%time%] Waiting 5,000ms(5s) until next command...
 ping 1.1.1.1 -n 1 -w 5000 > nul
+
 
 :REFRESH_SKIP_1
 
