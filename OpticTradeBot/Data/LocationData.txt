@@ -1,0 +1,23 @@
+============= Trade Offers Page
+Incoming Offers Button - 958, 291 to 1119, 448
+Click on a trade (center) - 549, 496
+Click on a trade (side) - 836, 497
+
+============= Trade Offer Accept Page
+Close Page - 1012, 15
+Confirm contents (normal line 1) - 641, 501
+Confirm contents (normal line 2) - 641, 610
+Confirm contents (alternate line 1) - 641, 560
+Confirm contents (alternate line 2) - 641, 664
+Accept trade (scroll to bottom, line 1) - 740, 295
+Accept trade (alt scroll to bottom, line 1) - 740, 573
+Accept trade (alt scroll to bottom, line 1) - 740, 394
+Decline trade (scroll to bottom) - 678, 699
+Decline trade (alt scroll to bottom) - 678, 421
+Cancel/close (scroll to bottom) - 852, 427
+Cancel/close (alt scroll to bottom) - 852, 701
+
+============= Steam Mobile Authenticator
+Open Most Recent Offer - 1242, 136
+Confirm Open Offer - 1124, 573
+Decline Open Offer - 641, 5670

@@ -1,0 +1,1 @@
+x=msgbox("AutoHotKey is not installed. Please install and try again.",0+48,"OpticTradeBot")
