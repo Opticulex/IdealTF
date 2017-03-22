@@ -1,1 +1,1 @@
-WinActivate, ahk_class MozillaWindowClass
+WinActivate, ahk_class Chrome_WidgetWin_1
