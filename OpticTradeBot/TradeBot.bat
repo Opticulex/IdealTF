@@ -39,8 +39,8 @@ echo [%time% %date%] [%x%] [%TRADEID%] Cycle Began... >> Log.txt
 :: Checks config files and resets all temorary information that may cause issues.
 echo.
 :: Deletes Trade Status Variable files and resets it empty.
-del Var.bat && echo. > Var.bat
-del hold.bat && echo. > hold.bat
+del Var.bat
+del hold.bat
 echo [%time%] Resetting cached data...
 
 :: Sets config and database values to "Null".
