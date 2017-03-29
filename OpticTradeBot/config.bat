@@ -38,14 +38,21 @@
 ::                      --- EDIT VARIABLES BELOW HERE ---
 :: ===========================================================================
 
+echo [CONFIG] Loading Users (1/3)
+echo [CONFIG] Var: Trade_Bot, Trade_Bot_S64, Trade_Admin, Trade_Admin_S64
 set Trade_Bot=Opticulex [?] BOT
 set Trade_Bot_S64=76561198176232947
 set Trade_Admin=Opticulex
 set Trade_Admin_S64=76561198305950404
+
+echo [CONFIG] Loading Debug (2/3)
+echo [CONFIG] Var: DebugMode, DebugSkipRefresh, DebugSkipTrade, DebugAuthMode, DebugSkipAuth
 set DebugMode=1
 set DebugSkipRefresh=0
 set DebugSkipTrade=0
 set DebugAuthMode=0
 set DebugSkipAuth=0
 
+echo [CONFIG] Loading Visual commands (3/3)
+echo [CONFIG] Var: ColorValue
 set ColorValue=0f

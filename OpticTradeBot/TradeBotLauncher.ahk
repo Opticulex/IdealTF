@@ -7,9 +7,9 @@ temp
 FileDelete, C:\OpticTradeBot\prgaupd.txt
 FileDelete, C:\OpticTradeBot\aupd.bat
 FileDelete, C:\OpticTradeBot\prgexit.txt
-SplashTextOn, 200, 100, Optic Trade Bot, `n`nPlease wait
-Sleep, 500
-SplashTextOff
+FileDelete, C:\OpticTradeBot\itemprices.bat
+FileDelete, C:\OpticTradeBot\Var.bat
+FileDelete, C:\OpticTradeBot\hold.bat
 Menu, RunMenu, Add, &Skip Update, RunSD
 Menu, RunMenu, Add, &Run Update, RunUpdates
 Menu, RunMenu, Add, &Exit, RunExit
@@ -122,8 +122,7 @@ MyListBox:
 return
 
 
-GuiEscape:
-ExitApp
+
 Gui, Show,, Optic Trade Bot
 return
 
@@ -237,46 +236,178 @@ return
 
 Settings:
 Gui, Settings:+owner1
-Gui +Disabled
-Gui, Settings:Add, Text,, Optic Trade Bot Settings                `n`n`n`n`n`n`n`n`n`n`n`n
+Gui, Settings:Add, Text,, Optic Trade Bot Settings
+Gui, Settings:Add, Text, x10 y35, TradeBot SteamID64:
+Gui, Settings:Add, Edit, x119 y31 r1 t21 vBotID,
+Gui, Settings:Add, Text, x10 y66, Admin SteamID64:
+Gui, Settings:Add, Edit, x119 y62 r1 t21 vAdminID,
+Gui, Settings:Add, Text, x10 y100, Log Window Color:
+Gui, Settings:Add, Edit, x119 y97 r1 t21 vLogWindowCol,
+Gui, Settings:Add, Button, x140 y130 Checked vViewConfig, View config
+Gui, Settings:Add, Button, x140 y160 Checked vViewLogs, View Logs
+IfExist C:\OpticTradeBot\config\DebugMode.txt
+	Gui, Settings:Add, Checkbox, x10 y130 Checked vDebugMode, Enable Debug
+IfNotExist C:\OpticTradeBot\config\DebugMode.txt
+	Gui, Settings:Add, Checkbox, x10 y130 vDebugMode, Enable Debug
+IfExist C:\OpticTradeBot\config\DebugModeSkip1.txt
+	Gui, Settings:Add, Checkbox, x10 y150 Checked vDebugModeSkip1, Skip Refresh
+IfNotExist C:\OpticTradeBot\config\DebugModeSkip1.txt
+	Gui, Settings:Add, Checkbox, x10 y150 vDebugModeSkip1, Skip Refresh
+IfExist C:\OpticTradeBot\config\DebugModeSkip2.txt
+	Gui, Settings:Add, Checkbox, x10 y170 Checked vDebugModeSkip2, Skip Confirmation
+IfNotExist C:\OpticTradeBot\config\DebugModeSkip2.txt
+	Gui, Settings:Add, Checkbox, x10 y170 vDebugModeSkip2, Skip Confirmation
+IfExist C:\OpticTradeBot\config\DebugModeSkip3.txt
+	Gui, Settings:Add, Checkbox, x10 y190 Checked vDebugModeSkip3, Skip Auth
+IfNotExist C:\OpticTradeBot\config\DebugModeSkip3.txt
+	Gui, Settings:Add, Checkbox, x10 y190 vDebugModeSkip3, Skip Auth
+IfExist C:\OpticTradeBot\config\DebugModeSkip4.txt
+	Gui, Settings:Add, Checkbox, x10 y210 Checked vDebugModeSkip4, Auth Mode
+IfNotExist C:\OpticTradeBot\config\DebugModeSkip4.txt
+	Gui, Settings:Add, Checkbox, x10 y210 vDebugModeSkip4, Auth Mode
+IfExist C:\OpticTradeBot\config\AditionalSettings1.txt
+	Gui, Settings:Add, Checkbox, x10 y240 Checked vAditionalSettings1, Custom config
+IfNotExist C:\OpticTradeBot\config\AditionalSettings1.txt
+	Gui, Settings:Add, Checkbox, x10 y240 vAditionalSettings1, Custom config
+IfExist C:\OpticTradeBot\config\AditionalSettings2.txt
+	Gui, Settings:Add, Checkbox, x10 y260 Checked vAditionalSettings2, Custom database
+IfNotExist C:\OpticTradeBot\config\AditionalSettings2.txt
+	Gui, Settings:Add, Checkbox, x10 y260 vAditionalSettings2, Custom database
+IfExist C:\OpticTradeBot\config\AditionalSettings3.txt
+	Gui, Settings:Add, Checkbox, x120 y240 Checked vAditionalSettings3, Disable Updates
+IfNotExist C:\OpticTradeBot\config\AditionalSettings3.txt
+	Gui, Settings:Add, Checkbox, x120 y240 vAditionalSettings3, Disable Updates
+
+Gui, Settings:Add, Checkbox, x120 y260 vAditionalSettings4, BatchedEngine
+Gui, Settings:Add, Button, x10 y285, Reset 
+Gui, Settings:Add, Button, x58 y285, Save
+Gui, Settings:Add, Button, x200 y285, Close
 Gui, Settings:Show
-Gui, Settings:Add, Button, x10 y30, Disable Updates
-Gui, Settings:Add, Button, x10 y55, Enable Updates
-Gui, Settings:Add, Button, x10 y80, Add/Edit password
-Gui, Settings:Add, Button, x10 y105, Remove password
-Gui, Settings:Add, Button, x10 y150, Reset settings
-Gui, Settings:Add, Button, x130 y150, Close
 Gui, Settings:Show,, Settings
-GuiControl Settings:Disable, Disable Updates
-GuiControl Settings:Disable, Enable Updates
-GuiControl Settings:Disable, Reset Settings
-GuiControl Settings:Disable, Add/Edit password
-GuiControl Settings:Disable, Remove password
-GuiControl Settings:Disable, Reset settings
+GuiControl Settings:Disable, BatchedEngine
+Gui, Submit, NoHide
 return
 
-SettingsButtonDisableUpdates:
-FileAppend,
+
+
+
+
+SettingsButtonSave:
+Gui, Settings:Submit, NoHide
+FileDelete, C:\OpticTradeBot\config\BotID.bat
+FileDelete, C:\OpticTradeBot\config\AdminID.bat
+FileDelete, C:\OpticTradeBot\config\LogWindowCol.bat
+FileAppend, 
 (
-temp
-), C:\OpticTradeBot\prgud.txt
+set cfgBotID=%BotID%
+), C:\OpticTradeBot\config\BotID.bat
+FileAppend, 
+(
+set cfgAdminID=%AdminID%
+), C:\OpticTradeBot\config\AdminID.bat
+FileAppend, 
+(
+set cfgLogWindowCol=%LogWindowCol%
+), C:\OpticTradeBot\config\LogWindowCol.bat
+if DebugMode = 1
+	FileAppend, temp, C:\OpticTradeBot\config\DebugMode.txt
+if DebugMode = 0
+	FileDelete, C:\OpticTradeBot\config\DebugMode.txt
+if DebugModeSkip1 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\DebugModeSkip1.txt
+if DebugModeSkip1 = 0
+	FileDelete, C:\OpticTradeBot\config\DebugModeSkip1.txt
+if DebugModeSkip2 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\DebugModeSkip2.txt
+if DebugModeSkip2 = 0
+	FileDelete, C:\OpticTradeBot\config\DebugModeSkip2.txt
+if DebugModeSkip3 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\DebugModeSkip3.txt
+if DebugModeSkip3 = 0
+	FileDelete, C:\OpticTradeBot\config\DebugModeSkip3.txt
+if DebugModeSkip4 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\DebugModeSkip4.txt
+if DebugModeSkip4 = 0
+	FileDelete, C:\OpticTradeBot\config\DebugModeSkip4.txt
+if AditionalSettings1 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\AditionalSettings1.txt
+if AditionalSettings1 = 0
+	FileDelete, C:\OpticTradeBot\config\AditionalSettings1.txt
+if AditionalSettings2 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\AditionalSettings2.txt
+if AditionalSettings2 = 0
+	FileDelete, C:\OpticTradeBot\config\AditionalSettings2.txt
+if AditionalSettings3 = 1
+	FileAppend, temp, C:\OpticTradeBot\config\AditionalSettings3.txt
+if AditionalSettings3 = 0
+	FileDelete, C:\OpticTradeBot\config\AditionalSettings3.txt
+SplashTextOn, 200, 65, Optic Trade Bot, `nSaving settings..
+Sleep, 700
+SplashTextOff
+MsgBox, 64, Optic Trade Bot, Changes succesfully saved.
 return
 
 
-SettingsButtonEnableUpdates:
-FileDelete, C:\OpticTradeBot\prgud.txt
+SettingsButtonViewConfig:
+Run C:\OpticTradeBot\config\ConfigRun.bat
+return
+SettingsButtonViewLogs:
+Run C:\OpticTradeBot\Log.txt
 return
 
-SettingsButtonResetSettings:
-FileDelete, C:\OpticTradeBot\prgud.txt
+
+SettingsButtonReset:
+SplashTextOn, 200, 65, Optic Trade Bot, `nResetting...
+Sleep, 700
+SplashTextOff
+FileDelete, C:\OpticTradeBot\config\BotID.bat
+FileDelete, C:\OpticTradeBot\config\AdminID.bat
+FileDelete, C:\OpticTradeBot\config\LogWindowCol.bat
+FileDelete, C:\OpticTradeBot\config\DebugMode.txt
+FileDelete, C:\OpticTradeBot\config\DebugModeSkip1.txt
+FileDelete, C:\OpticTradeBot\config\DebugModeSkip2.txt
+FileDelete, C:\OpticTradeBot\config\DebugModeSkip3.txt
+FileDelete, C:\OpticTradeBot\config\DebugModeSkip4.txt
+FileDelete, C:\OpticTradeBot\config\AditionalSettings1.txt
+FileDelete, C:\OpticTradeBot\config\AditionalSettings2.txt
+FileDelete, C:\OpticTradeBot\config\AditionalSettings3.txt
+MsgBox, 64, Optic Trade Bot, All preferences and settings have been reset to their defaults. A launcher restart is required in order for changes to take effect.
 return
 
 SettingsButtonClose:
 SettingsGuiClose:
-SettingsGuiEscape:
-Gui, 1:-Disabled
 Gui Destroy
 return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ClearLog:
 guicontrol,, MyListBox, |
@@ -291,14 +422,11 @@ InputBox, text, Activation, Please enter your product key:,
 MsgBox Product activation is disabled in this version due to its unimpementation. v1.2.0 will have this feature.
 return
 
+
 ButtonExit:
 RunExit:
 GuiClose:
 GuiControl,, MyListBox, [%A_Hour%:%A_Min%:%A_Sec%] Exiting..
-FileAppend,
-(
-temp
-), C:\OpticTradeBot\prgexit.txt
 FileDelete, C:\OpticTradeBot\prgrun.txt
 FileDelete, C:\OpticTradeBot\prgrl.txt
 FileDelete, C:\OpticTradeBot\prgon.txt

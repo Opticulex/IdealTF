@@ -73,6 +73,8 @@ echo [%time%] Please wait..
 set y=0
 :databaseloop
 set /a y+=1
+set ColorValue=0f
+set ColorValue1=0f
 if exist itemPrices.bat call itemPrices.bat
 if %y% GEQ 2000 goto CONFIG_ERR
 if not exist itemPrices.bat goto databaseloop
@@ -95,8 +97,14 @@ echo CraftHat: %CraftHat%, CraftHatHi1: %CraftHatHi1%, CraftHatHi2: %CraftHatHi2
 echo.
 
 :: Config is read and null vaules replaced with ones inside config.
+
 call config.bat
 echo [%time%] Reading config...
+
+:: Sets Color Value if it exists
+if %ColorValue1% NEQ %ColorValue% echo [%time%] Changed Color Value to %ColorValue%
+color %ColorValue%
+
 
 :: Prints out config values.
 echo.
@@ -109,11 +117,6 @@ echo.
 if %DebugMode%==Null goto CONFIG_ERR
 
 
-
-:: Sets Color Value if it exists
-set ColorValue=0f
-call config.bat
-color %ColorValues%
 
 :: Checks whether DebugMode was enabled in config and whether the program has alredy initiated it.
 if "%DebugMode1%"=="1" goto LOOP_DEBUG
@@ -325,7 +328,8 @@ goto TRADE_3_I
 
 :DEBUG
 cd C:\OpticTradeBot\
-start TBDebug.bat
+echo [%time%] Launching TBDebug.bat..
+::start TBDebug.bat
 set DebugMode1=1
 echo [%time%] Debug Mode Enabled.
 goto LOOP_DEBUG
