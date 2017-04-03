@@ -1,0 +1,14 @@
+// Below is an index of TF2 Item ID's and what item they correspond to.
+
+// Program Images
+#0000 - Blank Item Slot
+#0001 - Blank Edit Item Slot
+#0010/19 - 1/10 Incoming offers
+#0020 - No incoming offers
+#0100 - Trade Hold Pending
+
+// Item Images
+5000 - Scrap Metal
+5001 - Reclaimed Metal
+5002 - Refined Metal
+5021 - Mann Co. Supply Crate Key

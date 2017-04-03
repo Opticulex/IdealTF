@@ -1,397 +1,240 @@
+:start
 @echo off
 :: Sets directory and file title.
 cd C:\OpticTradeBot
 title Optic Trade Bot
-echo Optic Trade bot started.
-echo You are running v1.0.0 and build 230217
+echo [%time%] Optic Trade bot started.
 
-:: Sets "x", the value use to count how many cycles the bot has done to 0.
-set x=0
-
-:: Checks to see if AutoHotKey and BlueStacks is installed.
-if not exist "C:\Program Files\AutoHotkey" goto err_AHK
-if not exist "C:\Program Files (x86)\Bluestacks" goto err_BSK
-
-
-:LOOP
-:: Starting point of file and where the file refreshes to.
-
-:: Increments the "x" value for cycle count by +1.
-set /a x+=1
-
-:: Sets to root directory.
-cd C:\OpticTradeBot
-
-:: Prints cycle number, time and date.
+:: CYCLE
+:: Sets cycle value to 0, cycle lable and increments cycle value by 1.
+set cycle=0
+:cycle
 echo.
+set /a cycle+=1
+set cycleid=%random%%random%%random%
+
+:: Prints cycle details
+echo [%time%] Cycle #%cycle% began at %time% %date%; cycleid %cycleid%
+
+:: Checks status
+call :check_status
+
+:: Resets Config Values
+set DebugMode=0
+set DebugModeSkip1=0
+set DebugModeSkip2=0
+set DebugModeSkip3=0
+set DebugModeSkip4=0
+set AdditionalSettings1=0
+set AdditionalSettings2=0
+set AdditionalSettings3=0
+set varBotID=0
+set varBotName=0
+set varScreenSize=0
+set ScreenSizeX=0
+set ScreenSizeY=0
+
+echo [%time%] [CONFIG] Set all Config Values to value "0" 
+echo [%time%] [CONFIG] Reading Config values...
+
+:: Calls all config values
+if exist C:\OpticTradeBot\config\DebugMode.txt set DebugMode=1
+if exist C:\OpticTradeBot\config\DebugModeSkip1.txt set DebugModeSkip1=1
+if exist C:\OpticTradeBot\config\DebugModeSkip2.txt set DebugModeSkip2=1
+if exist C:\OpticTradeBot\config\DebugModeSkip3.txt set DebugModeSkip3=1
+if exist C:\OpticTradeBot\config\DebugModeSkip4.txt set DebugModeSkip4=1
+if exist C:\OpticTradeBot\config\AdditionalSettings1.txt set AdditionalSettings1=1
+if exist C:\OpticTradeBot\config\AdditionalSettings2.txt set AdditionalSettings2=1
+if exist C:\OpticTradeBot\config\AdditionalSettings3.txt set AdditionalSettings3=1
+echo [%time%] [CONFIG] Config values: "%DebugMode%,%DebugModeSkip1%,%DebugModeSkip2%,%DebugModeSkip3%,%DebugModeSkip4%,%AdditionalSettings1%,%AdditionalSettings2%,%AdditionalSettings3%"
+echo [%time%] [CONFIG] Reading Input Config values...
+call C:\OpticTradeBot\config\BotID.bat
+call C:\OpticTradeBot\config\BotName.bat
+call C:\OpticTradeBot\config\ScreenSize.bat
+echo [%time%] [CONFIG] Input Config values: "%varBotID%,%varBotName%,%varScreenSize%"
+:: Read Screen Resolution Settings
+if "%varScreenSize%"=="1366x768" set ScreenSizeX=1366
+if "%varScreenSize%"=="1366x768" set ScreenSizeY=768
+if "%varScreenSize%"=="1366x768 " set ScreenSizeX=1366
+if "%varScreenSize%"=="1366x768 " set ScreenSizeY=768
+
+if "%varScreenSize%"=="1024x768" set ScreenSizeX=1024
+if "%varScreenSize%"=="1024x768" set ScreenSizeY=768
+if "%varScreenSize%"=="1024x768 " set ScreenSizeX=1024
+if "%varScreenSize%"=="1024x768 " set ScreenSizeY=768
+
+echo [%time%] [CONFIG] Screen Resolution x:"%ScreenSizeX%" y:"%ScreenSizeY%" raw:"%varScreenSize%"
+
+:: Checks status again
+call :check_status
+
+:: Create TEMP shit in AHK. Messy stuff.
+echo CoordMode Pixel > C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo ImageSearch, FoundX, FoundY, 0, 0, %ScreenSizeX%, %ScreenSizeY%, C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\#0100.bmp >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo if ErrorLevel = 2 >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo else if ErrorLevel = 1 >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo else >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo     FileAppend, >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo ( >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo temp >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo. >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+echo ), C:\OpticTradeBot\config\itemconfig\temp\HOLD.txt >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+goto item_checker_pre
+
+
+:item_checker_pre
+echo [%time%] [ITEMCHECK] Loading advancedconfig.bat..
+call C:\OpticTradeBot\config\advancedconfig.bat
 echo.
-echo [%time%] Cycle #%x% began at %time% %date%
+echo [%time%] [ITEMCHECK] Began Item check of item indexes.
+echo [%time%] [ITEMCHECK] [WARNING] This will take about 2-3 minutes.
+echo [%time%] [ITEMCHECK] [WARNING] About 20 seconds per 1000 items.
+set itemid=0
+set loopcount=%lc_begin%
+set price1=0
 
-:: Sets the unique trade identifier and adds 4 empty lines to log file as a spacer.
-set TRADEID=%random%%random%%random%
-echo. >> Log.txt
-echo. >> Log.txt
-echo. >> Log.txt
-echo. >> Log.txt
-echo [%time% %date%] [%x%] [%TRADEID%] Cycle Began... >> Log.txt
+:item_checker
 
-:LOOP1
-:: Checks config files and resets all temorary information that may cause issues.
+:: Deletes TEMP files for previous item
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat
+
+:: Sets loopcount and itemid and checks to see if it should skip past unused ids
+set /a loopcount+=1
+set val=0
+set itemid=%loopcount%
+if "%itemid%"=="6060" goto ic_6060
+if "%itemid%"=="8248" goto ic_8248
+if "%itemid%"=="16000" goto ic_16000
+if %itemid% GEQ 31000 goto item_checker_done
+
+:: Deletes TEMP files for current item
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat
+
+:: Sets coords
+set coord1x=0
+set coord1y=0
+set coord2x=1366
+set coord2y=768
+
+:: If config for item exists.
+if exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat echo [%time%] [ITEMCHECK] Index entry '%itemid%' found.
+if exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
+
+:: If config for item doesn't exist.
+if not exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat goto item_checker
+
+:: Create TEMP shit in AHK. Messy stuff.
+echo CoordMode Pixel > C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\OpticTradeBot\config\itemconfig\img_1366x768\%itemid%.bmp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo if ErrorLevel = 2 >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo else if ErrorLevel = 1 >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo else >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo     FileAppend, >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo ( >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo temp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo. >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo ), C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+
+:: Start the AHK checker and sees its output.
+start C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+
+set ic_waitforitem=0
+:ic_waitforitem
+set /a ic_waitforitem+=1
+if %ic_waitforitem% GEQ %ic_timeout% goto ic_waitforitem_1
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat goto ic_waitforitem_2
+if not exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat goto ic_waitforitem
+goto ic_waitforitem
+
+:ic_waitforitem_1
+echo [%time%] [ITEMCHECK] itemid %itemid% not found in trade. (timed out)
+goto item_checker
+
+:ic_waitforitem_2
+echo [%time%] [ITEMCHECK] itemid %itemid% found in trade.
+if exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
+set /a price1+=%val%
+echo [%time%] [ITEMCHECK] %itemid% value is %val% Total price: %price1%
+goto item_checker
+
+:ic_waitforitem_3
+echo [%time%] [ITEMCHECK] Unknown or unspecified error.
+goto item_checker
+
+:item_checker_done
+echo [%time%] [ITEMCHECK] Item index checks complete.
+
+:item_price
+set itemid=0
 echo.
-:: Deletes Trade Status Variable files and resets it empty.
-del Var.bat
-del hold.bat
-echo [%time%] Resetting cached data...
-
-:: Sets config and database values to "Null".
-set Trade_Bot=Null
-set Trade_Bot_S64=Null
-set Trade_Admin=Null
-set Trade_Admin_S64=Null
-set Trade_Mod=Null
-set Trade_Mod_S64=Null
-set DebugMode=Null
-set DebugMode1=Null
-set PriceRef=Null
-set PriceRec=Null
-set PriceScr=Null
-set KeyPrice=Null
-set CraftHatHi1=Null
-set CraftHatHi2=Null
-set CraftHatLo1=Null
-set CraftHatLo2=Null
-set CraftHat=Null
-
-:: Resets File location for good measure
-cd C:\OpticTradeBot
-
-:: Resets itemPrices/database
-echo [%time%] Reloading database..
-if exist itemPrices.bat del itemPrices.bat
-start databaseDL.vbs
-echo [%time%] Please wait..
-set y=0
-:databaseloop
-set /a y+=1
-set ColorValue=0f
-set ColorValue1=0f
-if exist itemPrices.bat call itemPrices.bat
-if %y% GEQ 2000 goto CONFIG_ERR
-if not exist itemPrices.bat goto databaseloop
-::Checks that itemPrices.bat contains crucial variables
-if not %PriceRef%==100 goto CONFIG_ERR
-if not %PriceRec%==33 goto CONFIG_ERR
-if not %PriceScr%==11 goto CONFIG_ERR
-if %KeyPrice%==Null goto CONFIG_ERR
-if %CraftHat%==Null goto CONFIG_ERR
-if %CraftHatHi1%==Null goto CONFIG_ERR
-if %CraftHatHi2%==Null goto CONFIG_ERR
-if %CraftHatLo1%==Null goto CONFIG_ERR
-if %CraftHatLo2%==Null goto CONFIG_ERR
-
-:: Prints downloaded database values
-echo [%time%] Took %y% tries to get database.
-echo.
-echo PriceRef: %PriceRef%, PriceRec: %PriceRec%, PriceScr: %PriceScr%, KeyPrice: %KeyPrice%
-echo CraftHat: %CraftHat%, CraftHatHi1: %CraftHatHi1%, CraftHatHi2: %CraftHatHi2%, CraftHatLo1: %CraftHatLo1%, CraftHatLo2: %CraftHatLo2%
-echo.
-
-:: Config is read and null vaules replaced with ones inside config.
-
-call config.bat
-echo [%time%] Reading config...
-
-:: Sets Color Value if it exists
-if %ColorValue1% NEQ %ColorValue% echo [%time%] Changed Color Value to %ColorValue%
-color %ColorValue%
-
-
-:: Prints out config values.
-echo.
-echo Bot Linked to: %Trade_Bot% (%Trade_Bot_S64%)
-echo Bot Admin: %Trade_Admin% (%Trade_Admin_S64%)
-echo Bot Moderator: %Trade_Mod% (%Trade_Mod_S64%)
-echo DebugMode: %DebugMode% (%DebugMode1%), DebugAuthMode: %DebugAuthMode%, ColorValue: %ColorValue%
-echo DebugSkipRefresh: %DebugSkipRefresh%, DebugSkipTrade: %DebugSkipTrade%, DebugSkipAuth: %DebugSkipAuth%
-echo.
-if %DebugMode%==Null goto CONFIG_ERR
-
-
-
-:: Checks whether DebugMode was enabled in config and whether the program has alredy initiated it.
-if "%DebugMode1%"=="1" goto LOOP_DEBUG
-if "%DebugMode%"=="1" goto DEBUG
-if "%DebugMode%"=="0" set DebugSkipRefresh=Null && set DebugSkipTrade=Null && set DebugSkipAuth=Null && set DebugAuthMode=Null
-
-
-
-:LOOP_DEBUG
-:: LOOP_DEBUG is used to bypass the checking of DebugMode which may cause an infinate loop.
-if "%DebugAuthMode%"=="1" goto AUTHMODE
-:: Waits 5 seconds.
-echo [%time%] Began bot wait cycle
-echo [%time%] Waiting 2,000ms(2s) until next command...
-ping 1.1.1.1 -n 1 -w 2000 > nul
-
-:: Changes directory and runs PageRefresh script.
-:: The PageRefresh script moves the mouse to the refresh button and clicks.
-cd C:\OpticTradeBot\AHKScript
-if "%DebugSkipRefresh%"=="%DebugMode%" goto REFRESH_SKIP
-echo [%time%] Running "PageRefresh.ahk"
-start PageRefresh.ahk
-
-:: Waits 5 seconds for page to refresh.
-echo [%time%] Waiting 5,000ms(5s) until next command...
-ping 1.1.1.1 -n 1 -w 5000 > nul
-
-
-:REFRESH_SKIP_1
-
-:: Runs HoldChecker.ahk
-cd C:\OpticTradBot\AHKScript
-echo [%time%] Running "HoldChecker.ahk"
-start HoldChecker.ahk
-ping 1.1.1.1 -n 1 -w 1000 > nul
-cd C:\OpticTradeBot\
-call hold.bat
-:: Checks for trade holds.
-if "%Trade_Hold%"=="1" goto err_HOLD
-cd C:\OpticTradeBot\AHKScript
-
-:: Runs TradeStatusChecker script.
-echo [%time%] Running "TradeStatusChecker.ahk"
-echo.
-echo [%time%] (Checking for incoming trade offers)
-start TradeStatusChecker.ahk
-
-:: Waits 1 second for the script to run/load.
-ping 1.1.1.1 -n 1 -w 1000 > nul
-echo [%time%] Checking trade status...
-
-:: Changes directory and calls Var.bat to see what the "Trade_Status_Var" is now set to.
-cd C:\OpticTradeBot
-call Var.bat
-:: If "Trade_Status_Var" is at 0, no change has happened and it resumes cycle.
-if "%Trade_Status_Var%" == "0" goto TRADE_0
-:: If "Trade_Status_Var" is at 1, there is a change detected and it goes to TRADE_1 to search for a trade offer.
-if "%Trade_Status_Var%" == "1" goto TRADE_1
-:: If "Trade_Status_Var" is at 2, it has been set by the program to skip to Mobile Authentication.
-:: Under normal operating conditions, it should never get set to 2.
-if "%Trade_Status_Var%" == "2" goto TRADE_2
-:: If "Trade_Status_Var" is at 3, it has been set by the/a program to signal a fatal error.
-if "%Trade_Status_Var%" == "3" goto TRADE_3
-:: If "Trade_Status_Var" is not set to one of these values or doesn't exist, it goes to LOOP_FAIL to signifiy this.
-goto LOOP_FAIL
-
-:: Skips the Trade Status protocol if DebugMode is Active and DebugSkipRefresh = 1
-:REFRESH_SKIP
-echo.
-echo [%time%] [WARNING] Program Refresh Skipped.
-echo.
-goto REFRESH_SKIP_1
-
-:: Used to update log file if Trade_Status_Var=0. Follows on to LOOP_RESTART
-:TRADE_0
-echo. >> Log.txt
-echo [%time% %date%] [%x%] [%TRADEID%] No Trade offer found. (Trade_Status_Var=0) >> Log.txt
-
-:LOOP_RESTART
-:: Prints notification showing "Trade_Status_Var" is now set to zero and the cycle is about to restart.
-echo.
-echo [%time%] Trade status returned to normal. Resuming cycle.
-echo [%time%] (Trade_Status_Var=0)
-
-:: Returns to beginning of file.
-goto LOOP
-
-
-
-:: Trade_Status_Var=1
-:TRADE_1
-:: Check if DebugSkipTrade is active to skip offer confirmation.
-pause
-if "%DebugSkipTrade%"=="%DebugMode%" goto TRADE_1_SKIP
-:: Updates log file.
-echo. >> Log.txt
-echo [%time% %date%] [%x%] [%TRADEID%] Trade offer found. (Trade_Status_Var=1) >> Log.txt
-
-echo.
-:: Prints offer detected
-echo [%time%] Offer detected.
-echo [%time%] (Trade_Status_Var=1)
-echo [%time%] Opening trade.
-
-:: Starts "ScrollDown.ahk" (opens trade offer) and *cough* begins the CHECKFOR process.
-cd C:\OpticTradeBot\AHKScript
-start ScrollDown.ahk
-echo [%time%] Waiting for page to load..
-:: Waits for page and page assets/images to load.
-:: IF YOUR BOT ISN'T DETECTING TRADE ITEMS, INCREASE THE DELAY AND SEE IF IT HELPS.
-ping 1.1.1.1 -n 1 -w 9000 > nul
-MaximiseWindow.ahk
+echo [%time%] [ITEMPRICE] Total Price was: %price1%
 pause
 
-:CHECKFOR_BEGIN
-cd C:\OpticTradeBot\
-:: Deletes all old data again
-
-:VERIFIY
-echo [%time%] Bot Item Value: %value1%
-echo [%time%] User Item Value: %value2%
-
-if "%value2%"=="0" goto REJECT
-if "%value1%">"%value2%" goto REJECT
-if "%value1%"=="%value2%" goto CONFIRM
-goto REJECT
 
 
-:: Offer is eligble for confirmation.
-:CONFIRM
-:: Updates log file
-echo. >> Log.txt
-echo [%time% %date%] [%x%] [%TRADEID%] Offer eligble for acceptance. >> Log.txt
-:: Sets directory.
-cd C:\OpticTradeBot\AHKScript
-:: Starts OfferUp.ahk (scrolls page back up to top)
-start OfferUp.ahk
-:: Waits 1.5 seconds.
-ping 1.1.1.1 -n 1 -w 1500 > nul
-:: Starts OfferConfirm.ahk (confirms offer in trade window)
-start OfferConfirm.ahk
-echo [%time%] Confirming offer..
-:: Waits 30 seconds.
-echo [%time%] This will take around 30 seconds.
-ping 1.1.1.1 -n 1 -w 30000 > nul
-:: Sets directory.
-cd C:\OpticTradeBot
-:: Begins mobile authentication.
-echo [%time%] Offer confirmed in Steam Client.
-echo [%time%] Pending confirmation in Mobile Authenticator.
-echo [%time%] (Setting Trade_Status_Var to 2)
-goto TRADE_2
 
-:: Skips the Trade protocol if DebugMode is Active and DebugSkipTrade = 1
-:TRADE_1_SKIP
+:: These are the skippng labels used to skip past unused item ID's and save like 10 mins of time.
+:ic_6060
+echo [%time%] [ITEMCHECK] Skipped to itemid 7999 from 6060.
+set loopcount=7999
+goto item_checker
+
+:ic_8248
+echo [%time%] [ITEMCHECK] Skipped to itemid 14999 from 8248.
+set loopcount=14999
+goto item_checker
+
+:ic_16000
+echo [%time%] [ITEMCHECK] Skipped to itemid 29999 from 16000.
+set loopcount=29999
+goto item_checker
+
+
+
+:err_launcher001
+echo [%time%] [WARNING] C:\OpticTradeBot\config\prgon.txt does not exist.
 echo.
-echo [%time%] DebugSkipTrade=1, skipping Trade protocol..
-echo.
+echo [%time%] [WARNING] Please start the launcher.
+echo [%time%] [WARNING] Please wait..
+timeout /t 5 /nobreak >nul
+goto cycle
 
-:: Mobile authentication.
-:TRADE_2
-:: Skips mobile authentication if DebugMode is Active and DebugSkipAuth = 1
-if "%DebugSkipAuth%"=="%DebugMode%" goto TRADE_2_SKIP
-:: Sets directory.
-cd C:\OpticTradeBot\AHKScript
-:: Starts SwitchToAuth.ahk (switches over to BlueStacks window)
-start SwitchToAuth.ahk
+:err_launcher002
+echo [%time%] [WARNING] C:\OpticTradeBot\config\prgrun.txt does not exist.
 echo.
-echo [%time%] Opening Mobile Auth..
-:: Waits 1 second.
-ping 1.1.1.1 -n 1 -w 1000 > nul
-:: Starts OfferAuth.ahk (confirms offer in auth)
-start OfferAuth.ahk
-echo [%time%] Confirming offer inside auth...
-echo [%time%] This will take around 30 sec.
-:: Waits 30 seconds.
-ping 1.1.1.1 -n 1 -w 30000 > nul
-echo [%time%] Offer confirmed in Mobile Authenticator.
-echo [%time%] Resuming trade cycle..
-:: Starts SwitchToOffers.ahk (switches over to Firefox window)
-start SwitchToOffers.ahk
-echo [%time%] (Setting Trade_Status_Var to 0)
-goto LOOP_RESTART
+echo [%time%] [WARNING] Please launch the program from the launcher "Start" button.
+echo [%time%] [WARNING] Please wait..
+timeout /t 5 /nobreak >nul
+goto cycle
 
-:: Skips the Auth protocol if DebugMode is Active and DebugSkipAuth = 1
-:TRADE_2_SKIP
-echo.
-echo [%time%] DebugSkipAuth=1, skipping Authentication protocol
-echo.
-goto LOOP_RESTART
 
-:REJECT
-echo. >> Log.txt
-echo [%time% %date%] [%x%] [%TRADEID%] Offer declined due to incorrect items. >> Log.txt
-:: Declining offer
-cd C:\OpticTradeBot\AHKScript
-echo [%time%] Offer Declined due to invalid trade contents.
-echo [%time%] Bot offered %value1% while user offered %value2%
-start OfferDecline.ahk
-goto LOOP_RESTART
 
-:TRADE_3
-set errtime=%time%
-set errdate=%date%
-:TRADE_3_I
-echo.
-echo [%time%] Fatal error in program at %errtime% %errdate%! Cycle hatled until restart/fix.
-goto TRADE_3_I
 
-:DEBUG
-cd C:\OpticTradeBot\
-echo [%time%] Launching TBDebug.bat..
-::start TBDebug.bat
-set DebugMode1=1
-echo [%time%] Debug Mode Enabled.
-goto LOOP_DEBUG
 
-:LOOP_FAIL
-echo.
-echo [%time%] Failed to detect Trade_Status_Var. No trade offer was detected.
-echo [%time%] If Debug Mode is active, more information will be shown.
-echo.
-if "%DebugMode%1"=="1" echo [%time%] [DEBUG] Trade_Status_Var was not defined.
-cd C:\OpticTradeBot
-goto LOOP_RESTART
-
-:CONFIG_ERR
-echo.
-echo [%time%] Failed to read crucial config values as they are incorrect or do not exist.
-echo [%time%] Retrying..
-goto LOOP1
-
-:AUTHMODE
-echo.
-echo [%time%] DebugAuthMode=1
-echo [%time%] Skipping Page Refresh and Trade Verification
-echo [%time%] [WARNING] In Mobile Auth Mode!
-echo.
-:: Waits 5 seconds.
-echo [%time%] Waiting 5,000ms(5s) until next command...
-ping 1.1.1.1 -n 1 -w 5000 > nul
-goto TRADE_2
-
-:NETFAIL
-echo [%time%] Network Connection not establised. Checking again..
-call :NETTASK
-if NetStatus=1 goto LOOP
-
-:::NETTASK
-::cd C:\OpticTradeBot
-::call NetStatus.bat
-::if %NetStatus%==0 goto NETFAIL
-
-:err_AHK
-cd C:\OpticTradeBot\VBSScript
-start err_AHK.vbs
-echo.
-echo [%time%] [WARNING] Autohotkey does not seem to be installed.
-echo [%time%] [WARNING] Please install.
-exit
-:err_PRG_LOOP
-pause>nul
-goto err_PRG_LOOP
-
-:err_BSK
-cd C:\OpticTradeBot\VBSScript
-start err_BSK.vbs
-echo.
-echo [%time%] [WARNING] BlueStacks does not seem to be installed.
-echo [%time%] [WARNING] Please install.
-exit
-
-:err_HOLD
-cd C:\OpticTradeBot\VBSScript
-start err_HOLD.vbs
-echo.
-echo [%time%] [WARNING] A trade hold was detected! The bot can not function.
-exit
+:check_status
+echo [%time%] [STATUS] Checking status of TradeBotLauncher..
+if not exist C:\OpticTradeBot\config\prgon.txt goto err_launcher001
+echo [%time%] [STATUS] C:\OpticTradeBot\config\prgon.txt does exist.
+if not exist C:\OpticTradeBot\config\prgrun.txt goto err_launcher002
+echo [%time%] [STATUS] C:\OpticTradeBot\config\prgrun.txt does exist.
+echo [%time%] [STATUS] Launcher is Open and TradeBot is Started

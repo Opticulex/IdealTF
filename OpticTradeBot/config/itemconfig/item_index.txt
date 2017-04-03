@@ -1,0 +1,2479 @@
+# ==================== TF ITEM INDEX ====================
+# Use CTRL+F to find the item you're looking for.
+# Last upated 20th Jan 2017 with the website. (Formatting is readable but is slightly distorted)
+# ONLINE VERSION: https://wiki.alliedmods.net/Team_fortress_2_item_definition_indexes
+
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+13 	Scattergun 	tf_weapon_scattergun
+200 	Scattergun (Renamed/Strange) 	tf_weapon_scattergun
+45 	Force-A-Nature 	tf_weapon_scattergun
+220 	The Shortstop 	tf_weapon_handgun_scout_primary 	Special Delivery*
+448 	The Soda Popper 	tf_weapon_soda_popper 	Bonk Fan
+669 	Festive Scattergun 	tf_weapon_scattergun
+772 	Baby Face's Blaster 	tf_weapon_pep_brawler_blaster 	The Public Enemy
+799 	Silver Botkiller Scattergun Mk.I 	tf_weapon_scattergun
+808 	Gold Botkiller Scattergun Mk.I 	tf_weapon_scattergun
+888 	Rust Botkiller Scattergun Mk.I 	tf_weapon_scattergun
+897 	Blood Botkiller Scattergun Mk.I 	tf_weapon_scattergun
+906 	Carbonado Botkiller Scattergun Mk.I 	tf_weapon_scattergun
+915 	Diamond Botkiller Scattergun Mk.I 	tf_weapon_scattergun
+964 	Silver Botkiller Scattergun Mk.II 	tf_weapon_scattergun
+973 	Gold Botkiller Scattergun Mk.II 	tf_weapon_scattergun
+1078 	Festive Force-A-Nature 	tf_weapon_scattergun
+1103 	The Back Scatter 	tf_weapon_scattergun
+15002 	Night Terror 	tf_weapon_scattergun
+15015 	Tartan Torpedo 	tf_weapon_scattergun
+15021 	Country Crusher 	tf_weapon_scattergun
+15029 	Backcountry Blaster 	tf_weapon_scattergun
+15036 	Spruce Deuce 	tf_weapon_scattergun
+15053 	Current Event 	tf_weapon_scattergun
+15065 	Macabre Web 	tf_weapon_scattergun
+15069 	Nutcracker 	tf_weapon_scattergun
+15106 	Blue Mew 	tf_weapon_scattergun
+15107 	Flower Power 	tf_weapon_scattergun
+15108 	Shot to Hell 	tf_weapon_scattergun
+15131 	Coffin Nail 	tf_weapon_scattergun
+15151 	Killer Bee 	tf_weapon_scattergun
+15157 	Corsair 	tf_weapon_scattergun
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+23 	Scout's Pistol 	tf_weapon_pistol
+209 	Pistol (Renamed/Strange) 	tf_weapon_pistol
+46 	Bonk! Atomic Punch 	tf_weapon_lunchbox_drink
+160 	Vintage Lugermorph 	tf_weapon_pistol
+163 	Crit-a-Cola 	tf_weapon_lunchbox_drink
+222 	Mad Milk 	tf_weapon_jar_milk 	Special Delivery*
+294 	Lugermorph 	tf_weapon_pistol
+449 	The Winger 	tf_weapon_handgun_scout_secondary 	Bonk Fan
+773 	Pretty Boy's Pocket Pistol 	tf_weapon_handgun_scout_secondary 	The Public Enemy
+812 	The Flying Guillotine 	tf_weapon_cleaver
+833 	The Flying Guillotine (Genuine) 	tf_weapon_cleaver
+1121 	Mutated Milk 	tf_weapon_jar_milk
+1145 	Festive Bonk! 	tf_weapon_lunchbox_drink
+15013 	Red Rock Roscoe 	tf_weapon_pistol
+15018 	Homemade Heater 	tf_weapon_pistol
+15035 	Hickory Holepuncher 	tf_weapon_pistol
+15041 	Local Hero 	tf_weapon_pistol
+15046 	Black Dahlia 	tf_weapon_pistol
+15056 	Sandstone Special 	tf_weapon_pistol
+15060 	Macabre Web 	tf_weapon_pistol
+15061 	Nutcracker 	tf_weapon_pistol
+15100 	Blue Mew 	tf_weapon_pistol
+15101 	Brain Candy 	tf_weapon_pistol
+15102 	Shot to Hell 	tf_weapon_pistol
+15126 	Dressed To Kill 	tf_weapon_pistol
+15148 	Blitzkrieg 	tf_weapon_pistol
+30666 	The C.A.P.P.E.R. 	tf_weapon_pistol
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+0 	Bat 	tf_weapon_bat
+190 	Bat (Renamed/Strange) 	tf_weapon_bat
+44 	The Sandman 	tf_weapon_bat_wood
+221 	The Holy Mackerel 	tf_weapon_bat_fish 	Special Delivery*
+264 	Frying Pan 	saxxy
+317 	The Candy Cane 	tf_weapon_bat
+325 	The Boston Basher 	tf_weapon_bat
+349 	Sun-on-a-Stick 	tf_weapon_bat
+355 	The Fan O'War 	tf_weapon_bat
+423 	Saxxy 	saxxy
+450 	The Atomizer 	tf_weapon_bat 	Bonk Fan
+452 	Three-Rune Blade 	tf_weapon_bat
+474 	The Conscientious Objector 	saxxy
+572 	Unarmed Combat 	tf_weapon_bat_fish
+648 	The Wrap Assassin 	tf_weapon_bat_giftwrap 	Santa's Little Accomplice
+660 	Festive Bat 	tf_weapon_bat
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+999 	Festive Holy Mackerel 	tf_weapon_bat_fish 	Special Delivery*
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+30667 	Batsaber 	tf_weapon_bat
+30758 	Prinny Machete 	saxxy
+Soldier
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+18 	Rocket Launcher 	tf_weapon_rocketlauncher
+205 	Rocket Launcher (Renamed/Strange) 	tf_weapon_rocketlauncher
+127 	The Direct Hit 	tf_weapon_rocketlauncher_directhit
+228 	The Black Box 	tf_weapon_rocketlauncher 	Tank Buster*
+237 	Rocket Jumper 	tf_weapon_rocketlauncher
+414 	The Liberty Launcher 	tf_weapon_rocketlauncher 	Airborne Armaments
+441 	The Cow Mangler 5000 	tf_weapon_particle_cannon 	Dr. Grordbort's Victory Pack
+513 	The Original 	tf_weapon_rocketlauncher
+658 	Festive Rocket Launcher 	tf_weapon_rocketlauncher
+730 	The Beggar's Bazooka 	tf_weapon_rocketlauncher 	The Dumpster Diver
+800 	Silver Botkiller Rocket Launcher Mk.I 	tf_weapon_rocketlauncher
+809 	Gold Botkiller Rocket Launcher Mk.I 	tf_weapon_rocketlauncher
+889 	Rust Botkiller Rocket Launcher Mk.I 	tf_weapon_rocketlauncher
+898 	Blood Botkiller Rocket Launcher Mk.I 	tf_weapon_rocketlauncher
+907 	Carbonado Botkiller Rocket Launcher Mk.I 	tf_weapon_rocketlauncher
+916 	Diamond Botkiller Rocket Launcher Mk.I 	tf_weapon_rocketlauncher
+965 	Silver Botkiller Rocket Launcher Mk.II 	tf_weapon_rocketlauncher
+974 	Gold Botkiller Rocket Launcher Mk.II 	tf_weapon_rocketlauncher
+1085 	Festive Black Box 	tf_weapon_rocketlauncher 	Tank Buster*
+1104 	The Air Strike 	tf_weapon_rocketlauncher_airstrike
+15006 	Woodland Warrior 	tf_weapon_rocketlauncher
+15014 	Sand Cannon 	tf_weapon_rocketlauncher
+15028 	American Pastoral 	tf_weapon_rocketlauncher
+15043 	Smalltown Bringdown 	tf_weapon_rocketlauncher
+15052 	Shell Shocker 	tf_weapon_rocketlauncher
+15057 	Aqua Marine 	tf_weapon_rocketlauncher
+15081 	Autumn 	tf_weapon_rocketlauncher
+15104 	Blue Mew 	tf_weapon_rocketlauncher
+15105 	Brain Candy 	tf_weapon_rocketlauncher
+15129 	Coffin Nail 	tf_weapon_rocketlauncher
+15130 	High Roller's 	tf_weapon_rocketlauncher
+15150 	Warhawk 	tf_weapon_rocketlauncher
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+10 	Soldier's Shotgun 	tf_weapon_shotgun_soldier
+199 	Shotgun (Renamed/Strange) 	tf_weapon_shotgun
+129 	The Buff Banner 	tf_weapon_buff_item 		back
+133 	Gunboats 	tf_wearable 		feet
+226 	The Battalion's Backup 	tf_weapon_buff_item 	Tank Buster* 	back
+354 	The Concheror 	tf_weapon_buff_item 		back
+415 	The Reserve Shooter 	tf_weapon_shotgun 	Airborne Armaments
+442 	The Righteous Bison 	tf_weapon_raygun 	Dr. Grordbort's Victory Pack
+444 	The Mantreads 	tf_wearable 	The General's Formals 	feet
+1001 	Festive Buff Banner 	tf_weapon_buff_item 		back
+1101 	The B.A.S.E. Jumper 	tf_weapon_parachute
+1141 	Festive Shotgun 	tf_weapon_shotgun
+1153 	Panic Attack 	tf_weapon_shotgun
+15003 	Backwoods Boomstick 	tf_weapon_shotgun
+15016 	Rustic Ruiner 	tf_weapon_shotgun
+15044 	Civic Duty 	tf_weapon_shotgun
+15047 	Lightning Rod 	tf_weapon_shotgun
+15085 	Autumn 	tf_weapon_shotgun
+15109 	Flower Power 	tf_weapon_shotgun
+15132 	Coffin Nail 	tf_weapon_shotgun
+15133 	Dressed to Kill 	tf_weapon_shotgun
+15152 	Red Bear 	tf_weapon_shotgun
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+6 	Shovel 	tf_weapon_shovel
+196 	Shovel (Renamed/Strange) 	tf_weapon_shovel
+128 	The Equalizer 	tf_weapon_shovel
+154 	The Pain Train 	tf_weapon_shovel
+264 	Frying Pan 	tf_weapon_shovel
+357 	The Half-Zatoichi 	tf_weapon_katana
+416 	The Market Gardener 	tf_weapon_shovel 	Airborne Armaments
+423 	Saxxy 	saxxy
+447 	The Disciplinary Action 	tf_weapon_shovel 	The General's Formals
+474 	The Conscientious Objector 	saxxy
+775 	The Escape Plan 	tf_weapon_shovel
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+30758 	Prinny Machete 	saxxy
+Pyro
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+21 	Flame Thrower 	tf_weapon_flamethrower
+208 	Flame Thrower (Renamed/Strange) 	tf_weapon_flamethrower
+40 	The Backburner 	tf_weapon_flamethrower
+215 	The Degreaser 	tf_weapon_flamethrower 	The Gas Jockey's Gear*
+594 	The Phlogistinator 	tf_weapon_flamethrower 	Dr. Grordbort's Moonman Pack
+659 	Festive Flame Thrower 	tf_weapon_flamethrower
+741 	The Rainblower 	tf_weapon_flamethrower
+798 	Silver Botkiller Flame Thrower Mk.I 	tf_weapon_flamethrower
+807 	Gold Botkiller Flame Thrower Mk.I 	tf_weapon_flamethrower
+887 	Rust Botkiller Flame Thrower Mk.I 	tf_weapon_flamethrower
+896 	Blood Botkiller Flame Thrower Mk.I 	tf_weapon_flamethrower
+905 	Carbonado Botkiller Flame Thrower Mk.I 	tf_weapon_flamethrower
+914 	Diamond Botkiller Flame Thrower Mk.I 	tf_weapon_flamethrower
+963 	Silver Botkiller Flame Thrower Mk.II 	tf_weapon_flamethrower
+972 	Gold Botkiller Flame Thrower Mk.II 	tf_weapon_flamethrower
+1146 	Festive Backburner 	tf_weapon_flamethrower
+15005 	Forest Fire 	tf_weapon_flamethrower
+15017 	Barn Burner 	tf_weapon_flamethrower
+15030 	Bovine Blazemaker 	tf_weapon_flamethrower
+15034 	Earth, Sky and Fire 	tf_weapon_flamethrower
+15049 	Flash Fryer 	tf_weapon_flamethrower
+15054 	Turbine Torcher 	tf_weapon_flamethrower
+15066 	Autumn 	tf_weapon_flamethrower
+15067 	Pumpkin Patch 	tf_weapon_flamethrower
+15068 	Nutcracker 	tf_weapon_flamethrower
+15089 	Balloonicorn 	tf_weapon_flamethrower
+15090 	Rainbow 	tf_weapon_flamethrower
+15115 	Coffin Nail 	tf_weapon_flamethrower
+15141 	Warhawk 	tf_weapon_flamethrower
+30474 	Nostromo Napalmer 	tf_weapon_flamethrower 		The Isolated Merc
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+12 	Pyro's Shotgun 	tf_weapon_shotgun_pyro
+199 	Shotgun (Renamed/Strange) 	tf_weapon_shotgun
+39 	The Flare Gun 	tf_weapon_flaregun
+351 	The Detonator 	tf_weapon_flaregun
+415 	The Reserve Shooter 	tf_weapon_shotgun
+595 	The Manmelter 	tf_weapon_flaregun_revenge 	Dr. Grordbort's Moonman Pack
+740 	The Scorch Shot 	tf_weapon_flaregun
+1081 	Festive Flare Gun 	tf_weapon_flaregun
+1141 	Festive Shotgun 	tf_weapon_shotgun
+1153 	Panic Attack 	tf_weapon_shotgun
+15003 	Backwoods Boomstick 	tf_weapon_shotgun
+15016 	Rustic Ruiner 	tf_weapon_shotgun
+15044 	Civic Duty 	tf_weapon_shotgun
+15047 	Lightning Rod 	tf_weapon_shotgun
+15085 	Autumn 	tf_weapon_shotgun
+15109 	Flower Power 	tf_weapon_shotgun
+15132 	Coffin Nail 	tf_weapon_shotgun
+15133 	Dressed to Kill 	tf_weapon_shotgun
+15152 	Red Bear 	tf_weapon_shotgun
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+2 	Fire Axe 	tf_weapon_fireaxe
+192 	Fire Axe (Renamed/Strange) 	tf_weapon_fireaxe
+38 	The Axtinguisher 	tf_weapon_fireaxe
+153 	Homewrecker 	tf_weapon_fireaxe
+214 	The Powerjack 	tf_weapon_fireaxe 	The Gas Jockey's Gear*
+264 	Frying Pan 	saxxy
+326 	The Back Scratcher 	tf_weapon_fireaxe
+348 	Sharpened Volcano Fragment 	tf_weapon_fireaxe
+423 	Saxxy 	saxxy
+457 	The Postal Pummeler 	tf_weapon_fireaxe
+466 	The Maul 	tf_weapon_fireaxe
+474 	The Conscientious Objector 	saxxy
+593 	The Third Degree 	tf_weapon_fireaxe 	Dr. Grordbort's Moonman Pack
+739 	The Lollichop 	tf_weapon_fireaxe
+813 	Neon Annihilator 	tf_weapon_fireaxe
+834 	Neon Annihilator (Genuine) 	tf_weapon_fireaxe
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+1000 	The Festive Axtinguisher 	tf_weapon_fireaxe
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+30758 	Prinny Machete 	saxxy
+Demoman
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+19 	Grenade Launcher 	tf_weapon_grenadelauncher
+206 	Grenade Launcher (Renamed/Strange) 	tf_weapon_grenadelauncher
+308 	The Loch-n-Load 	tf_weapon_grenadelauncher 	Expert's Ordnance*
+405 	Ali Baba's Wee Booties 	tf_wearable 	One Thousand and One Demoknights 	feet
+608 	The Bootlegger 	tf_wearable 	Swashbuckler's Swag 	feet
+996 	The Loose Cannon 	tf_weapon_cannon
+1007 	Festive Grenade Launcher 	tf_weapon_grenadelauncher
+1101 	The B.A.S.E. Jumper 	tf_weapon_parachute
+1151 	The Iron Bomber 	tf_weapon_grenadelauncher
+15077 	Autumn 	tf_weapon_grenadelauncher
+15079 	Macabre Web 	tf_weapon_grenadelauncher
+15091 	Rainbow 	tf_weapon_grenadelauncher
+15092 	Sweet Dreams 	tf_weapon_grenadelauncher
+15116 	Coffin Nail 	tf_weapon_grenadelauncher
+15117 	Top Shelf 	tf_weapon_grenadelauncher
+15142 	Warhawk 	tf_weapon_grenadelauncher
+15158 	Butcher Bird 	tf_weapon_grenadelauncher
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+20 	Stickybomb Launcher 	tf_weapon_pipebomblauncher
+207 	Stickybomb Launcher (Renamed/Strange) 	tf_weapon_pipebomblauncher
+130 	The Scottish Resistance 	tf_weapon_pipebomblauncher
+131 	The Chargin' Targe 	tf_wearable_demoshield
+265 	Sticky Jumper 	tf_weapon_pipebomblauncher
+406 	The Splendid Screen 	tf_wearable_demoshield 	One Thousand and One Demoknights
+661 	Festive Stickybomb Launcher 	tf_weapon_pipebomblauncher
+797 	Silver Botkiller Stickybomb Launcher Mk.I 	tf_weapon_pipebomblauncher
+806 	Gold Botkiller Stickybomb Launcher Mk.I 	tf_weapon_pipebomblauncher
+886 	Rust Botkiller Stickybomb Launcher Mk.I 	tf_weapon_pipebomblauncher
+895 	Blood Botkiller Stickybomb Launcher Mk.I 	tf_weapon_pipebomblauncher
+904 	Carbonado Botkiller Stickybomb Launcher Mk.I 	tf_weapon_pipebomblauncher
+913 	Diamond Botkiller Stickybomb Launcher Mk.I 	tf_weapon_pipebomblauncher
+962 	Silver Botkiller Stickybomb Launcher Mk.II 	tf_weapon_pipebomblauncher
+971 	Gold Botkiller Stickybomb Launcher Mk.II 	tf_weapon_pipebomblauncher
+1099 	The Tide Turner 	tf_wearable_demoshield
+1144 	Festive Targe 	tf_wearable_demoshield
+1150 	The Quickiebomb Launcher 	tf_weapon_pipebomblauncher
+15009 	Sudden Flurry 	tf_weapon_pipebomblauncher
+15012 	Carpet Bomber 	tf_weapon_pipebomblauncher
+15024 	Blasted Bombardier 	tf_weapon_pipebomblauncher
+15038 	Rooftop Wrangler 	tf_weapon_pipebomblauncher
+15045 	Liquid Asset 	tf_weapon_pipebomblauncher
+15048 	Pink Elephant 	tf_weapon_pipebomblauncher
+15082 	Autumn 	tf_weapon_pipebomblauncher
+15083 	Pumpkin Patch 	tf_weapon_pipebomblauncher
+15084 	Macabre Web 	tf_weapon_pipebomblauncher
+15113 	Sweet Dreams 	tf_weapon_pipebomblauncher
+15137 	Coffin Nail 	tf_weapon_pipebomblauncher
+15138 	Dressed to Kill 	tf_weapon_pipebomblauncher
+15155 	Blitzkrieg 	tf_weapon_pipebomblauncher
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+1 	Bottle 	tf_weapon_bottle
+191 	Bottle (Renamed/Strange) 	tf_weapon_bottle
+132 	The Eyelander 	tf_weapon_sword
+154 	The Pain Train 	tf_weapon_shovel
+172 	The Scotsman's Skullcutter 	tf_weapon_sword
+264 	Frying Pan 	saxxy
+266 	Horseless Headless Horsemann's Headtaker 	tf_weapon_sword
+307 	Ullapool Caber 	tf_weapon_stickbomb 	Expert's Ordnance*
+327 	The Claidheamh Mòr 	tf_weapon_sword
+357 	The Half-Zatoichi 	tf_weapon_katana
+404 	The Persian Persuader 	tf_weapon_sword 	One Thousand and One Demoknights
+423 	Saxxy 	saxxy
+474 	The Conscientious Objector 	saxxy
+482 	Nessie's Nine Iron 	tf_weapon_sword
+609 	The Scottish Handshake 	tf_weapon_bottle 	Swashbuckler's Swag
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1082 	Festive Eyelander 	tf_weapon_sword
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+30758 	Prinny Machete 	saxxy
+Heavy
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+15 	Minigun 	tf_weapon_minigun
+202 	Minigun (Renamed/Strange) 	tf_weapon_minigun
+41 	Natascha 	tf_weapon_minigun
+298 	Iron Curtain 	tf_weapon_minigun
+312 	The Brass Beast 	tf_weapon_minigun 	The Hibernating Bear*
+424 	Tomislav 	tf_weapon_minigun 	Black Market Business
+654 	Festive Minigun 	tf_weapon_minigun
+793 	Silver Botkiller Minigun Mk.I 	tf_weapon_minigun
+802 	Gold Botkiller Minigun Mk.I 	tf_weapon_minigun
+811 	The Huo-Long Heater 	tf_weapon_minigun
+832 	The Huo-Long Heater (Genuine) 	tf_weapon_minigun
+850 	Deflector (MvM only?) 	tf_weapon_minigun
+882 	Rust Botkiller Minigun Mk.I 	tf_weapon_minigun
+891 	Blood Botkiller Minigun Mk.I 	tf_weapon_minigun
+900 	Carbonado Botkiller Minigun Mk.I 	tf_weapon_minigun
+909 	Diamond Botkiller Minigun Mk.I 	tf_weapon_minigun
+958 	Silver Botkiller Minigun Mk.II 	tf_weapon_minigun
+967 	Gold Botkiller Minigun Mk.II 	tf_weapon_minigun
+15004 	King of the Jungle 	tf_weapon_minigun
+15020 	Iron Wood 	tf_weapon_minigun
+15026 	Antique Annihilator 	tf_weapon_minigun
+15031 	War Room 	tf_weapon_minigun
+15040 	Citizen Pain 	tf_weapon_minigun
+15055 	Brick House 	tf_weapon_minigun
+15086 	Macabre Web 	tf_weapon_minigun
+15087 	Pumpkin Patch 	tf_weapon_minigun
+15088 	Nutcracker 	tf_weapon_minigun
+15098 	Brain Candy 	tf_weapon_minigun
+15099 	Mister Cuddles 	tf_weapon_minigun
+15123 	Coffin Nail 	tf_weapon_minigun
+15124 	Dressed to Kill 	tf_weapon_minigun
+15125 	Top Shelf 	tf_weapon_minigun
+15147 	Butcher Bird 	tf_weapon_minigun
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+11 	Heavy's Shotgun 	tf_weapon_shotgun_hwg
+199 	Shotgun (Renamed/Strange) 	tf_weapon_shotgun
+42 	Sandvich 	tf_weapon_lunchbox
+159 	The Dalokohs Bar 	tf_weapon_lunchbox
+311 	The Buffalo Steak Sandvich 	tf_weapon_lunchbox 	The Hibernating Bear*
+425 	The Family Business 	tf_weapon_shotgun_hwg 	Black Market Business
+433 	Fishcake 	tf_weapon_lunchbox
+863 	Robo-Sandvich 	tf_weapon_lunchbox
+1002 	Festive Sandvich 	tf_weapon_lunchbox
+1141 	Festive Shotgun 	tf_weapon_shotgun
+1153 	Panic Attack 	tf_weapon_shotgun
+15003 	Backwoods Boomstick 	tf_weapon_shotgun
+15016 	Rustic Ruiner 	tf_weapon_shotgun
+15044 	Civic Duty 	tf_weapon_shotgun
+15047 	Lightning Rod 	tf_weapon_shotgun
+15085 	Autumn 	tf_weapon_shotgun
+15109 	Flower Power 	tf_weapon_shotgun
+15132 	Coffin Nail 	tf_weapon_shotgun
+15133 	Dressed to Kill 	tf_weapon_shotgun
+15152 	Red Bear 	tf_weapon_shotgun
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+5 	Fists 	tf_weapon_fists
+195 	Fists (Renamed/Strange) 	tf_weapon_fists
+43 	The Killing Gloves of Boxing 	tf_weapon_fists
+239 	Gloves of Running Urgently 	tf_weapon_fists
+264 	Frying Pan 	saxxy
+310 	Warrior's Spirit 	tf_weapon_fists 	The Hibernating Bear*
+331 	Fists of Steel 	tf_weapon_fists
+423 	Saxxy 	saxxy
+426 	The Eviction Notice 	tf_weapon_fists 	Black Market Business
+474 	The Conscientious Objector 	saxxy
+587 	Apoco-Fists 	tf_weapon_fists
+656 	The Holiday Punch 	tf_weapon_fists
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1084 	Festive Gloves of Running Urgently (G.R.U.) 	tf_weapon_fists
+1100 	The Bread Bite 	tf_weapon_fists
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+30758 	Prinny Machete 	saxxy
+Engineer
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+9 	Engineer's Shotgun 	tf_weapon_shotgun_primary
+199 	Shotgun (Renamed/Strange) 	tf_weapon_shotgun
+141 	The Frontier Justice 	tf_weapon_sentry_revenge
+527 	The Widowmaker 	tf_weapon_shotgun_primary
+588 	The Pomson 6000 	tf_weapon_drg_pomson 	Dr. Grordbort's Braniac Pack
+997 	The Rescue Ranger 	tf_weapon_shotgun_building_rescue
+1004 	Festive Frontier Justice 	tf_weapon_sentry_revenge
+1141 	Festive Shotgun 	tf_weapon_shotgun
+1153 	Panic Attack 	tf_weapon_shotgun
+15003 	Backwoods Boomstick 	tf_weapon_shotgun
+15016 	Rustic Ruiner 	tf_weapon_shotgun
+15044 	Civic Duty 	tf_weapon_shotgun
+15047 	Lightning Rod 	tf_weapon_shotgun
+15085 	Autumn 	tf_weapon_shotgun
+15109 	Flower Power 	tf_weapon_shotgun
+15132 	Coffin Nail 	tf_weapon_shotgun
+15133 	Dressed to Kill 	tf_weapon_shotgun
+15152 	Red Bear 	tf_weapon_shotgun
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+22 	Engineer's Pistol 	tf_weapon_pistol
+209 	Pistol (Renamed/Strange) 	tf_weapon_pistol
+140 	The Wrangler 	tf_weapon_laser_pointer
+160 	Vintage Lugermorph 	tf_weapon_pistol
+294 	Lugermorph 	tf_weapon_pistol
+528 	The Short Circuit 	tf_weapon_mechanical_arm
+1086 	Festive Wrangler 	tf_weapon_laser_pointer
+15013 	Red Rock Roscoe 	tf_weapon_pistol
+15018 	Homemade Heater 	tf_weapon_pistol
+15035 	Hickory Holepuncher 	tf_weapon_pistol
+15041 	Local Hero 	tf_weapon_pistol
+15046 	Black Dahlia 	tf_weapon_pistol
+15056 	Sandstone Special 	tf_weapon_pistol
+15060 	Macabre Web 	tf_weapon_pistol
+15061 	Nutcracker 	tf_weapon_pistol
+15100 	Blue Mew 	tf_weapon_pistol
+15101 	Brain Candy 	tf_weapon_pistol
+15102 	Shot to Hell 	tf_weapon_pistol
+15126 	Dressed To Kill 	tf_weapon_pistol
+15148 	Blitzkrieg 	tf_weapon_pistol
+30666 	The C.A.P.P.E.R. 	tf_weapon_pistol
+30668 	The Gigar Counter 	tf_weapon_laser_pointer
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+7 	Wrench 	tf_weapon_wrench
+197 	Wrench (Renamed/Strange) 	tf_weapon_wrench
+142 	The Gunslinger 	tf_weapon_robot_arm
+155 	The Southern Hospitality 	tf_weapon_wrench
+169 	Golden Wrench 	tf_weapon_wrench
+329 	The Jag 	tf_weapon_wrench
+423 	Saxxy 	saxxy
+589 	The Eureka Effect 	tf_weapon_wrench 	Dr. Grordbort's Braniac Pack
+662 	Festive Wrench 	tf_weapon_wrench
+795 	Silver Botkiller Wrench Mk.I 	tf_weapon_wrench
+804 	Gold Botkiller Wrench Mk.I 	tf_weapon_wrench
+884 	Rust Botkiller Wrench Mk.I 	tf_weapon_wrench
+893 	Blood Botkiller Wrench Mk.I 	tf_weapon_wrench
+902 	Carbonado Botkiller Wrench Mk.I 	tf_weapon_wrench
+911 	Diamond Botkiller Wrench Mk.I 	tf_weapon_wrench
+960 	Silver Botkiller Wrench Mk.II 	tf_weapon_wrench
+969 	Gold Botkiller Wrench Mk.II 	tf_weapon_wrench
+1071 	Gold Frying Pan 	saxxy
+1123 	The Necro Smasher 	saxxy
+15073 	Nutcracker 	tf_weapon_wrench
+15074 	Autumn 	tf_weapon_wrench
+15075 	Boneyard 	tf_weapon_wrench
+15139 	Dressed to Kill 	tf_weapon_wrench
+15140 	Top Shelf 	tf_weapon_wrench
+15114 	Torqued to Hell 	tf_weapon_wrench
+15156 	Airwolf 	tf_weapon_wrench
+30758 	Prinny Machete 	saxxy
+PDA [Slot 3]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+25 	Construction PDA 	tf_weapon_pda_engineer_build
+737 	Construction PDA (Renamed/Strange) 	tf_weapon_pda_engineer_build
+PDA2 (not in loadout) [Slot 4]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+26 	Destruction PDA 	tf_weapon_pda_engineer_destroy
+Building (not in loadout) [Slot 5]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+28 	PDA (ed: Toolbox) 	tf_weapon_builder
+Medic
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+17 	Syringe Gun 	tf_weapon_syringegun_medic
+204 	Syringe Gun (Renamed/Strange) 	tf_weapon_syringegun_medic
+36 	The Blutsauger 	tf_weapon_syringegun_medic
+305 	Crusader's Crossbow 	tf_weapon_crossbow 	The Medieval Medic*
+412 	The Overdose 	tf_weapon_syringegun_medic 	The Clinical Trial
+1079 	Festive Crusader's Crossbow 	tf_weapon_crossbow 	The Medieval Medic*
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+29 	Medi Gun 	tf_weapon_medigun 		medigun_backpack
+211 	Medi Gun(Renamed/Strange) 	tf_weapon_medigun 		medigun_backpack
+35 	The Kritzkrieg 	tf_weapon_medigun 		medigun_backpack
+411 	The Quick-Fix 	tf_weapon_medigun 	The Clinical Trial 	medigun_backpack
+663 	Festive Medi Gun 	tf_weapon_medigun 		medigun_backpack
+796 	Silver Botkiller Medi Gun Mk.I 	tf_weapon_medigun 		medigun_backpack
+805 	Gold Botkiller Medi Gun Mk.I 	tf_weapon_medigun 		medigun_backpack
+885 	Rust Botkiller Medi Gun Mk.I 	tf_weapon_medigun 		medigun_backpack
+894 	Blood Botkiller Medi Gun Mk.I 	tf_weapon_medigun 		medigun_backpack
+903 	Carbonado Botkiller Medi Gun Mk.I 	tf_weapon_medigun 		medigun_backpack
+912 	Diamond Botkiller Medi Gun Mk.I 	tf_weapon_medigun 		medigun_backpack
+961 	Silver Botkiller Medi Gun Mk.II 	tf_weapon_medigun 		medigun_backpack
+970 	Gold Botkiller Medi Gun Mk.II 	tf_weapon_medigun 		medigun_backpack
+998 	The Vaccinator 	tf_weapon_medigun 		back
+15008 	Masked Mender 	tf_weapon_medigun 		medigun_backpack
+15010 	Wrapped Reviver 	tf_weapon_medigun 		medigun_backpack
+15025 	Reclaimed Reanimator 	tf_weapon_medigun 		medigun_backpack
+15039 	Civil Servant 	tf_weapon_medigun 		medigun_backpack
+15050 	Spark of Life 	tf_weapon_medigun 		medigun_backpack
+15078 	Wildwood 	tf_weapon_medigun 		medigun_backpack
+15097 	Flower Power 	tf_weapon_medigun 		medigun_backpack
+15121 	Dressed To Kill 	tf_weapon_medigun 		medigun_backpack
+15122 	High Roller's 	tf_weapon_medigun 		medigun_backpack
+15123 	Coffin Nail 	tf_weapon_medigun 		medigun_backpack
+15145 	Blitzkrieg 	tf_weapon_medigun 		medigun_backpack
+15146 	Corsair 	tf_weapon_medigun 		medigun_backpack
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+8 	Bonesaw 	tf_weapon_bonesaw
+198 	Bonesaw (Renamed/Strange) 	tf_weapon_bonesaw
+37 	The Ubersaw 	tf_weapon_bonesaw
+173 	The Vita-Saw 	tf_weapon_bonesaw
+264 	Frying Pan 	saxxy
+304 	Amputator 	tf_weapon_bonesaw 	The Medieval Medic*
+413 	The Solemn Vow 	tf_weapon_bonesaw 	The Clinical Trial
+423 	Saxxy 	saxxy
+474 	The Conscientious Objector 	saxxy
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+1003 	Festive Ubersaw 	tf_weapon_bonesaw
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+1143 	Festive Bonesaw 	tf_weapon_bonesaw
+30758 	Prinny Machete 	saxxy
+Sniper
+Primary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+14 	Sniper Rifle 	tf_weapon_sniperrifle
+201 	Sniper Rifle (Renamed/Strange) 	tf_weapon_sniperrifle
+56 	The Huntsman 	tf_weapon_compound_bow 	Dual-Purpose Fruit
+230 	The Sydney Sleeper 	tf_weapon_sniperrifle 	The Croc-o-Style Kit*
+402 	The Bazaar Bargain 	tf_weapon_sniperrifle_decap 	Lawrence of Australia
+526 	The Machina 	tf_weapon_sniperrifle
+664 	Festive Sniper Rifle 	tf_weapon_sniperrifle
+752 	The Hitman's Heatmaker 	tf_weapon_sniperrifle 	The Urban Professional
+792 	Silver Botkiller Sniper Rifle Mk.I 	tf_weapon_sniperrifle
+801 	Gold Botkiller Sniper Rifle Mk.I 	tf_weapon_sniperrifle
+851 	The AWPer Hand 	tf_weapon_sniperrifle
+881 	Rust Botkiller Sniper Rifle Mk.I 	tf_weapon_sniperrifle
+890 	Blood Botkiller Sniper Rifle Mk.I 	tf_weapon_sniperrifle
+899 	Carbonado Botkiller Sniper Rifle Mk.I 	tf_weapon_sniperrifle
+908 	Diamond Botkiller Sniper Rifle Mk.I 	tf_weapon_sniperrifle
+957 	Silver Botkiller Sniper Rifle Mk.II 	tf_weapon_sniperrifle
+966 	Gold Botkiller Sniper Rifle Mk.II 	tf_weapon_sniperrifle
+1005 	Festive Huntsman 	tf_weapon_compound_bow
+1092 	The Fortified Compound 	tf_weapon_compound_bow
+1098 	The Classic 	tf_weapon_sniperrifle_classic
+15000 	Night Owl 	tf_weapon_sniperrifle
+15007 	Purple Range 	tf_weapon_sniperrifle
+15019 	Lumber From Down Under 	tf_weapon_sniperrifle
+15023 	Shot in the Dark 	tf_weapon_sniperrifle
+15033 	Bogtrotter 	tf_weapon_sniperrifle
+15059 	Thunderbolt 	tf_weapon_sniperrifle
+15070 	Pumpkin Patch 	tf_weapon_sniperrifle
+15071 	Boneyard 	tf_weapon_sniperrifle
+15072 	Wildwood 	tf_weapon_sniperrifle
+15111 	Balloonicorn 	tf_weapon_sniperrifle
+15112 	Rainbow 	tf_weapon_sniperrifle
+15135 	Coffin Nail 	tf_weapon_sniperrifle
+15136 	Dressed to Kill 	tf_weapon_sniperrifle
+15154 	Airwolf 	tf_weapon_sniperrifle
+30665 	Shooting Star 	tf_weapon_sniperrifle
+Secondary [Slot 1]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+16 	SMG 	tf_weapon_smg
+203 	SMG (Renamed/Strange) 	tf_weapon_smg
+57 	The Razorback 	tf_wearable 		back
+58 	Jarate 	tf_weapon_jar
+231 	Darwin's Danger Shield 	tf_wearable 	The Croc-o-Style Kit* 	back
+642 	Cozy Camper 	tf_wearable 		back
+751 	The Cleaner's Carbine 	tf_weapon_smg 	The Urban Professional
+1083 	Festive Jarate 	tf_weapon_jar
+1105 	The Self-Aware Beauty Mark 	tf_weapon_jar
+1149 	Festive SMG 	tf_weapon_smg
+15001 	Woodsy Widowmaker 	tf_weapon_smg
+15022 	Plaid Potshotter 	tf_weapon_smg
+15032 	Treadplate Tormenter 	tf_weapon_smg
+15037 	Team Sprayer 	tf_weapon_smg
+15058 	Low Profile 	tf_weapon_smg
+15076 	Wildwood 	tf_weapon_smg
+15110 	Blue Mew 	tf_weapon_smg
+15134 	High Roller's 	tf_weapon_smg
+15153 	Blitzkrieg 	tf_weapon_smg
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+3 	Kukri 	tf_weapon_club
+193 	Kukri (Renamed/Strange) 	tf_weapon_club
+171 	The Tribalman's Shiv 	tf_weapon_club
+232 	The Bushwacka 	tf_weapon_club 	The Croc-o-Style Kit*
+264 	Frying Pan 	saxxy
+401 	The Shahanshah 	tf_weapon_club 	Lawrence of Australia
+423 	Saxxy 	saxxy
+474 	The Conscientious Objector 	saxxy
+880 	The Freedom Staff 	saxxy
+939 	The Bat Outta Hell 	saxxy
+954 	The Memory Maker 	saxxy
+1013 	The Ham Shank 	saxxy
+1071 	Gold Frying Pan 	saxxy
+1123 	The Necro Smasher 	saxxy
+1127 	The Crossing Guard 	saxxy
+30758 	Prinny Machete 	saxxy
+Spy
+Secondary [Slot 0]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+24 	Revolver 	tf_weapon_revolver
+210 	Revolver (Renamed/Strange) 	tf_weapon_revolver
+61 	The Ambassador 	tf_weapon_revolver
+161 	Big Kill 	tf_weapon_revolver
+224 	L'Etranger 	tf_weapon_revolver 	Saharan Spy*
+460 	The Enforcer 	tf_weapon_revolver 	The Man of Honor
+525 	The Diamondback 	tf_weapon_revolver
+1006 	Festive Ambassador 	tf_weapon_revolver
+1142 	Festive Revolver 	tf_weapon_revolver
+15011 	Psychedelic Slugger 	tf_weapon_revolver
+15027 	Old Country 	tf_weapon_revolver
+15042 	Mayor 	tf_weapon_revolver
+15051 	Dead Reckoner 	tf_weapon_revolver
+15062 	Boneyard 	tf_weapon_revolver
+15063 	Wildwood 	tf_weapon_revolver
+15064 	Macabre Web 	tf_weapon_revolver
+15103 	Flower Power 	tf_weapon_revolver
+15128 	Top Shelf 	tf_weapon_revolver
+15129 	Coffin Nail 	tf_weapon_revolver
+15149 	Blitzkrieg 	tf_weapon_revolver
+Building [Slot 1]
+
+Note: Labeled "PDA" in loadout
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+735 	Sapper 	tf_weapon_builder
+736 	Sapper (Renamed/Strange) 	tf_weapon_builder
+810 	The Red-Tape Recorder 	tf_weapon_sapper
+831 	The Red-Tape Recorder (Genuine) 	tf_weapon_sapper
+933 	The Ap-Sap (Genuine) 	tf_weapon_sapper
+1080 	Festive Sapper 	tf_weapon_sapper
+1102 	The Snack Attack 	tf_weapon_sapper
+Melee [Slot 2]
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+4 	Knife 	tf_weapon_knife
+194 	Knife (Renamed/Strange) 	tf_weapon_knife
+225 	Your Eternal Reward 	tf_weapon_knife 	Saharan Spy*
+356 	Conniver's Kunai 	tf_weapon_knife
+423 	Saxxy 	saxxy
+461 	The Big Earner 	tf_weapon_knife 	The Man of Honor
+574 	The Wanga Prick 	tf_weapon_knife
+638 	The Sharp Dresser 	tf_weapon_knife
+649 	The Spy-cicle 	tf_weapon_knife
+665 	Festive Knife 	tf_weapon_knife
+727 	The Black Rose 	tf_weapon_knife
+794 	Silver Botkiller Knife Mk.I 	tf_weapon_knife
+803 	Gold Botkiller Knife Mk.I 	tf_weapon_knife
+883 	Rust Botkiller Knife Mk.I 	tf_weapon_knife
+892 	Blood Botkiller Knife Mk.I 	tf_weapon_knife
+901 	Carbonado Botkiller Knife Mk.I 	tf_weapon_knife
+910 	Diamond Botkiller Knife Mk.I 	tf_weapon_knife
+959 	Silver Botkiller Knife Mk.II 	tf_weapon_knife
+968 	Gold Botkiller Knife Mk.II 	tf_weapon_knife
+1071 	Gold Frying Pan 	saxxy
+15062 	Boneyard 	tf_weapon_knife
+15094 	Blue Mew 	tf_weapon_knife
+15095 	Brain Candy 	tf_weapon_knife
+15096 	Stabbed to Hell 	tf_weapon_knife
+15118 	Dressed to Kill 	tf_weapon_knife
+15119 	Top Shelf 	tf_weapon_knife
+15143 	Blitzkrieg 	tf_weapon_knife
+15144 	Airwolf 	tf_weapon_knife
+30758 	Prinny Machete 	saxxy
+PDA (not in loadout) [Slot 3]
+
+Note: Not available if attribute 155 has been used on one of the weapons.
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+27 	Disguise Kit PDA 	tf_weapon_pda_spy
+PDA2 [Slot 4]
+
+Note: Labeled "PDA" in loadout
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+30 	Invis Watch 	tf_weapon_invis
+212 	Invis Watch (Renamed/Strange) 	tf_weapon_invis
+59 	The Dead Ringer 	tf_weapon_invis
+60 	The Cloak and Dagger 	tf_weapon_invis
+297 	Enthusiast's Timepiece 	tf_weapon_invis
+947 	The Quackenbirdt 	tf_weapon_invis
+Cosmetic
+
+These are wearables that go in the three Cosmetic slots.
+All cosmetic items are the tf_wearable class
+Scout
+Index 	Cosmetic 	Equip Regions 	Set
+52 	Batter's Helmet 	hat
+106 	Bonk Helm 	hat
+107 	Ye Olde Baker Boy 	hat
+111 	Baseball Bill's Sports Shine (Hatless Scout) 	hat
+150 	Troublemaker's Tossle Cap 	hat
+174 	Whoopee Cap 	hat
+219 	The Milkman 	hat 	Special Delivery*
+249 	Bombing Run 	hat
+324 	Flipped Trilby 	hat
+346 	The Superfan 	hat
+347 	The Essential Accessories 	arms, feet
+451 	Bonk Boy 	head_skin 	Bonk Fan
+453 	Hero's Tail 	hat
+454 	Sign of the Wolf's School 	necklace
+468 	Planeswalker Goggles 	glasses
+490 	Flip-Flops 	feet
+491 	Lucky No. 42 	back
+539 	The El Jefe 	hat
+540 	Ball-Kicking Boots 	feet
+614 	The Hot Dogger 	hat
+617 	The Backwards Ballcap 	hat
+630 	The Stereoscopic Shades 	glasses
+633 	The Hermes 	hat
+652 	The Big Elfin Deal 	hat 	Santa's Little Accomplice
+653 	The Bootie Time 	arms, feet 	Santa's Little Accomplice
+707 	The Boston Boom-Bringer 	scout_backpack
+722 	The Fast Learner 	scout_shirt
+734 	The Teufort Tooth Kicker 	feet
+760 	The Front Runner 	hat
+765 	The Cross-Comm Express 	hat
+780 	The Fed-Fightin' Fedora 	hat 	The Public Enemy
+781 	Dillinger's Duffel 	scout_backpack 	The Public Enemy
+788 	The Void Monk Hair 	hat
+814 	The Triad Trinket 	necklace
+815 	The Champ Stamp 	arm_tatoos
+835 	The Triad Trinket (Genuine) 	necklace
+836 	The Champ Stamp (Genuine) 	arm_tatoos
+846 	The Robot Running Man 	hat
+853 	The Crafty Hair 	hat
+924 	The Spooky Shoes 	shoes_socks
+925 	The Spooky Sleeves 	arms
+983 	The Digit Divulger 	scout_hands
+1012 	The Wilson Weave 	hat
+1016 	Buck Turner All-Stars 	feet, shoes, shoes_socks
+1026 	The Tomb Wrapper 	scout_bandages
+1032 	The Long Fall Loafers 	shoes_socks
+1040 	The Bacteria Blocker 	hat
+1057 	MvM GateBot Light Scout 	hat
+1075 	The Sack Fulla Smissmas 	scout_backpack
+30018 	The Bot Dogger 	hat
+30019 	Ye Oiled Baker Boy 	hat
+30027 	Bolt Boy 	head_skin
+30030 	Bonk Leadwear 	hat
+30059 	The Beastly Bonnet 	whole_head
+30060 	The Cheet Sheet 	shoes_socks
+30068 	The Breakneck Baggies 	scout_pants
+30076 	The Bigg Mann on Campus 	shirt
+30077 	The Cool Cat Cardigan 	shirt
+30078 	Greased Lightning 	hat
+30083 	The Caffeine Cooler 	scout_backpack
+30084 	The Half-Pipe Hurdler 	scout_backpack
+30085 	The Macho Mann 	glasses
+30134 	The Delinquent's Down Vest 	shirt
+30185 	The Flapjack 	shirt
+30320 	Chucklenuts 	left_shoulder
+30325 	The Little Drummer Mann 	shirt
+30326 	The Scout Shako 	hat
+30332 	Runner's Warm-up 	hat
+30376 	The Ticket Boy 	shirt
+30394 	The Frickin' Sweet Ninja Hood 	hat, beard 	The Wicked Good Ninja Pack
+30395 	The Southie Shinobi 	shirt, arm_tatoos 	The Wicked Good Ninja Pack
+30396 	The Red Socks 	feet 	The Wicked Good Ninja Pack
+30426 	The Paisley Pro 	shirt, arm_tatoos 	The Retro Rebel Pack
+30427 	The Argyle Ace 	feet 	The Retro Rebel Pack
+30428 	The Pomade Prince 	hat, headphones 	The Retro Rebel Pack
+30479 	Thirst Blood 	hat
+30540 	Brooklyn Booties 	feet
+30552 	Thermal Tracker 	shirt
+30561 	The Bootenkhamuns 	feet
+30564 	Orion's Belt 	feet
+30573 	Mountebank's Masque 	hat
+30574 	Courtier's Collar 	shirt
+30575 	Harlequin's Hooves 	feet
+30576 	Co-Pilot 	hat
+30636 	Fortunate Son 	hat
+30637 	Flak Jack 	shirt
+30661 	Cadet Visor 	glasses
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+546 	Wrap Battler 	hat 	The Curse-a-Nature
+547 	B-ankh! 	arms 	The Curse-a-Nature
+548 	Futankhamun 	feet 	The Curse-a-Nature
+5617 	Voodoo-Cursed Scout Soul 	zombie_body
+30200 	The Baphomet Trotters 	feet
+30207 	The Hound's Hood 	hat 	The Boston Bulldog
+30208 	The Terrier Trousers 	scout_pants, feet 	The Boston Bulldog
+30211 	The Horrific Head of Hate 	hat
+30231 	The Face Plante 	face
+30247 	Faun Feet 	feet
+30248 	The Halloweiner 	hat
+30253 	The Sprinting Cephalopod 	feet
+30470 	The Biomech Backpack 	back 	The Isolationist Pack
+30471 	The Alien Cranium 	hat 	The Isolationist Pack
+30472 	The Xeno Suit 	feet 	The Isolationist Pack
+30491 	Nugget Noggin 	whole_head, necklace 	The Deep-Fried Dummy
+30492 	Fowl Fists 	arms 	The Deep-Fried Dummy
+30493 	Talon Trotters 	feet 	The Deep-Fried Dummy
+30494 	Head Hunter 	hat, necklace 	The Rooftop Rebel
+30495 	Claws and Infect 	scout_hands 	The Rooftop Rebel
+30496 	Crazy Legs 	scout_pants, feet 	The Rooftop Rebel
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30153 	Scoutbot Armor 	shirt
+30154 	Scoutbot Hat 	hat
+Soldier
+Index 	Cosmetic 	Equip Regions 	Set
+54 	Soldier's Stash 	hat
+98 	Stainless Pot 	hat
+99 	Tyrant's Helm 	hat
+121 	Service Medal 	medal
+152 	Killer's Kabuto 	hat
+183 	Sergeant's Drill Hat 	hat
+227 	The Grenadier's Softcap 	hat 	Tank Buster*
+240 	Lumbricus Lid 	hat
+250 	Chieftain's Challenge 	hat
+251 	Stout Shako 	hat
+252 	Dr's Dapper Topper 	hat
+339 	Exquisite Rack 	hat
+340 	Defiant Spartan 	hat
+360 	Hero's Hachimaki 	hat
+378 	The Team Captain 	hat
+391 	Honcho's Headgear 	hat
+392 	Pocket Medic 	soldier_pocket
+395 	Furious Fukaamigasa 	hat
+417 	Jumper's Jeepcap 	hat 	Airborne Armaments
+434 	Brain Bucket 	hat
+439 	Lord Cockswain's Pith Helmet 	hat 	Dr. Grordbort's Victory Pack
+440 	Lord Cockswain's Novelty Mutton Chops and Pipe 	beard 	Dr. Grodbort's Victory Pack
+445 	Armored Authority 	hat 	The General's Formals
+446 	Fancy Dress Uniform 	shirt 	The General's Formals
+516 	Stahlhelm 	hat
+575 	The Infernal Impaler 	hat
+611 	The Salty Dog 	hat
+631 	The Hat With No Name 	hat
+641 	The Ornament Armament 	grenades
+647 	The All-Father 	beard
+650 	The Kringle Collection 	shirt
+701 	The Lucky Shot 	hat
+719 	The Battle Bob 	hat
+721 	The Conquistador 	hat
+731 	The Captain's Cocktails 	grenades 	The Dumpster Diver
+734 	The Teufort Tooth Kicker 	feet
+764 	The Cross-Comm Crash Helmet 	hat
+766 	The Doublecross-Comm 	hat
+768 	The Professor's Pineapple 	grenades
+732 	The Helmet Without a Name 	hat 	The Dumpster Diver
+829 	The War Pig 	hat
+844 	The Tin Pot 	hat
+852 	The Soldier's Stogie 	soldier_cigar
+853 	The Crafty Hair 	hat
+875 	The Menpo 	beard
+922 	The Bonedolier 	grenades
+945 	The Chief Constable 	hat
+948 	The Deadliest Duckling 	grenades
+980 	Soldier's Slope Scopers 	hat
+1021 	The Doe-Boy 	hat
+1063 	MvM GateBot Light Soldier 	hat
+1073 	The War on Smissmas Battle Hood 	hat
+1074 	The War on Smissmas Battle Socks 	grenades
+1090 	Big Daddy 	whole_head
+1091 	The First American 	whole_head
+1093 	The Gilded Guard 	hat
+30014 	Tyrantium Helmet 	hat
+30017 	Steel Shako 	hat
+30026 	Full Metal Drill Hat 	hat
+30033 	Soldier's Sparkplug 	soldier_cigar
+30071 	The Cloud Crasher 	hat
+30085 	The Macho Mann 	glasses
+30114 	The Valley Forge 	hat
+30115 	The Compatriot 	left_shoulder
+30116 	The Caribbean Conqueror 	hat
+30117 	The Colonial Clogs 	feet
+30118 	The Whirly Warrior 	whole_head
+30119 	The Federal Casemaker 	hat
+30120 	The Rebel Rouser 	hat
+30126 	The Shotgun's Shoulder Guard 	arms
+30129 	The Hornblower 	soldier_coat
+30130 	Lieutenant Bites 	soldier_pocket
+30131 	The Brawling Buccaneer 	soldier_coat
+30142 	The Founding Father 	shirt
+30164 	The Viking Braider 	beard
+30314 	The Slo-Poke 	hat
+30331 	Anarctic Parka 	soldier_coat
+30335 	Marshall's Mutton Chops 	face
+30338 	Ground Control 	shirt
+30339 	The Killer's Kit 	soldier_legs
+30388 	The Classified Coif 	soldier_coat 	The Federal Express Pack
+30390 	The Spook Specs 	hat 	The Federal Express Pack
+30392 	The Man in Slacks 	soldier_legs 	The Federal Express Pack
+30477 	The Lone Survivor 	beard
+30543 	Snow Stompers 	feet
+30548 	Screamin' Eagle 	hat
+30553 	Condor Cap 	hat
+30554 	Mistaken Movember 	beard
+30558 	Coldfront Curbstompers 	feet
+30578 	Skullcap 	hat
+30601 	Cold Snap Coat 	soldier_coat
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+555 	Idiot Box 	hat 	The Tin Soldier
+556 	Steel Pipes 	arms 	The Tin Soldier
+557 	Shoestring Budget 	feet 	The Tin Soldier
+926 	The Zipperface 	hat
+5618 	Voodoo-Cursed Soldier Soul 	zombie_body
+30221 	Grub Grenades 	grenades
+30227 	The Faux Manchu 	beard 	The Terracotta Trooper
+30228 	The Hidden Dragon 	hat 	The Terracotta Trooper
+30236 	Pin Pals 	grenades
+30239 	The Freedom Feathers 	whole_head
+30242 	The Candleer 	grenades
+30251 	Cadaver's Capper 	hat, glasses
+30264 	The Hardium Helm 	hat, glasses 	The Rocket Ranger
+30265 	The Jupiter Jumpers 	feet 	The Rocket Ranger
+30266 	The Space Bracers 	arms 	The Rocket Ranger
+30268 	The Spellbinder's Bonnet 	hat
+30276 	Lieutenant Bites the Dust 	soldier_pocket
+30281 	The Shaolin Sash 	soldier_pocket 	The Terracotta Trooper
+30294 	The Larval Lid 	hat
+30520 	Ghoul Gibbin' Gear 	grenades 	The Sgt. Helsing
+30521 	Hellhunter's Headpiece 	hat 	The Sgt. Helsing
+30522 	Supernatural Stalker 	face 	The Sgt. Helsing
+30520 	Battle Bird 	hat
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30157 	Soldierbot Armor 	hat
+30158 	Soldierbot Helmet 	hat
+Pyro
+Index 	Cosmetic 	Equip Regions 	Set
+51 	Pyro's Beanie 	hat
+102 	Respectless Rubber Glove 	hat
+105 	Brigade Helm 	hat
+151 	Triboniophorus Tyrannus 	hat
+182 	Vintage Merryweather 	hat
+175 	Whiskered Gentleman 	face, beard
+213 	The Attendant 	hat 	The Gas Jockey's Gear*
+247 	Old Guadalajara 	hat
+248 	Napper's Respite 	hat
+253 	Handyman's Handle 	hat
+316 	Pyromancer's Mask 	hat
+318 	Prancer's Pride 	hat
+321 	Madame Dixie 	hat
+335 	Foster's Facade 	pyro_head_replacement
+336 	Stockbroker's Scarf 	shirt
+377 	Hottie's Hoodie 	hat
+387 	Sight for Sore Eyes 	glasses, lenses
+394 	Connoisseur's Cap 	hat
+435 	Dead Cone 	hat
+481 	Stately Steel Toe 	hat
+570 	The Last Breath 	pyro_head_replacement
+571 	Apparition's Aspect 	pyro_head_replacement
+596 	The Moonman Backpack 	pyro_tank 	Dr. Grordbort's Moonman Pack
+597 	The Bubble Pipe 	hat 	Dr. Grordbort's Moonman Pack
+612 	The Little Buddy 	hat
+615 	The Birdcage 	hat
+627 	The Flamboyant Flamenco 	hat
+632 	The Cremator's Conscience 	grenades
+641 	The Ornament Armament 	grenades
+644 	The Head Warmer 	hat
+651 	The Jingle Belt 	grenades
+745 	The Infernal Orchestrina 	back
+746 	The Burning Bongoes 	grenades
+753 	The Waxy Wayfinder 	hat
+754 	The Scrap Pack 	back
+761 	The Triclops 	whole_head
+768 	The Professor's Pineapple 	grenades
+783 	The HazMat Headcase 	pyro_head_replacement
+787 	The Tribal Bones 	necklace
+820 	The Russian Rocketeer 	back
+842 	The Pyrobotics Pack 	back
+854 	Area 451 	hat
+856 	The Pyrotechnic Tote 	back
+922 	The Bonedolier 	grenades
+937 	The Wraith Wrap 	hat
+938 	The Coffin Kit 	back
+948 	The Deadliest Duckling 	grenades
+949 	The DethKapp 	hat
+950 	Nose Candy 	pyro_head_replacement
+951 	Rail Spikes 	pyro_spikes
+976 	Winter Wonderland Wrap 	pyro_head_replacement
+1020 	The Person in the Iron Mask 	pyro_head_replacement
+1031 	The Necronomicrown 	hat
+1038 	The Breather Bag 	pyro_head_replacement
+1058 	MvM GateBot Light Pyro 	hat
+1072 	The Portable Smissmas Spirit Dispenser 	back
+1124 	The Nabler 	pyro_head_replacement
+30020 	The Scrap Sack 	back
+30022 	Plumber's Pipe 	head
+30025 	The Electric Escorter 	head
+30028 	The Metal Slug 	head
+30032 	The Rusty Reaper 	pyro_head_replacement
+30036 	The Filamental 	pyro_head_replacement
+30038 	Firewall Helmet 	head
+30039 	Respectless Robo-Glove 	head
+30040 	Pyro's Boron Beanie 	head
+30053 	The Googol Glass Eyes 	glasses, lenses
+30057 	Bolted Birdcage 	head
+30062 	The Steel Sixpack 	grenades
+30063 	The Centurion 	hat
+30075 	The Mair Mask 	pyro_head_replacement
+30089 	El Muchacho 	shirt
+30090 	The Backpack Broiler 	back
+30091 	The Burning Bandana 	hat
+30092 	The Soot Suit 	shirt
+30093 	The Hive Minder 	hat
+30139 	The Pampered Pyro 	hat
+30162 	The Bone Dome 	hat
+30163 	The Air Raider 	pyro_head_replacement
+30169 	Trickster's Turnout Gear 	shirt
+30175 	The Cotton Head 	hat
+30176 	Pop-eyes 	lenses
+30304 	The Blizzard Breather 	pyro_head_replacement
+30305 	The Sub Zero Suit 	shirt
+30308 	The Trail-Blazer 	back
+30321 	Tiny Timber 	back
+30327 	The Toy Tailor 	hat
+30355 	Sole Mate 	hat
+30367 	The Cute Suit 	pyro_head_replacement
+30391 	The Sengoku Scorcher 	shirt, grenades 	The Ronin Roaster Pack
+30398 	The Gas Guzzler 	back 	The Sons of Arsonry Pack
+30399 	The Smoking Skid Lid 	hat 	The Sons of Arsonry Pack
+30400 	The Lunatic's Leathers 	shirt, grenades 	The Sons of Arsonry Pack
+30416 	Employee of the Mmmph 	hat 	The Fast Food Firestarter Pack
+30417 	The Frymaster 	back 	The Fast Food Firestarter Pack
+30418 	The Combustable Kabuto 	hat 	The Ronin Roaster Pack
+30475 	The Mishap Mercenary 	pyro_head_replacement
+30538 	Wartime Warmth 	pyro_head_replacement
+30544 	North Polar Fleece 	shirt
+30580 	Pyromancer's Hood 	hat
+30581 	Pyromancer's Raiments 	shirt
+30582 	Black Knight's Bascinet 	whole_head
+30583 	Torcher's Tabard 	shirt
+30584 	Charred Chainmail 	arms
+30652 	Phobos Filter 	pyro_head_replacement
+30662 	A Head Full of Hot Air 	hat
+30663 	Jupiter Jetpack 	back
+30664 	The Space Diver 	shirt
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+549 	Blazing Bull 	hat, lenses 	The Infernal Imp
+550 	Fallen Angel 	pyro_wings 	The Infernal Imp
+551 	Tail From the Crypt 	pyro_tail 	The Infernal Imp
+923 	The Plutonidome 	hat
+5624 	Voodoo-Cursed Pyro Soul 	zombie_body
+30191 	The Beast From Below 	pyro_head_replacement
+30192 	Hard-Headed Hardware 	pyro_head_replacement
+30194 	The Spectralnaut 	pyro_head_replacement
+30196 	The Maniac's Manacles 	pyro_spikes
+30203 	Burny's Boney Bonnet 	hat 	Burny The Pyrosaur
+30204 	The Crispy Golden Locks 	hat 	Malice in Pyroland
+30205 	The Scorched Skirt 	shirt 	Malice in Pyroland
+30212 	The Snaggletoothed Stetson 	hat
+30213 	Up Pyroscopes 	glasses
+30216 	The External Organ 	back
+30218 	The Rugged Respirator 	pyro_head_replacement
+30220 	The Hallowhead 	pyro_head_replacement
+30222 	The Gothic Guise 	whole_head, pyro_head_replacement
+30225 	The Cauterizer's Caudal Appendage 	pyro_tail 	Burny The Pyrosaur
+30235 	The Muccus Membrain 	hat, pyro_head_replacement
+30236 	Pin Pals 	grenades
+30242 	The Candleer 	grenades
+30245 	Bozo's Bouffant 	hat
+30257 	The Death Support Pack 	grenades
+30259 	The Monster's Stompers 	feet 	Burny The Pyrosaur
+30267 	The Handhunter 	back
+30269 	The Macabre Mask 	whole_head, pyro_head_replacement
+30273 	The Vicious Visage 	pyro_head_replacement 	The Murky Lurker
+30277 	The Grisly Gumbo 	back
+30285 	Corpsemopolitan 	hat, pyro_head_replacement
+30286 	The Glob 	pyro_head_replacement
+30288 	Carrion Companion 	left_shoulder
+30290 	PY-40 Incinibot 	pyro_head_replacement
+30296 	The Creature From The Heap 	back
+30298 	The Raven's Visage 	face
+30303 	The Abhorrent Appendages 	arms 	The Murky Lurker
+30525 	Creature's Grin 	pyro_head_replacement
+30526 	Arsonist Apparatus 	arms 	The Automated Abnormality
+30527 	Moccasin Machinery 	feet 	The Automated Abnormality
+30528 	Lollichop Licker 	pyro_head_replacement
+30529 	Mr. Juice 	pyro_head_replacement
+30530 	Vampyro 	pyro_head_replacement
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30151 	Pyrobot Armor 	shirt
+30152 	Pyrobot Helmet 	hat
+Demoman
+Index 	Cosmetic 	Equip Regions 	Set
+47 	Demoman's 'Fro 	hat
+100 	Glengarry Bonnet 	hat
+120 	Scottsman's Stove Pipe 	hat
+146 	Hustler's Hallmark 	hat
+179 	Tippler's Tricorne 	hat
+216 	Rimmed Raincatcher 	hat
+255 	Sober Stuntman 	hat
+259 	Carouser's Capotain 	hat
+295 	Dangeresque, Too?! 	glasses
+306 	Scotch Bonnet 	hat
+342 	Prince Tavish's Crown 	hat
+359 	Samur-Eye 	hat
+388 	Private Eye 	hat
+390 	Reggaelator 	hat
+403 	Sultan's Ceremonial 	hat 	One Thousand and One Demoknights
+465 	Conjurer's Cowl 	hat
+480 	Tam O'Shanter 	hat
+514 	Mask of the Shaman 	whole_head
+605 	The Tavish DeGroot Experience 	hat
+607 	The Buccaneer's Bicorne 	hat 	Swashbuckler's Swag
+610 	A Whiff of the Old Brimstone 	grenades 	Swashbuckler's Swag
+641 	The Ornament Armament 	grenades
+703 	The Bolgan 	hat
+708 	Aladdin's Private Reserve 	demo_belt
+709 	The Snapped Pupil 	glasses
+734 	The Teufort Tooth Kicker 	feet
+768 	The Professor's Pineapple 	grenades
+771 	The Liquor Locker 	back, possibly style dependent
+776 	The Bird-Man of Aberdeen 	left_shoulder
+786 	The Grenadier Helm 	hat
+830 	The Bearded Bombardier 	face
+845 	The Battery Bandolier 	grenades
+874 	King of Scotland Cape 	back
+875 	The Menpo 	beard
+876 	The K-9 Mane 	hat
+922 	The Bonedolier 	grenades
+935 	The Voodoo Juju (Slight Return) 	hat
+948 	The Deadliest Duckling 	grenades
+976 	The Cool Breeze 	demoman_pants
+986 	The Mutton Mann 	beard
+1012 	The Wilson Weave 	hat
+1016 	Buck Turner All-Stars 	feet, shoes, shoes_socks
+1019 	Blind Justice 	demo_mustache_eyepatch
+1061 	MvM GateBot Light Demoman 	hat
+30010 	The HDMI Patch 	glasses
+30011 	Bolted Bombardier 	face
+30016 	The FR-0 	hat
+30021 	The Pure Tin Capotain 	hat
+30024 	The Cyborg Stunt Helmet 	hat
+30029 	The Broadband Bonnet 	hat
+30034 	The Bolted Bicorne 	hat
+30037 	The Strontium Stovepipe 	hat
+30055 	The Scrumpy Strongbox 	back
+30061 	The Tartantaloons 	demoman_pants
+30064 	The Tartan Shade 	whole_head
+30073 	The Dark Age Defender 	left_shoulder
+30082 	The Glasgow Great Helm 	hat
+30085 	The Macho Mann 	glasses
+30105 	The Black Watch 	hat
+30106 	The Tartan Spartan 	hat
+30107 	The Gaelic Golf Bag 	back
+30110 	The Whiskey Bib 	shirt
+30112 	The Stormin' Norman 	hat
+30124 	The Gaelic Garb 	shirt
+30179 	The Hurt Locher 	shirt
+30180 	Pirate Bandana 	hat
+30333 	Highland High Heels 	feet
+30334 	Tartan Tyrolean 	hat
+30340 	Stylish Degroot 	head_skin
+30348 	Bushi-Dou 	shirt
+30357 	The Dark Falkirk Helm 	hat
+30358 	The Sole Saviors 	feet
+30363 	The Juggernaut Jacket 	left_shoulder
+30366 	The Sangu Sleeves 	demo_arms
+30393 	The Razor Cut 	hat
+30421 	The Frontier Djustice 	hat
+30429 	The Allbrero 	hat 	The South of the Border Pack
+30430 	Seeing Double 	glasses 	The South of the Border Pack
+30431 	Six Pack Abs 	grenades 	The South of the Border Pack
+30480 	Mann of the Seven Seas 	demo_arms
+30541 	Double Dynamite 	grenades
+30547 	Bomber's Bucket Hat 	hat
+30555 	Double Dog Dare Demo Pants 	pants
+30586 	Valhalla Helm 	hat
+30587 	Storm Stompers 	feet
+30604 	Scot Bonnet 	hat
+30627 	Bruce's Bonnet 	hat
+30628 	Outta' Sight 	hat
+30658 	Universal Translator 	hat
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+543 	Hair of the Dog 	hat 	The Highland Hound
+544 	Scottish Snarl 	face 	The Highland Hound
+545 	Pickled Paws 	feet 	The Highland Hound
+5620 	Voodoo-Cursed Demoman Soul 	zombie_body
+30193 	Cap'n Calamari 	face, beard 	The Cursed Captain
+30195 	Ethereal Hood 	whole_head
+30200 	The Baphomet Trotters 	feet
+30219 	The Squid's Lid 	hat 	The Cursed Captain
+30226 	Polly Putrid 	left_shoulder
+30240 	The Headtaker's Hood 	whole_head
+30241 	The Transylvania Top 	hat 	The Count Tavish
+30242 	The Candleer 	grenades
+30243 	The Horsemann's Hand-Me-Down 	back
+30249 	Lordly Lapels 	demoman_collar 	The Count Tavish
+30282 	The Mann-Bird of Aberdeen 	whole_head
+30292 	The Parasight 	face
+30516 	Forgotten King's Restless Head 	whole_head 	The Forgotten King
+30517 	Forgotten King's Pauldrons 	demoman_collar 	The Forgotten King
+30518 	Eyeborg 	glasses
+30519 	Explosive Mind 	hat
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30143 	Demobot Armor 	shirt
+30144 	Demobot Helmet 	hat
+30161 	Sentrybuster (Total War) 	shirt
+Heavy
+Index 	Cosmetic 	Equip Regions 	Set
+49 	Football Helmet 	hat
+96 	Officer's Ushanka 	hat
+97 	Tough Guy's Toque 	hat
+145 	Hound Dog 	hat
+185 	Heavy Duty Rag 	hat
+246 	Pugilist's Protector 	hat
+254 	Hard Counter 	hat
+290 	Cadaver's Cranium 	hat
+292 	Poker Visor 	hat
+309 	Big Chief 	hat
+313 	Magnificent Mongolian 	hat
+330 	Coupe D'isaster 	hat
+358 	Dread Knot 	hat
+378 	The Team Captain 	hat
+380 	Large Luchadore 	head_skin
+392 	Pocket Medic 	heavy_pocket
+427 	Capo's Capper 	hat 	Black Market Business
+478 	Copper's Hard Top 	hat
+479 	Security Shades 	glasses
+485 	Big Steel Jaw of Summer Fun 	beard
+515 	Pilotka 	hat
+517 	Dragonborn Helmet 	hat, face
+524 	The Purity Fist 	arms
+535 	Storm Spirit's Jolly Hat 	hat
+585 	Cold War Luchador 	head_skin
+601 	The One-Man Army 	hat
+603 	The Outdoorsman 	hat
+613 	The Gym Rat 	hat
+635 	War Head 	hat, ears
+643 	The Sandvich Safe 	heavy_hip
+647 	The All-Father 	beard
+757 	The Toss-Proof Towel 	shirt
+777 	The Apparatchik's Apparel 	scout_or_heavy_shirt
+814 	The Triad Trinket 	necklace
+815 	The Champ Stamp 	arm_tatoos
+835 	The Triad Trinket (Genuine) 	necklace
+836 	The Champ Stamp (Genuine) 	arm_tatoos
+840 	The U-clank-a 	head
+853 	The Crafty Hair 	hat
+866 	The Heavy Artillery Officer's Cap 	hat
+876 	The K-9 Mane 	hat
+946 	The Siberian Sophisticate 	scout_or_heavy_shirt
+952 	Brock's Locks 	hat
+985 	Heavy's Hockey Hair 	heavy_mullet
+989 	The Carl 	hat
+990 	Aqua Flops 	feet
+991 	The Hunger Force 	scout_or_heavy_shirt, necklace
+1012 	The Wilson Weave 	hat
+1018 	The Pounding Father 	hat
+1028 	The Samson Skewer 	heavy_belt_back
+1060 	MvM GateBot Light Heavy 	hat
+1097 	The Little Bear 	heavy_hip_pouch
+30012 	The Titanium Towel 	shirt
+30013 	The Gridiron Guardian 	hat
+30049 	The Tungsten Toque 	hat
+30054 	The Bunsen Brave 	hat
+30074 	The Tyrutleneck 	shirt
+30079 	The Red Army Robin 	left_shoulder
+30080 	The Heavy-Weight Champ 	heavy_hip
+30081 	The Tsarboosh 	hat
+30085 	The Macho Mann 	glasses
+30094 	The Katyusha 	hat
+30108 	The Borscht Belt 	heavy_bullets
+30122 	The Bear Necessities 	hat
+30138 	The Bolshevik Biker 	shirt
+30141 	The Gabe Glasses 	glasses
+30164 	The Viking Braider 	beard
+30165 	The Cuban Bristle Crisis 	beard
+30178 	Weight Room Warmer 	shirt
+30306 	The Dictator 	beard
+30315 	Minnesota Slick 	hat
+30319 	The Mann of the House 	belt_misc
+30342 	The Heavy Lifter 	shirt
+30343 	Gone Commando 	heavy_hip
+30344 	Bullet Buzz 	hat
+30345 	The Leftover Trap 	beard
+30346 	The Trash Man 	hat
+30354 	The Rat Stompers 	feet
+30364 	The Warmth Preserver 	shirt
+30368 	The War Goggles 	glasses
+30369 	The Eliminators Safeguard 	hat
+30372 	Combat Slacks 	heavy_hip
+30374 	The Sammy Cap 	head
+30401 	Yuri's Revenge 	beard
+30413 	The Merc's Mohawk 	hat
+30482 	The Unshaved Bear 	beard
+30545 	Fur-lined Fighter 	hat
+30556 	Sleeveless in Siberia 	shirt
+30557 	Hunter Heavy 	shirt
+30563 	Jungle Booty 	pants
+30588 	Siberian Facehugger 	hat
+30589 	Old Man Frost 	hat
+30633 	Comissar's Coat 	shirt
+30644 	White Russian 	hat
+30645 	El Duderino 	beard
+30653 	Sucker Slug 	hat
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+561 	Can Opener 	hat 	The FrankenHeavy
+562 	Soviet Stitch-Up 	arms 	The FrankenHeavy
+563 	Steel-Toed Stompers 	feet 	The FrankenHeavy
+930 	The Grand Duchess Tutu 	heavy_hip 	The Grand Duchess
+931 	The Grand Duchess Fairy Wings 	back 	The Grand Duchess
+932 	The Grand Duchess Tiara 	hat 	The Grand Duchess
+5619 	Voodoo-Cursed Heavy Soul 	zombie_body
+30199 	The Last Bite 	heavy_belt_back
+30217 	Ivan The Inedible 	head_skin
+30238 	Chicken Kiev 	whole_head
+30275 	The Horned Honcho 	hat
+30280 	The Monstrous Mandible 	head_skin, beard
+30531 	Bone-Cut Belt 	left_shoulder, shirt 	The Minsk Beast
+30532 	Bull Locks 	beard 	The Minsk Beast
+30533 	Minsk Beef 	hat 	The Minsk Beast
+30534 	Immobile Suit 	shirt
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30147 	Heavybot Armor 	shirt
+30148 	Heavybot Helmet 	hat
+Engineer
+Index 	Cosmetic 	Equip Regions 	Set
+48 	Mining Light 	hat
+94 	Texas Ten Gallon 	hat
+95 	Engineer's Cap 	hat
+118 	Texas Slim's Dome Shine (Hatless Engineer) 	hat
+148 	Hotrod 	hat
+178 	Safe'n'Sound 	hat
+322 	Buckaroo's Hat 	hat
+338 	Industrial Festivizer 	hat
+379 	Western Wear 	hat
+382 	Big Country 	hat
+384 	Professor's Peculiarity 	hat, glasses
+386 	Teddy Roosebelt 	engineer_pocket
+389 	Googly Gazer 	glasses
+399 	Ol' Geezer 	hat
+436 	Hetman's Headpiece 	hat
+484 	Prarie Heel Biters 	feet
+519 	Pip-Boy 	engineer_left_arm
+520 	Wingstick 	engineer_belt
+533 	Clockwerk's Helm 	hat
+590 	The Brainiac Hairpiece 	beard 	Dr. Grordbort's Braniac Pack
+591 	The Brainiac Goggles 	glasses 	Dr. Grordbort's Braniac Pack
+605 	The Pencil Pusher 	hat
+606 	The Builder's Blueprints 	engineer_pocket
+628 	The Virtual Reality Headset 	hat
+646 	The Itsy Bitsy Spyer 	engineer_pocket
+670 	The Stocking Stuffer 	engineer_pocket
+734 	The Teufort Tooth Kicker 	feet
+755 	The Texas Half-Pants 	engineer_pants
+784 	The Idea Tube 	back
+814 	The Triad Trinket 	necklace
+815 	The Champ Stamp 	arm_tatoos
+835 	The Triad Trinket (Genuine) 	necklace
+836 	The Champ Stamp (Genuine) 	arm_tatoos
+848 	The Tin-1000 	hat
+853 	The Crafty Hair 	hat
+948 	The Deadliest Duckling 	engineer_pocket
+986 	The Mutton Mann 	beard
+988 	The Barnstormer 	hat
+1008 	The Prize Plushy 	engineer_pocket
+1009 	The Grizzled Growth 	beard
+1010 	The Last Straw 	hat
+1012 	The Wilson Weave 	hat
+1017 	Vox Diabolus 	hat
+1065 	MvM GateBot Light Engineer 	hat
+1089 	Mister Bubbles 	engineer_pocket
+30023 	Teddy Robobelt 	engineer_pocket
+30031 	The Plug-in Prospector 	hat
+30035 	The Timeless Topper 	hat
+30044 	Texas Tin-Gallon 	hat
+30051 	The Data Mining Light 	hat
+30056 	The Dual-Core Devil Doll 	engineer_pocket
+30070 	The Pocket Pyro 	engineer_pocket
+30085 	The Macho Mann 	glasses
+30086 	The Trash Toter 	shirt
+30087 	The Dry Gulch Gulp 	engineer_pocket
+30099 	The Pardner's Pompadour 	hat
+30113 	The Flared Frontiersman 	engineer_pants
+30164 	The Viking Braider 	beard
+30167 	The Beep Boy 	engineer_belt
+30168 	The Special Eyes 	glasses
+30172 	The Gold Digger 	beard
+30322 	Face Full of Festive 	beard
+30330 	The Dogfighter 	shirt
+30336 	The Trencher's Topper 	hat
+30337 	The Trencher's Tunic 	shirt
+30341 	Ein 	left_shoulder
+30347 	The Scotch Saver 	beard
+30377 	The Antarctic Researcher 	shirt
+30402 	The Tools of the Trade 	belt_misc 	The Builder's Basics Kit
+30403 	The Joe-on-the-Go 	back 	The Builder's Basics Kit
+30406 	The Peacenik's Ponytail 	hat
+30407 	The Level Three Chin 	beard 	The Texas Tech-hand
+30408 	The Egghead's Overalls 	shirt 	The Texas Tech-hand
+30409 	The Lonesome Loafers 	feet 	The Texas Tech-hand
+30412 	The Endothermic Exowear 	shirt
+30413 	The Merc's Mohawk 	hat
+30420 	The Danger 	hat, glasses
+30481 	Hillbilly Speed Bump 	engineer_pocket
+30539 	Insulated Inventor 	shirt
+30590 	Holstered Heaters 	shirt
+30591 	Cop Caller 	engineer_pocket
+30592 	Conagher's Combover 	hat
+30593 	Clubsy the Seal 	engineer_pocket
+30605 	Thermal Insulation Layer 	shirt
+30629 	Support Spurs 	feetsupport
+30634 	Sheriff's Stetson 	hat
+30635 	Wild West Waistcoat 	shirt
+30654 	Life Support System 	engineer_pocket
+30655 	Rocket Operator 	shirt
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+567 	Buzz Killer 	whole_head 	The Brundle Bundle
+568 	Frontier Flyboy 	engineer_wings 	The Brundle Bundle
+569 	Legend of Bugfoot 	feet 	The Brundle Bundle
+5621 	Voodoo-Cursed Engineer Soul 	zombie_body
+918 	The Master Mind 	hat
+30212 	The Snaggletoothed Stetson 	hat
+30223 	The Grease Monkey 	face
+30508 	Iron Fist 	engineer_left_arm
+30509 	Beep Man 	whole_head, shirt
+30510 	Soul of 'Spenser's Past 	disconnected_floating_item
+30511 	Tiny Texan 	hat
+30523 	Garden Bristles 	beard
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30145 	Engineerbot Armor 	shirt
+30146 	Engineerbot Helmet 	hat
+Medic
+Index 	Cosmetic 	Equip Regions 	Set
+50 	Prussian Pickelhaube 	hat
+101 	Vintage Tyrolean 	hat
+104 	Otolaryngologist's Mirror 	hat
+144 	Physician's Procedure Mask 	face
+177 	Ze Goggles 	hat
+184 	Gentleman's Gatsby 	hat
+303 	Berliner's Bucket Helm 	hat, face
+315 	Blighted Beak 	face
+323 	German Gonzila 	hat
+363 	Geisha Boy 	hat
+378 	The Team Captain 	hat
+381 	Medic's Mountain Cap 	hat
+383 	Grimm Hatte 	hat
+388 	Private Eye 	hat 	Eliminating The Impossible
+398 	Doctor's Sack 	hat
+467 	Planeswalker Helm 	hat
+616 	The Surgeon's Stahlhelm 	hat
+620 	Couvre Corner 	medic_pocket
+621 	The Surgeon's Stethoscope 	necklace
+639 	Dr. Whoa 	necklace, shirt
+657 	The Nine-Pipe Problem 	medic_pipe 	Eliminating The Impossible
+754 	The Scrap Pack 	back
+769 	The Quadwranlger 	medic_gloves
+770 	The Surgeon's Side Satchel 	medic_hip
+778 	The Gentlemen's Ushanka 	hat
+828 	Archimedes 	left_shoulder
+843 	The Medic Mech-bag 	back
+853 	The Crafty Hair 	hat
+867 	The Combat Medic's Crusher Cap 	hat
+878 	The Foppish Physician 	shirt
+978 	Der Wintermantel 	shirt
+982 	Doc's Holiday 	shirt
+986 	The Mutton Mann 	beard
+1012 	The Wilson Weave 	hat
+1039 	The Weather Master 	hat
+1059 	MvM GateBot Light Medic 	hat
+30041 	Halogen Head Lamp 	hat
+30042 	Platinum Pickelhaube 	hat
+30043 	The Virus Doctor 	hat
+30045 	Titanium Tyrolean 	hat
+30046 	Practitioner's Processing Mask 	face
+30048 	Mecha-Medes 	left_shoulder
+30052 	The Byte'd Beak 	face
+30069 	The Powdered Practitioner 	hat
+30085 	The Macho Mann 	glasses
+30095 	Das Hazmattenhatten 	face
+30096 	Das Feelinbeterbager 	medic_hip
+30097 	Das Ubersternmann 	hat
+30098 	Das Metalmeatencasen 	shirt
+30109 	Das Naggenvatcher 	hat
+30121 	Das Maddendoktor 	hat
+30127 	Das Gutenkutteharen 	hat
+30136 	Baron von Havenaplane 	hat
+30137 	Das Fantzipantzen 	shirt
+30171 	The Medical Mystery 	shirt
+30186 	A Brush with Death 	beard
+30187 	The Slick Cut 	hat
+30190 	The Ward 	shirt
+30311 	The Nunhood 	hat
+30312 	The Angel of Death 	hat
+30318 	The Mann of Reason 	hat
+30323 	The Ruffled Ruprecht 	beard
+30349 	The Fashionable Megalomaniac 	beard
+30350 	The Dough Puncher 	shirt
+30351 	The Teutonic Toque 	hat
+30352 	The Mustachioed Mann 	face
+30356 	The Heat of Winter 	shirt
+30361 	The Colonel's Coat 	shirt
+30365 	The Smock Surgeon 	shirt
+30378 	Heer's Helm 	hat
+30379 	The Gaiter Guards 	feet
+30410 	Ze Ubermensch 	face
+30415 	The Medicine Manpurse 	medic_hip
+30419 	The Chronoscarf 	necklace
+30483 	Pocket Heavy 	medal
+30595 	Unknown Mann 	face
+30596 	Surgeon's Shako 	hat
+30625 	The Physician's Protector 	hat
+30626 	The Vascular Vestment 	shirt
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+552 	Einstein 	hat 	The Mad Doktor
+553 	Dr. Googlestache 	face 	The Mad Doktor
+554 	Emerald Jarate 	medigun_accessories 	The Mad Doktor
+5622 	Voodoo-Cursed Medic Soul 	zombie_body
+30197 	The Second Opinion 	head_skin
+30224 	The Alternative Medicine Man 	hat, face
+30229 	The Lo-Grav Loafers 	feet 	Doctor Galactic
+30230 	The Surgeon's Space Suit 	shirt 	Doctor Galactic
+30232 	Das Blutliebhaber 	glasses
+30233 	The Trepanabotomizer 	hat
+30237 	Medimedes 	whole_head
+30263 	The Vicar's Vestments 	shirt
+30270 	The Shaman's Skull 	hat
+30279 	Archimedes the Undying 	left_shoulder
+30293 	Teutonkahmun 	hat, beard 	The Sun King
+30299 	Ramses' Regalia 	shirt, arms 	The Sun King
+30486 	Herzensbrecher 	medic_hip, shirt 	Canis Ex Machina
+30487 	Hundekopf 	whole_head 	Canis Ex Machina
+30488 	Kriegsmaschine-9000 	arms 	Canis Ex Machina
+30489 	Transylvania Toupe 	hat 	Dr. Acula
+30490 	Vampiric Vesture 	shirt 	Dr. Acula
+30514 	Templar's Spirit 	whole_head 	The Templar
+30515 	Wings of Purity 	back 	The Templar
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30149 	Medicbot Chariot 	feet
+30150 	Medicbot Hat 	hat
+Sniper
+Index 	Cosmetic 	Equip Regions 	Set
+53 	Trophy Belt 	hat
+109 	Professional's Panama 	hat
+110 	Master's Yellow Belt 	sniper_headband
+117 	Ritzy Rick's Hair Fixative (Hatless Sniper) 	hat
+158 	Shooter's Sola Topi 	hat
+181 	Bloke's Bucket Hat 	hat
+229 	Ol' Snaggletooth 	hat 	The Croc-o-Style Kit*
+314 	Larrikin Robin 	hat
+344 	Crocleather Slouch 	hat
+393 	Villain's Veil 	beard
+400 	Desert Maurader 	hat 	Lawrence of Australia
+518 	The Anger 	hat, beard
+534 	Sniper's Snipin' Glass 	glasses
+600 	Your Worst Nightmare 	hat
+618 	The Crocodile Smile 	necklace
+626 	The Swagman's Swatter 	hat
+645 	The Outback Intellectual 	shirt
+646 	The Itsy Bitsy Spyer 	sniper_pocket
+720 	The Bushman's Boonie 	hat
+734 	The Teufort Tooth Kicker 	feet
+759 	The Fruit Shoot 	hat 	Dual-Purpose Fruit
+762 	Flamingo Kid 	hat
+779 	Liquidator's Lid 	hat 	The Urban Professional
+814 	The Triad Trinket 	necklace
+815 	The Champ Stamp 	arm_tatoos
+819 	The Lone Star 	hat
+835 	The Triad Trinket (Genuine) 	necklace
+836 	The Champ Stamp (Genuine) 	arm_tatoos
+847 	The Bolted Bushman 	hat
+877 	The Stovepipe Sniper Shako 	hat
+917 	Sir Hootsalot 	left_shoulder
+948 	The Deadliest Duckling 	sniper_pocket
+981 	The Cold Killer 	hat
+986 	The Mutton Mann 	beard
+1022 	The Sydney Straw Boat 	hat
+1023 	The Steel Songbird 	left_shoulder
+1029 	The Bloodhound 	hat
+1062 	MvM GateBot Light Sniper 	hat
+1076 	The Smissmas Caribou 	hat
+1077 	Randolph the Blood-Nosed Caribou 	hat
+1094 	The Criminal Cloak 	sniper_vest
+1095 	The Dread Riding Hood 	hat, beard
+30002 	Letch's LED 	hat
+30004 	Soldered Sensei 	hat
+30004 	Shooter's Tin Topi 	hat
+30056 	The Dual-Core Devil Doll 	sniper_pocket
+30067 	The Well-Rounded Rifleman 	hat
+30085 	The Macho Mann 	glasses
+30100 	The Birdman of Australiacatraz 	shirt
+30101 	The Cobber Chameleon 	left_shoulder
+30103 	The Falconer 	arms
+30135 	Wet Works 	hat
+30170 	The Chronomancer 	shirt
+30173 	Brim-Full Of Bullets 	hat
+30181 	Li'l Snaggletooth 	sniper_pocket
+30310 	The Snow Scoper 	shirt
+30316 	The Toy Soldier 	hat
+30317 	The Five-Month Shadow 	beard
+30324 	The Golden Garment 	shirt
+30328 	The Extra Layer 	shirt
+30359 	The Huntman's Essentials 	sniper_quiver
+30371 	The Archers Groundings 	feet
+30373 	The Toowoomba Tunic 	shirt
+30375 	The Deep Cover Operator 	hat
+30423 	The Scoper's Smoke 	beard 	The Straight Shooter Pack
+30424 	The Triggerman's Tacticals 	sniper_legs 	The Straight Shooter Pack
+30478 	Poacher's Safari Jacket 	sniper_vest
+30481 	Hillbilly Speed Bump 	sniper_pocket
+30597 	Bushman's Bristles 	beard
+30598 	Professional's Ushanka 	hat
+30599 	Marksman's Mohair 	sniper_vest
+30600 	Wally Pocket 	sniper_pocket
+30629 	Support Spurs 	feet
+30648 	Corona Australis 	whole_head
+30649 	Final Fontiersman 	feet
+30650 	Starduster 	sniper_vest
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+564 	Holy Hunter 	hat 	The Camper Van Helsing
+565 	Silver Bullets 	necklace, sniper_bullets 	The Camper Van Helsing
+566 	Garlic Flank Stake 	sniper_legs 	The Camper Van Helsing
+5625 	Voodoo-Cursed Sniper Soul 	zombie_body
+30212 	The Snaggletoothed Stetson 	hat
+30284 	Sir Shootsalot 	whole_head
+30258 	The Carious Chameleon 	left_shoulder
+30287 	The Hallowed Headcase 	hat, face
+30499 	Conspiratorial Cut 	head_skin 	The Reptiloid
+30500 	Skinless Slashers 	arms 	The Reptiloid
+30501 	Marsupial Man 	hat
+30502 	Kanga Kickers 	feet 	The Manngaroo
+30503 	Roo Rippers 	arms 	The Manngaroo
+30504 	Marsupial Muzzle 	whole_head 	The Manngaroo
+30513 	Mr. Mundee's Wild Ride 	sniper_legs
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30155 	Sniperbot Armor 	shirt
+30156 	Sniperbot Helmet 	hat
+Spy
+Index 	Cosmetic 	Equip Regions 	Set
+55 	Fancy Fedora 	hat
+103 	Camera Beard 	beard
+108 	Backbiter's Billycock 	hat
+147 	Magistrate's Mullet 	hat
+180 	Frenchman's Beret 	hat
+223 	The Familiar Fez 	hat, glasses 	Saharan Spy*
+319 	Detective Noir 	hat
+337 	Le Party Phantom 	head_skin
+361 	Noh Mercy 	hat
+388 	Private Eye 	hat
+397 	Charmer's Chapeau 	hat
+437 	Janissary Ketche 	hat
+459 	Cosa Nostra Cap 	hat 	The Man of Honor
+462 	The Made Man 	medal 	The Man of Honor
+483 	Rogue's Col Roule 	shirt
+521 	Nanobalaclava 	hat
+602 	The Counterfeit Billycock 	hat
+622 	L'Inspecteur 	hat
+629 	The Spectre's Spectacles 	glasses
+637 	The Dashin' Hashshashin 	hat, shirt
+639 	Dr. Whoa 	necklace, shirt
+763 	The Sneaky Spats of Sneaking 	feet
+782 	The Business Casual 	shirt
+789 	The Ninja Cowl 	hat
+814 	The Triad Trinket 	necklace
+835 	The Triad Trinket (Genuine) 	necklace
+841 	The Stealth Steeler 	hat
+872 	The Lacking Moral Fiber Mask 	hat
+879 	The Distinguished Rogue 	shirt
+919 	The Scarecrow 	face
+936 	The Exorcizor 	shirt
+977 	The Cut-Throat Concierge 	shirt
+1029 	The Bloodhound 	hat
+1030 	The Dapper Disguise 	face
+1064 	MvM GateBot Light Spy 	hat
+30007 	Base Metal Billycock 	hat
+30009 	The Megapixel Beard 	beard
+30047 	Bootleg Base Metal Billycock 	hat
+30072 	The Pom-Pommed Provocateur 	hat
+30085 	The Macho Mann 	glasses
+30123 	The Harmburg 	hat
+30125 	The Rogue's Brogues 	feet
+30132 	The Blood Banker 	shirt
+30133 	The After Dark 	shirt
+30128 	The Belgian Detective 	hat
+30182 	L'homme Burglerre 	hat
+30183 	Escapist 	shirt
+30189 	The Frenchman's Formals 	shirt
+30309 	Dead of Night 	shirt
+30353 	The Backstabber's Boomslang 	left_shoulder
+30360 	The Napolean Complex 	hat
+30375 	The Deep Cover Operator 	hat
+30389 	The Rogue's Robe 	shirt
+30404 	The Aviator Assassin 	hat 	The Automatic Pilot Pack
+30405 	The Sky Captain 	shirt 	The Automatic Pilot Pack
+30411 	The Au Courant Assassin 	shirt
+30467 	The Spycrab 	left_shoulder
+30476 	The Lady Killer 	shirt
+30602 	Puffy Provocateur 	shirt
+30603 	Stealthy Scarf 	shirt
+30606 	Pocket Momma 	medal
+30631 	Lurker's Leathers 	shirt
+30651 	The Graylien 	head_skin
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+558 	Under Cover 	hat 	The Invisible Rogue
+559 	Griffin's Gog 	glasses 	The Invisible Rogue
+560 	Intangible Ascot 	shirt 	The Invisible Rogue
+5623 	Voodoo-Cursed Spy Soul 	zombie_body
+30195 	Ethereal Hood 	whole_head
+30256 	The Hyperbaric Bowler 	hat
+30260 	The Bountiful Bow 	shirt 	The Gravelpit Emperor
+30261 	The Candyman's Cap 	hat 	The Gravelpit Emperor
+30283 	The Foul Cowl 	back
+30301 	Bozo's Brogues 	feet 	The Gravelpit Emperor
+30505 	Shadowman's Shade 	hat
+30506 	Nightmare Hunter 	hat
+30507 	Rogue's Rabbit 	hat
+30512 	Facepeeler 	face
+Vision Restriction: Romevision
+Index 	Cosmetic 	Equip Regions 	Set
+30159 	Spybot Armor 	shirt
+30160 	Spybot Hood 	hat
+All-Class
+Index 	Cosmetic 	Equip Regions 	Set
+116 	Ghastly Gibus 	hat
+125 	Cheater's Lament 	hat
+126 	Bill's Hat 	hat
+134 	J.Axer's Dapper Topper (custom Towering Pillar of Hats) 	hat
+135 	Towering Pillar of Hats 	hat
+136 	Amber's Rad As All Hell Hat (custom Noble Amassment of Hats) 	hat
+137 	Noble Amassment of Hats 	hat
+138 	Uncle Sam (custom Modest Pile of Hat) 	hat
+139 	Modest Pile of Hat 	hat
+143 	Earbuds 	ears
+162 	Max's Severed Head 	hat
+164 	Grizzled Veteran 	medal
+165 	Soldier of Fortune 	medal
+166 	Mercenary 	medal
+170 	Primeval Warrior 	medal
+189 	Alien Swarm Parasite 	hat
+242 	Duel Medal Bronze 	medal
+243 	Duel Medal Silver 	medal
+244 	Duel Medal Gold 	medal
+245 	Duel Medal Plat 	medal
+260 	Wiki Cap 	hat
+261 	Mann Co. Cap 	hat
+262 	Polycount Pin 	medal
+263 	Ellis' Hat 	hat
+277 	Halloween Mask - Saxton Hale 	whole_head
+279 	Ghastlier Gibus 	hat
+287 	Spine-Chilling Skull 	hat, face
+289 	Voodoo Juju 	hat
+291 	Horrific Headsplitter 	hat
+296 	License to Maim 	medal
+299 	Companion Cube Pin 	medal
+302 	Frontline Field Recorder 	hat
+332 	Bounty Hat 	hat
+333 	Treasure Hat 	hat
+334 	Hat of Undeniable Wealth and Respect 	hat
+341 	A Rather Festive Tree 	hat
+343 	Professor Speks 	glasses
+345 	Athletic Supporter 	hat
+408 	Humanitarian's Hachimaki 	hat
+409 	Benefactor's Kanmuri 	hat
+410 	Magnanimous Monarch 	hat
+420 	Aperture Labs Hard Hat 	hat
+422 	Resurrection Associate Pin 	medal
+432 	SpaceChem Pin 	medal
+443 	Dr. Grordbort's Crest 	medal
+470 	Lo-Fi Longwave 	hat
+471 	Proof of Purchase 	hat
+473 	Spiral Sallet 	hat, face
+486 	Summer Shades 	glasses
+492 	Summer Hat 	hat
+522 	The Deus Specs 	glasses
+523 	Company Man 	hat
+537 	Birthday Hat 	hat
+538 	Killer Exclusive 	hat
+541 	Merc's Pride Scarf 	necklace
+576 	Spine-Chilling Skull 2011 	hat, face
+578 	Spine-Chilling Skull 2011: Spine-Tingling Skull 	hat, face
+579 	Spine-Chilling Skull 2011: Spine-Cooling Skull 	hat, face
+580 	Spine-Chilling Skull 2011: Spine-Twisting Skull 	hat, face
+583 	Bombnomicon 	medal
+584 	Ghastlierest Gibus 	hat
+586 	Mark of the Saint 	medal
+592 	Dr. Grordbort's Copper Crest 	medal
+598 	Manniversary Paper Hat 	hat
+619 	Flair! 	flair
+623 	Photo Badge 	medal
+624 	Clan Pride 	medal
+634 	Point and Shoot 	hat
+636 	Dr. Grordbort's Silver Crest 	medal
+640 	The Top Notch 	whole_head
+655 	The Spirit of Giving [Strange-quality only] 	medal
+666 	The B.M.O.C. 	hat
+667 	The Holiday Headcase 	hat, beard, necklace
+668 	The Full Head of Steam 	hat
+671 	The Brown Bomber 	hat
+675 	The Ebenezer 	hat
+702 	The Warsworn Helmet 	hat, face
+704 	The Bolgan Family Crest 	medal
+711 	Dueler 	hat
+712 	Gifting Man From Gifting Land 	hat
+713 	Philateler 	hat
+717 	Mapmaker's Medallion 	medal
+718 	The Merc Medal 	medal
+725 	Tour of Duty Badge 	medal
+733 	Pet Robro 	disconnected_floating_item
+738 	Pet Balloonicorn 	disconnected_floating_item
+743 	Vintage Pyrovision Goggles 	glasses
+744 	Pyrovision Goggles 	glasses
+756 	The Bolt Action Blitzer 	hat
+756 	The Gentle Munitions of Leisure 	hat
+767 	The Atomic Accolade 	medal
+785 	Robot Chicken Hat 	hat
+816 	The Marxman 	glasses
+817 	The Human Cannonball 	hat
+818 	Awesomenauts Badge 	medal
+837 	The Marxman (Genuine) 	glasses
+838 	The Human Cannonball (Genuine) 	hat
+855 	The Vigilant Pin 	medal
+864 	The Friends Forever Companion Square Badge 	medal
+865 	The Triple A Badge 	medal
+868 	The Heroic Companion Badge 	medal
+869 	The Rump-o'-Lantern 	engineer_pocket
+870 	Tour of Duty Badge Intermediate 1 	medal
+871 	Tour of Duty Badge Expert 1 	medal
+873 	The Whale Bone Charm 	medal
+920 	The Crone's Dome 	hat
+921 	The Executioner 	hat
+940 	Ghostly Gibus 	hat
+941 	The Skull Island Topper 	hat
+942 	The Cockfighter 	hat
+943 	The Hitt Man Badge 	medal
+944 	That '70s Chapeau 	hat
+953 	The Saxxy Clapper Badge 	medal
+955 	The Tuxxy 	scout_or_heavy_shirt
+955 	Faerie Solitaire Pin 	medal
+975 	Tour of Duty Badge Advanced 2 	medal
+984 	Tough Stuff Muffs 	hat
+987 	The Merc's Muffler 	necklace
+992 	Smissmas Wreath 	medal
+993 	Antlers 	hat
+994 	Mann Co. Online Cap 	hat
+995 	Pet Reindoonicorn 	disconnected_floating_item
+1011 	Tux 	 ???
+1014 	The Brutal Bouffant 	hat
+1024 	Croft's Crest 	medal
+1025 	The Fortune Hunter 	cosmetic_axe
+1033 	The TF2VRH 	hat
+1034 	The Conspiracy Cap 	hat
+1035 	The Public Accessor 	hat
+1066 	Tour of Duty Badge Advanced 3 	medal
+1067 	The Grandmaster 	hat
+1096 	The Baronial Badge 	medal
+1122 	Towering Pillar of Summer Shades 	hat
+1126 	Duck Badge 	medal
+1899 	World Traveler 	hat
+5075 	Something Special For Someone Special 	 ???
+5606 	Barely-Melted Capacitor 	 ???
+30000 	The Electric Badge-aloo 	medal
+30001 	Modest Metal Pile of Scrap 	hat
+30003 	The Galvanized Gibus 	hat
+30006 	Noble Nickel Amassment of Hats 	hat
+30008 	Towering Titanium Pillar of Hats 	hat
+30058 	The Crosslinker's Coil 	hat
+30065 	The Hardy Laurel 	hat
+30066 	The Brotherhood of Arms 	hat
+30104 	Greybanns 	glasses
+30140 	The Virtual Viewfinder 	hat
+30177 	Hong Kong Cone 	hat
+30307 	Neckwear Headwear 	hat
+30313 	The Kiss King 	hat
+30329 	The Polar Pullover 	hat
+30362 	The Law 	hat
+30397 	The Bruiser's Bandana 	beard
+30414 	The Eye-Catcher 	misc
+30422 	Viva La France 	hat, headphones
+30425 	Tipped Lid 	hat, headphones
+30469 	Horace 	hat
+30473 	The MK 50 	hat 	The Isolated Merc
+30542 	Coldsnap Cap 	hat
+30546 	Boxcar Bomber 	hat
+30549 	Winter Woodsman 	hat
+30550 	Snow Sleeves 	shirt
+30551 	Flashdance Footies 	feet
+30559 	End of the Line Community Update Medal 	medal
+30567 	Crown of the Old Kingdom 	hat
+30569 	Tomb Readers 	glasses
+30571 	Brimstone 	hat
+30607 	Pocket Raiser 	hat
+30623 	The Rotation Sensation 	hat
+30640 	Captain Cardbeard Cutthroat 	hat
+30643 	Potassium Bonnett 	hat
+30646 	Captain Space Mann 	hat
+30647 	Phononaut 	hat
+30669 	Space Hamster Hammy 	disconnect_floating_item
+30670 	Invasion Community Update Medal 	medal
+Holiday Restriction: Halloween or Full Moon
+Index 	Cosmetic 	Equip Regions 	Set
+115 	Mildly Disturbing Halloween Mask 	whole_head
+268 	Halloween Mask - Scout 	whole_head
+269 	Halloween Mask - Sniper 	whole_head
+270 	Halloween Mask - Soldier 	whole_head
+271 	Halloween Mask - Demoman 	whole_head
+272 	Halloween Mask - Medic 	whole_head
+273 	Halloween Mask - Heavy 	whole_head
+274 	Halloween Mask - Spy 	whole_head
+275 	Halloween Mask - Engineer 	whole_head
+276 	Halloween Mask - Pyro 	whole_head
+278 	Horseless Headless Horsemann's Head 	whole_head
+581 	MONOCULUS! 	whole_head
+582 	Seal Mask 	face
+927 	The Boo Balloon 	disconnected_floating_item
+929 	The Unknown Monkeynaut 	disconnected_floating_item
+934 	The Dead Little Buddy 	disconnected_floating_item
+30198 	The Pocket Horsemann 	belt_misc
+30206 	The Accursed Apparition 	disconnected_floating_item
+30214 	The One-Way Ticket 	hat
+30215 	The Birdie Bonnet 	hat
+30234 	The Sackcloth Spook 	disconnected_floating_item
+30252 	Guano 	disconnected_floating_item
+30254 	Unidentified Following Object 	disconnected_floating_item
+30255 	The Beacon From Beyond 	disconnected_floating_item
+30274 	The Tuque or Treat 	hat
+30278 	The Dark Helm 	hat
+30289 	Quoth 	disconnected_floating_item
+30295 	The Manneater 	hat, glasses
+30297 	The Magical Mercenary 	hat
+30300 	The Haunted Hat 	hat
+30302 	The Cryptic Keepsake 	necklace
+30484 	The Dadliest Catch 	hat
+30497 	Ghost of Spies Checked Past 	disconnected_floating_item
+30498 	The Hooded Haunter 	disconnected_floating_item
+30536 	Cursed Cruise 	disconnected_floating_item
+Tournament Medals
+Index 	Cosmetic 	Equip Regions 	Set
+496 	Tournament Medal - GWJ Winners 	medal
+497 	Tournament Medal - GWJ Runnerups 	medal
+498 	Tournament Medal - GWJ Participants 	medal
+499 	Tournament Medal - ETF2L Highlander Winners 	medal
+500 	Tournament Medal - ETF2L Highlander 2nd 	medal
+501 	Tournament Medal - ETF2L Highlander 3rd 	medal
+502 	Tournament Medal - ETF2L Highlander Participants 	medal
+503 	Tournament Medal - UGC Highlander Participants 	medal
+504 	Tournament Medal - UGC Highlander Division 1 Winners 	medal
+505 	Tournament Medal - UGC Highlander Division 1 2nd 	medal
+506 	Tournament Medal - UGC Highlander Division 1 3rd 	medal
+507 	Tournament Medal - UGC Highlander Division 2 Winners 	medal
+508 	Tournament Medal - UGC Highlander Division 2 2nd 	medal
+509 	Tournament Medal - UGC Highlander Division 2 3rd 	medal
+510 	Tournament Medal - UGC Highlander Division 3 Winners 	medal
+511 	Tournament Medal - UGC Highlander Division 3 2nd 	medal
+512 	Tournament Medal - UGC Highlander Division 3 3rd 	medal
+680 	UGC Tounament Fall 2011 - Platinum 1st Place 	medal
+681 	UGC Tounament Fall 2011 - Platinum 2nd Place 	medal
+682 	UGC Tounament Fall 2011 - Platinum 3rd Place 	medal
+683 	UGC Tounament Fall 2011 - Platinum Participant 	medal
+684 	UGC Tournament Autumn 2011 - Euro Platinum 	medal
+685 	UGC Tounament Fall 2011 - Silver 1st Place 	medal
+686 	UGC Tounament Fall 2011 - Silver 2nd Place 	medal
+687 	UGC Tounament Fall 2011 - Silver 3rd Place 	medal
+688 	UGC Tounament Fall 2011 - Silver Participant 	medal
+689 	UGC Tournament Autumn 2011 - Euro Silver 	medal
+690 	UGC Tounament Fall 2011 - Iron 1st Place 	medal
+691 	UGC Tounament Fall 2011 - Iron 2nd Place 	medal
+692 	UGC Tounament Fall 2011 - Iron 3rd Place 	medal
+693 	UGC Tournament Autumn 2011 - Euro Iron 	medal
+694 	UGC Tounament Fall 2011 - Tin 1st Place 	medal
+695 	UGC Tounament Fall 2011 - Tin 2nd Place 	medal
+696 	UGC Tounament Fall 2011 - Tin 3rd Place 	medal
+697 	UGC Tounament Fall 2011 - Participant 	medal
+698 	UGC Tournament Autumn 2011 - Euro Tin 	medal
+8000 	UGC Highlander 1st Place North American Platinum Season 6 	medal
+8001 	UGC Highlander 2nd Place North American Platinum Season 6 	medal
+8002 	UGC Highlander 3rd Place North American Platinum Season 6 	medal
+8003 	UGC Highlander 1st Place European Platinum Season 6 	medal
+8004 	UGC Highlander 2nd Place European Platinum Season 6 	medal
+8005 	UGC Highlander 3rd Place European Platinum Season 6 	medal
+8006 	UGC Highlander 1st Place South American Platinum Season 6 	medal
+8007 	UGC Highlander 2nd Place South American Platinum Season 6 	medal
+8008 	UGC Highlander 3rd Place South American Platinum Season 6 	medal
+8009 	UGC Highlander 1st Place North American Silver Season 6 	medal
+8010 	UGC Highlander 2nd Place North American Silver Season 6 	medal
+8011 	UGC Highlander 3rd Place North American Silver Season 6 	medal
+8012 	UGC Highlander 1st Place European Silver Season 6 	medal
+8013 	UGC Highlander 2nd Place European Silver Season 6 	medal
+8014 	UGC Highlander 3rd Place European Silver Season 6 	medal
+8015 	UGC Highlander 1st Place South American Silver Season 6 	medal
+8016 	UGC Highlander 2nd Place South American Silver Season 6 	medal
+8017 	UGC Highlander 3rd Place South American Silver Season 6 	medal
+8018 	UGC Highlander 1st Place European Steel Season 6 	medal
+8019 	UGC Highlander 2nd Place European Steel Season 6 	medal
+8020 	UGC Highlander 3rd Place European Steel Season 6 	medal
+8021 	UGC Highlander 1st Place South American Steel Season 6 	medal
+8022 	UGC Highlander 2nd Place South American Steel Season 6 	medal
+8023 	UGC Highlander 3rd Place South American Steel Season 6 	medal
+8024 	UGC Highlander Platinum Participant Season 6 	medal
+8025 	UGC Highlander Silver Participant Season 6 	medal
+8026 	UGC Highlander Steel Participant Season 6 	medal
+8027 	ESL Season VI Premier Division 1st Place 	medal
+8028 	ESL Season VI Premier Division 2nd Place 	medal
+8029 	ESL Season VI Premier Division 3rd Place 	medal
+8030 	ESL Season VI Premier Division Participant 	medal
+8031 	ESL Season VI Division 1 1st Place 	medal
+8032 	ESL Season VI Division 1 2nd Place 	medal
+8033 	ESL Season VI Division 1 3rd Place 	medal
+8034 	ESL Season VI Division 1 Participant 	medal
+8035 	ESL Season VI Division 2 1st Place 	medal
+8036 	ESL Season VI Division 2 2nd Place 	medal
+8037 	ESL Season VI Division 2 3rd Place 	medal
+8038 	ESL Season VI Division 2 Participant 	medal
+8039 	ESL Season VI Division 3 1st Place 	medal
+8040 	ESL Season VI Division 3 2nd Place 	medal
+8041 	ESL Season VI Division 3 3rd Place 	medal
+8042 	ESL Season VI Division 3 Participant 	medal
+8043 	ESL Season VI Division 4 1st Place 	medal
+8044 	ESL Season VI Division 4 2nd Place 	medal
+8045 	ESL Season VI Division 4 3rd Place 	medal
+8046 	ESL Season VI Division 4 Participant 	medal
+8047 	ESL Season VI Division 5 1st Place 	medal
+8048 	ESL Season VI Division 5 2nd Place 	medal
+8049 	ESL Season VI Division 5 3rd Place 	medal
+8050 	ESL Season VI Division 5 Participant 	medal
+8051 	ESL Season VII Premiership Division 1st Place 	medal
+8052 	ESL Season VII Premiership Division 2nd Place 	medal
+8053 	ESL Season VII Premiership Division 3rd Place 	medal
+8054 	ESL Season VII Premiership Division Participant 	medal
+8055 	ESL Season VII Division 1 1st Place 	medal
+8056 	ESL Season VII Division 1 2nd Place 	medal
+8057 	ESL Season VII Division 1 3rd Place 	medal
+8058 	ESL Season VII Division 2 1st Place 	medal
+8059 	ESL Season VII Division 2 2nd Place 	medal
+8060 	ESL Season VII Division 2 Participant 	medal
+8061 	ESL Season VII Division 3 Participant 	medal
+8062 	ESL Season VII Division 4 1st Place 	medal
+8063 	ESL Season VII Division 4 2nd Place 	medal
+8064 	ESL Season VII Division 4 3rd Place 	medal
+8065 	ESL Season VII Division 4 Participant 	medal
+8066 	ESL Season VII Division 5 1st Place 	medal
+8067 	ESL Season VII Division 5 2nd Place 	medal
+8068 	ESL Season VII Division 5 3rd Place 	medal
+8069 	ESL Season VII Division 5 Participant 	medal
+8070 	Ready Steady Pan Participant Season 1 	medal
+8071 	Ready Steady Pan Helper Season 1 	medal
+8072 	ETF2L 6v6 Premier Division Gold Medal Season 8 	medal
+8073 	ETF2L 6v6 Premier Division Silver Medal Season 8 	medal
+8074 	ETF2L 6v6 Premier Division Bronze Medal Season 8 	medal
+8075 	ETF2L 6v6 Premier Division Gold Medal Season 9 	medal
+8076 	ETF2L 6v6 Premier Division Silver Medal Season 9 	medal
+8077 	ETF2L 6v6 Premier Division Bronze Medal Season 9 	medal
+8078 	ETF2L 6v6 Premier Division Gold Medal Season 10 	medal
+8079 	ETF2L 6v6 Premier Division Silver Medal Season 10 	medal
+8080 	ETF2L 6v6 Premier Division Bronze Medal Season 10 	medal
+8081 	ETF2L 6v6 Premier Division Gold Medal Season 11 	medal
+8082 	ETF2L 6v6 Premier Division Silver Medal Season 11 	medal
+8083 	ETF2L 6v6 Premier Division Bronze Medal Season 11 	medal
+8084 	ETF2L 6v6 Premier Division Gold Medal Season 12 	medal
+8085 	ETF2L 6v6 Premier Division Silver Medal Season 12 	medal
+8086 	ETF2L 6v6 Premier Division Bronze Medal Season 12 	medal
+8087 	ETF2L 6v6 Premier Division Gold Medal Season 13 	medal
+8088 	ETF2L 6v6 Premier Division Silver Medal Season 13 	medal
+8089 	ETF2L 6v6 Premier Division Bronze Medal Season 13 	medal
+8090 	ETF2L 6v6 Division 1 Group Winner Season 8 	medal
+8091 	ETF2L 6v6 Division 2 Group Winner Season 8 	medal
+8092 	ETF2L 6v6 Division 3 Group Winner Season 8 	medal
+8093 	ETF2L 6v6 Division 4 Group Winner Season 8 	medal
+8094 	ETF2L 6v6 Division 5 Group Winner Season 8 	medal
+8095 	ETF2L 6v6 Division 6 Group Winner Season 8 	medal
+8096 	ETF2L 6v6 Division 1 Group Winner Season 9 	medal
+8097 	ETF2L 6v6 Division 2 Group Winner Season 9 	medal
+8098 	ETF2L 6v6 Division 3 Group Winner Season 9 	medal
+8099 	ETF2L 6v6 Division 4 Group Winner Season 9 	medal
+8100 	ETF2L 6v6 Division 5 Group Winner Season 9 	medal
+8101 	ETF2L 6v6 Division 6 Group Winner Season 9 	medal
+8102 	ETF2L 6v6 Division 1 Group Winner Season 10 	medal
+8103 	ETF2L 6v6 Division 2 Group Winner Season 10 	medal
+8104 	ETF2L 6v6 Division 3 Group Winner Season 10 	medal
+8105 	ETF2L 6v6 Division 4 Group Winner Season 10 	medal
+8106 	ETF2L 6v6 Division 5 Group Winner Season 10 	medal
+8107 	ETF2L 6v6 Division 6 Group Winner Season 10 	medal
+8108 	ETF2L 6v6 Division 1 Group Winner Season 11 	medal
+8109 	ETF2L 6v6 Division 2 Group Winner Season 11 	medal
+8110 	ETF2L 6v6 Division 3 Group Winner Season 11 	medal
+8111 	ETF2L 6v6 Division 4 Group Winner Season 11 	medal
+8112 	ETF2L 6v6 Division 5 Group Winner Season 11 	medal
+8113 	ETF2L 6v6 Division 6 Group Winner Season 11 	medal
+8114 	ETF2L 6v6 Division 1 Group Winner Season 12 	medal
+8115 	ETF2L 6v6 Division 2 Group Winner Season 12 	medal
+8116 	ETF2L 6v6 Division 3 Group Winner Season 12 	medal
+8117 	ETF2L 6v6 Division 4 Group Winner Season 12 	medal
+8118 	ETF2L 6v6 Division 5 Group Winner Season 12 	medal
+8119 	ETF2L 6v6 Division 6 Group Winner Season 12 	medal
+8120 	ETF2L 6v6 Division 1 Group Winner Season 13 	medal
+8121 	ETF2L 6v6 Division 2 Group Winner Season 13 	medal
+8122 	ETF2L 6v6 Division 3 Group Winner Season 13 	medal
+8123 	ETF2L 6v6 Division 4 Group Winner Season 13 	medal
+8124 	ETF2L 6v6 Division 5 Group Winner Season 13 	medal
+8125 	ETF2L 6v6 Division 6 Group Winner Season 13 	medal
+8126 	ETF2L 6v6 Premier Division Participation Medal Season 8 	medal
+8127 	ETF2L 6v6 Division 1 Participation Medal Season 8 	medal
+8128 	ETF2L 6v6 Division 2 Participation Medal Season 8 	medal
+8129 	ETF2L 6v6 Division 3 Participation Medal Season 8 	medal
+8130 	ETF2L 6v6 Division 4 Participation Medal Season 8 	medal
+8131 	ETF2L 6v6 Division 5 Participation Medal Season 8 	medal
+8132 	ETF2L 6v6 Division 6 Participation Medal Season 8 	medal
+8133 	ETF2L 6v6 Premier Division Participation Medal Season 9 	medal
+8134 	ETF2L 6v6 Division 1 Participation Medal Season 9 	medal
+8135 	ETF2L 6v6 Division 2 Participation Medal Season 9 	medal
+8136 	ETF2L 6v6 Division 3 Participation Medal Season 9 	medal
+8137 	ETF2L 6v6 Division 4 Participation Medal Season 9 	medal
+8138 	ETF2L 6v6 Division 5 Participation Medal Season 9 	medal
+8139 	ETF2L 6v6 Division 6 Participation Medal Season 9 	medal
+8140 	ETF2L 6v6 Premier Division Participation Medal Season 10 	medal
+8141 	ETF2L 6v6 Division 1 Participation Medal Season 10 	medal
+8142 	ETF2L 6v6 Division 2 Participation Medal Season 10 	medal
+8143 	ETF2L 6v6 Division 3 Participation Medal Season 10 	medal
+8144 	ETF2L 6v6 Division 4 Participation Medal Season 10 	medal
+8145 	ETF2L 6v6 Division 5 Participation Medal Season 10 	medal
+8146 	ETF2L 6v6 Division 6 Participation Medal Season 10 	medal
+8147 	ETF2L 6v6 Premier Division Participation Medal Season 11 	medal
+8148 	ETF2L 6v6 Division 1 Participation Medal Season 11 	medal
+8149 	ETF2L 6v6 Division 2 Participation Medal Season 11 	medal
+8150 	ETF2L 6v6 Division 3 Participation Medal Season 11 	medal
+8151 	ETF2L 6v6 Division 4 Participation Medal Season 11 	medal
+8152 	ETF2L 6v6 Division 5 Participation Medal Season 11 	medal
+8153 	ETF2L 6v6 Division 6 Participation Medal Season 11 	medal
+8154 	ETF2L 6v6 Premier Division Participation Medal Season 12 	medal
+8155 	ETF2L 6v6 Division 1 Participation Medal Season 12 	medal
+8156 	ETF2L 6v6 Division 2 Participation Medal Season 12 	medal
+8157 	ETF2L 6v6 Division 3 Participation Medal Season 12 	medal
+8158 	ETF2L 6v6 Division 4 Participation Medal Season 12 	medal
+8159 	ETF2L 6v6 Division 5 Participation Medal Season 12 	medal
+8160 	ETF2L 6v6 Division 6 Participation Medal Season 12 	medal
+8161 	ETF2L 6v6 Premier Division Participation Medal Season 13 	medal
+8162 	ETF2L 6v6 Division 1 Participation Medal Season 13 	medal
+8163 	ETF2L 6v6 Division 2 Participation Medal Season 13 	medal
+8164 	ETF2L 6v6 Division 3 Participation Medal Season 13 	medal
+8165 	ETF2L 6v6 Division 4 Participation Medal Season 13 	medal
+8166 	ETF2L 6v6 Division 5 Participation Medal Season 13 	medal
+8167 	ETF2L 6v6 Division 6 Participation Medal Season 13 	medal
+8168 	ETF2L Highlander Division 1 Gold Medal Season 1 	medal
+8169 	ETF2L Highlander Division 1 Silver Medal Season 1 	medal
+8170 	ETF2L Highlander Division 1 Bronze Medal Season 1 	medal
+8171 	ETF2L Highlander Division 1 Gold Medal Season 2 	medal
+8172 	ETF2L Highlander Division 1 Silver Medal Season 2 	medal
+8173 	ETF2L Highlander Division 1 Bronze Medal Season 2 	medal
+8174 	ETF2L Highlander Premier Division Gold Medal Season 3 	medal
+8175 	ETF2L Highlander Premier Division Silver Medal Season 3 	medal
+8176 	ETF2L Highlander Premier Division Bronze Medal Season 3 	medal
+8177 	ETF2L Highlander Division 2 Group Winner Season 1 	medal
+8178 	ETF2L Highlander Division 3 Group Winner Season 1 	medal
+8179 	ETF2L Highlander Division 4 Group Winner Season 1 	medal
+8180 	ETF2L Highlander Division 5 Group Winner Season 1 	medal
+8181 	ETF2L Highlander Division 6 Group Winner Season 1 	medal
+8182 	ETF2L Highlander Division 2 Group Winner Season 2 	medal
+8183 	ETF2L Highlander Division 3 Group Winner Season 2 	medal
+8184 	ETF2L Highlander Division 4 Group Winner Season 2 	medal
+8185 	ETF2L Highlander Division 5 Group Winner Season 2 	medal
+8186 	ETF2L Highlander Division 6 Group Winner Season 2 	medal
+8187 	ETF2L Highlander Division 1 Group Winner Season 3 	medal
+8188 	ETF2L Highlander Division 2 Group Winner Season 3 	medal
+8189 	ETF2L Highlander Division 3 Group Winner Season 3 	medal
+8190 	ETF2L Highlander Division 4 Group Winner Season 3 	medal
+8191 	ETF2L Highlander Division 5 Group Winner Season 3 	medal
+8192 	ETF2L Highlander Division 6 Group Winner Season 3 	medal
+8193 	ETF2L Highlander Division 1 Participation Medal Season 1 	medal
+8194 	ETF2L Highlander Division 2 Participation Medal Season 1 	medal
+8195 	ETF2L Highlander Division 3 Participation Medal Season 1 	medal
+8196 	ETF2L Highlander Division 4 Participation Medal Season 1 	medal
+8197 	ETF2L Highlander Division 5 Participation Medal Season 1 	medal
+8198 	ETF2L Highlander Division 6 Participation Medal Season 1 	medal
+8199 	ETF2L Highlander Division 1 Participation Medal Season 2 	medal
+8200 	ETF2L Highlander Division 2 Participation Medal Season 2 	medal
+8201 	ETF2L Highlander Division 3 Participation Medal Season 2 	medal
+8202 	ETF2L Highlander Division 4 Participation Medal Season 2 	medal
+8203 	ETF2L Highlander Division 5 Participation Medal Season 2 	medal
+8204 	ETF2L Highlander Division 6 Participation Medal Season 2 	medal
+8205 	ETF2L Highlander Premier Division Participation Medal Season 3 	medal
+8206 	ETF2L Highlander Division 1 Participation Medal Season 3 	medal
+8207 	ETF2L Highlander Division 2 Participation Medal Season 3 	medal
+8208 	ETF2L Highlander Division 3 Participation Medal Season 3 	medal
+8209 	ETF2L Highlander Division 4 Participation Medal Season 3 	medal
+8210 	ETF2L Highlander Division 5 Participation Medal Season 3 	medal
+8211 	ETF2L Highlander Division 6 Participation Medal Season 3 	medal
+8212 	ETF2L Ultiduo 1 Gold Medal 	medal
+8213 	ETF2L Ultiduo 2 Gold Medal 	medal
+8214 	ETF2L Ultiduo 3 Gold Medal 	medal
+8215 	ETF2L Ultiduo 4 Gold Medal 	medal
+8216 	ESH Ultiduo 1 Gold Medal 	medal
+8217 	ESH Ultiduo 2 Gold Medal 	medal
+8218 	ESH Ultiduo 3 Gold Medal 	medal
+8219 	ESH Ultiduo 4 Gold Medal 	medal
+8220 	ESH Ultiduo 5 Gold Medal 	medal
+8221 	ESH Ultiduo 6 Gold Medal 	medal
+8222 	ESH Ultiduo 7 Gold Medal 	medal
+8224 	UGC Highlander 1st Place Platinum Season 8 	medal
+8225 	UGC Highlander 2nd Place Platinum Season 8 	medal
+8226 	UGC Highlander 3rd Place Platinum Season 8 	medal
+8227 	UGC Highlander 1st Place Silver Season 8 	medal
+8228 	UGC Highlander 2nd Place Silver Season 8 	medal
+8229 	UGC Highlander 3rd Place Silver Season 8 	medal
+8230 	UGC Highlander 1st Place Steel Season 8 	medal
+8231 	UGC Highlander 2nd Place Steel Season 8 	medal
+8232 	UGC Highlander 3rd Place Steel Season 8 	medal
+8233 	UGC Highlander 1st Place Iron Season 8 	medal
+8234 	UGC Highlander 2nd Place Iron Season 8 	medal
+8235 	UGC Highlander 3rd Place Iron Season 8 	medal
+8236 	UGC Highlander 1st Place Season 8 	medal
+8237 	UGC Highlander 2nd Place Season 8 	medal
+8238 	UGC Highlander 3rd Place Season 8 	medal
+8239 	UGC Highlander Platinum Participant Season 8 	medal
+8240 	UGC Highlander Silver Participant Season 8 	medal
+8241 	UGC Highlander Steel Participant Season 8 	medal
+8242 	UGC Highlander Participant Season 8 	medal
+8243 	Ready Steady Pan First Place Season 2 	medal
+8244 	Ready Steady Pan Second Place Season 2 	medal
+8245 	Ready Steady Pan Third Place Season 2 	medal
+8246 	Ready Steady Pan Participant Season 2 	medal
+8247 	Ready Steady Pan Helper Season 2 	medal
+Action Items
+
+These go in the Action screen on loadout and are used with H by default
+Index 	Item 	Item class
+241 	Duel MiniGame 	tf_wearable
+280 	Halloween Noise Maker - Black Cat 	tf_wearable
+281 	Halloween Noise Maker - Gremlin 	tf_wearable
+282 	Halloween Noise Maker - Werewolf 	tf_wearable
+283 	Halloween Noise Maker - Witch 	tf_wearable
+284 	Halloween Noise Maker - Banshee 	tf_wearable
+286 	Halloween Noise Maker - Crazy Laugh 	tf_wearable
+288 	Halloween Noise Maker - Stabby 	tf_wearable
+362 	Charity Noise Maker - Bell 	tf_wearable
+364 	Charity Noise Maker - Gong 	tf_wearable
+365 	Charity Noise Maker - Koto 	tf_wearable
+489 	Powerup Canteen (MvM) 	tf_powerup_bottle
+493 	Promotional Noise Maker - Fireworks 	tf_wearable
+542 	Noise Maker - Vuvuzela 	tf_wearable
+1152 	Grappling Hook 	tf_weapon_grapplinghook
+30015 	Battery Canteens (MvM) 	tf_powerup_bottle
+Spellbooks
+Index 	Item 	Item class
+1069 	Fancy Spellbook 	tf_weapon_spellbook
+1070 	Spellbook Magazine 	tf_weapon_spellbook
+1132 	Spellbook Magazine (Stock) 	tf_weapon_spellbook
+5604 	Fireproof Secret Diary 	tf_weapon_spellbook
+Holiday Restriction: Halloween or Full Moon
+Index 	Item 	Item class
+30535 	Kritz or Treat Canteen (MvM) 	tf_powerup_bottle
+Holiday Restriction: Birthday
+Index 	Item 	Item class
+536 	Noise Maker - Birthday 	tf_wearable
+Holiday Restriction: Winter
+Index 	Item 	Item class
+673 	Noise Maker - Winter 2011 	tf_wearable
+Taunt Items
+
+These go in the separate Taunt menu in the loadout and are used with G twice by default
+Index 	Item 	Player class 	Type
+167 	High Five 	Any 	Hold
+438 	Director's Vision 	Any 	Single
+463 	Schadenfreude 	Any 	Single
+477 	Meet the Medic 	Medic 	Single
+1015 	The Shred Alert 	Any 	Single
+1106 	Square Dance 	Any 	Hold
+1107 	Flippin' Awesome 	Any 	Hold
+1108 	Buy a Life 	Spy 	Single
+1109 	Results Are In 	Medic 	Single
+1110 	Rock Paper Scissors 	Any 	Hold
+1111 	Skullcracker 	Any 	Hold
+1112 	Party Trick 	Pyro 	Single
+1113 	Freshly Brewed Victory 	Soldier 	Single
+1114 	Spent Well Spirits 	DemoMan 	Single
+1115 	Rancho Relaxo 	Engineer 	Hold
+1116 	I See You 	Sniper 	Single
+1117 	Battin' a Thousand 	Scout 	Single
+1118 	Conga 	Any 	Group, Continuous
+1119 	Deep Fried Desire 	Scout 	Single
+1120 	Oblooterated 	DemoMan 	Single
+1157 	Kazotsky Kick 	Any 	Group, Continuous
+1162 	Mannrobics 	Any 	Group, Continuous
+30570 	Pool Party 	Pyro 	Hold
+30609 	The Killer Solo 	Sniper 	Single
+30572 	The Boston Breakdance 	Scout 	Single
+30614 	Most Wanted 	Sniper 	Single
+30615 	The Boxtrot 	Spy 	Continuous
+30616 	Proletariat Showoff 	Heavy 	Single
+30618 	Bucking Bronco 	Engineer 	Hold
+30621 	Burstchester 	Any 	Single
+30671 	True Scotsman's Call 	DemoMan 	Single
+30672 	Zoomin' Broom 	Any 	Continuous
+30673 	Soldier's Requiem 	Soldier 	Single
+Powerups
+
+Powerups are used by the Mannpower game mode and may or may not appear in a weapon slot.
+
+Note: Critical Hits is not actually a powerup.
+Index 	Weapon 	Weapon class 	Set 	Equip Region
+1133 	Powerup: Strength 	saxxy
+1134 	Powerup: Haste 	saxxy
+1135 	Powerup: Regeneration 	saxxy
+1136 	Powerup: Resist 	saxxy
+1137 	Powerup: Vampire 	saxxy
+1138 	Powerup: Warlock 	saxxy
+1139 	Powerup: Precision 	saxxy
+1140 	Powerup: Agility 	saxxy
+
+
+Craft Items
+
+These are the items obtained and used primarily through crafting.
+
+267 - Haunted Metal Scrap
+429 - Moustachium Bar
+430 - SpaceChem Fishcake Fragment
+431 - SpaceChem Pin Fragment
+699 - Something Special For Someone Special
+725 - Tour of Duty Ticket
+758 - MvM Squad Surplus Voucher
+5000 - Scrap Metal
+5001 - Reclaimed Metal
+5002 - Refined Metal
+5003 - Scout Class Token
+5004 - Sniper Class Token
+5005 - Soldier Class Token
+5006 - Demoman Class Token
+5007 - Heavy Class Token
+5008 - Medic Class Token
+5009 - Pyro Class Token
+5010 - Spy Class Token
+5011 - Engineer Class Token
+5012 - Primary Slot Token
+5013 - Secondary Slot Token
+5014 - Melee Slot Token
+5015 - Grenade Slot Token
+5016 - Building Slot Token
+5017 - PDA Slot Token
+5018 - PDA2 Slot Token
+5019 - Head Slot Token
+Tools
+
+These are items that you use in combination with another via the backpack.
+
+5021 - Mann Co. Supply Crate Key
+5022 - Mann Co. Supply Crate
+5023 - Paint Can
+5026 - Decal Tool
+5027 - Paint: Indubitably Green
+5028 - Paint: Zepheniah's Greed
+5029 - Paint: Noble Hatter's Violet
+5030 - Paint: Color No. 216-190-216
+5031 - Paint: A Deep Commitment to Purple
+5032 - Paint: Mann Co. Orange
+5033 - Paint: Muskelmannbraun
+5034 - Paint: Peculiarly Drab Tincture
+5035 - Paint: Radigan Conagher Brown
+5036 - Paint: Ye Olde Rustic Colour
+5037 - Paint: Australium Gold
+5038 - Paint: Aged Moustache Grey
+5039 - Paint: An Extraordinary Abundance of Tinge
+5040 - Paint: A Distinctive Lack of Hue
+5042 - Gift Wrap
+5043 - A Carefully Wrapped Gift
+5044 - Description Tag
+5046 - Team Paint: Team Spirit
+5048 - Festive Winter Crate
+5050 - Backpack Expander
+5051 - Paint: Pink as Hell
+5052 - Paint: A Color Similar to Slate
+5053 - Paint: Drably Olive
+5054 - Paint: The Bitter Taste of Defeat and Lime
+5055 - Paint: The Color of a Gentlemann's Business Pants
+5056 - Paint: Dark Salmon Injustice
+5057 - Stocking Stuffer Key
+5060 - Team Paint: Operator's Overalls
+5061 - Team Paint: Waterlogged Lab Coat
+5062 - Team Paint: Balaclavas Are Forever
+5063 - Team Paint: An Air of Debonair
+5064 - Team Paint: The Value of Teamwork
+5065 - Team Paint: Cream Spirit
+5066 - Refreshing Summer Cooler
+5068 - Salvaged Mann Co. Supply Crate
+5070 - Naughty Winter Crate
+5071 - Nice Winter Crate
+5076 - Paint: Mann's Mint
+5077 - Paint: After Eight
+5500 - RIFT Well Spun Hat Claim Code
+5999 - Strange Part (Generic)
+Strange Parts
+
+6000 - Strange Part: Heavies Killed
+6001 - Strange Part: Demomen Killed
+6002 - Strange Part: Soldiers Killed
+6003 - Strange Part: Scouts Killed
+6009 - Strange Part: Building Destroyed
+6010 - Strange Part: Projectiles Reflected
+6011 - Strange Part: Headshot Kills
+6012 - Strange Part: Airborne Enemies Killed
+6013 - Strange Part: Enemies Gibbed
+6015 - Strange Part: Full Moon Kills
+6016 - Strange Part: Domination Kills
+6018 - Strange Part: Revenge Kills
+6019 - Strange Part: Posthumous Kills
+6020 - Strange Part: Allies Extinguished
+6021 - Strange Part: Critical Kills
+6022 - Strange Part: Kills While Explosive-Jumping
+6024 - Strange Part: Cloaked Spies Killed
+6025 - Strange Part: Sappers Destroyed
+6026 - Strange Part: Robots Destroyed
+6028 - Strange Part: Giant Robots Destroyed
+6032 - Strange Part: Low-Health Kills
+6033 - Strange Part: Halloween Kills
+6034 - Strange Part: Robots Destroyed During Halloween
+6035 - Strange Part: Defender Kills
+6036 - Strange Part: Underwater Kills
+6037 - Strange Part: Kills While Ubercharged
+6038 - Strange Part: Tanks Destroyed
+6039 - Strange Part: Long-Distance Kills
+6041 - Strange Part: Kills During Victory Time
+6048 - Strange Part: Robot Spies Destroyed
+6051 - Strange Part: Kills with a Taunt Attack
+6052 - Strange Part: Unusual-Wearing Player Kills
+6053 - Strange Part: Burning Enemy Kills
+6054 - Strange Part: Killstreaks Ended
+6055 - Strange Part: Freezecam Taunt Appearances
+6056 - Strange Part: Damage Dealt
+6057 - Strange Part: Fires Survived
+6058 - Strange Part: Allied Healing Done
+6059 - Strange Part: Point-Blank Kills
+MvM Robot Parts
+
+5700 - Pristine Robot Currency Digester
+5701 - Pristine Robot Brainstorm Bulb
+5702 - Reinforced Robot Emotion Detector
+5703 - Reinforced Robot Humor Suppression Pump
+5704 - Reinforced Robot Bomb Stabilizer
+5705 - Battle-Worn Robot Taunt Processor
+5706 - Battle-Worn Robot KB-808
+5707 - Battle-Worn Robot Money Furnace
+Mysterious Tools
+
+790 - What's in the Sandvich Box? (open for Genuine Robo-Sandvich)
+791 - What's in the Companion Square Box? (open for Genuine The Friends Forever Companion Square Badge)
+928 - Portal 2 Soundtrack Promo Package (open for Genuine Ap-Sap)
