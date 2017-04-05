@@ -48,21 +48,28 @@ if exist C:\OpticTradeBot\config\AdditionalSettings2.txt set AdditionalSettings2
 if exist C:\OpticTradeBot\config\AdditionalSettings3.txt set AdditionalSettings3=1
 echo [%time%] [CONFIG] Config values: "%DebugMode%,%DebugModeSkip1%,%DebugModeSkip2%,%DebugModeSkip3%,%DebugModeSkip4%,%AdditionalSettings1%,%AdditionalSettings2%,%AdditionalSettings3%"
 echo [%time%] [CONFIG] Reading Input Config values...
-call C:\OpticTradeBot\config\BotID.bat
-call C:\OpticTradeBot\config\BotName.bat
-call C:\OpticTradeBot\config\ScreenSize.bat
+if exist C:\OpticTradeBot\config\BotID.bat call C:\OpticTradeBot\config\BotID.bat
+if exist C:\OpticTradeBot\config\BotName.bat call C:\OpticTradeBot\config\BotName.bat
+if exist C:\OpticTradeBot\config\ScreenSize.bat call C:\OpticTradeBot\config\ScreenSize.bat
+if not exist C:\OpticTradeBot\config\BotID.bat goto err_config001
+if not exist C:\OpticTradeBot\config\BotName.bat goto err_config001
+if not exist C:\OpticTradeBot\config\ScreenSize.bat goto err_config001
 echo [%time%] [CONFIG] Input Config values: "%varBotID%,%varBotName%,%varScreenSize%"
 :: Read Screen Resolution Settings
 if "%varScreenSize%"=="1366x768" set ScreenSizeX=1366
 if "%varScreenSize%"=="1366x768" set ScreenSizeY=768
+if "%varScreenSize%"=="1366x768" goto screensizeset
 if "%varScreenSize%"=="1366x768 " set ScreenSizeX=1366
 if "%varScreenSize%"=="1366x768 " set ScreenSizeY=768
-
+if "%varScreenSize%"=="1366x768 " goto screensizeset
 if "%varScreenSize%"=="1024x768" set ScreenSizeX=1024
 if "%varScreenSize%"=="1024x768" set ScreenSizeY=768
+if "%varScreenSize%"=="1024x768" goto screensizeset
 if "%varScreenSize%"=="1024x768 " set ScreenSizeX=1024
 if "%varScreenSize%"=="1024x768 " set ScreenSizeY=768
-
+if "%varScreenSize%"=="1024x768 " goto screensizeset
+goto err_config002
+:screensizeset
 echo [%time%] [CONFIG] Screen Resolution x:"%ScreenSizeX%" y:"%ScreenSizeY%" raw:"%varScreenSize%"
 
 :: Checks status again
@@ -227,8 +234,17 @@ echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
 goto cycle
 
+:err_config001
+echo [%time%] [WARNING] Config does not exist. Please log into the bot if you havent already.
+echo.
+timeout /t 4 /nobreak >nul
+exit
 
-
+:err_config002
+echo [%time%] [WARNING] Screen Size Config is corrupt.
+echo.
+timeout /t 2 /nobreak >nul
+exit
 
 
 :check_status
