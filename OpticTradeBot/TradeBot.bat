@@ -3,7 +3,12 @@
 :: Sets directory and file title.
 cd C:\OpticTradeBot
 title Optic Trade Bot
-echo [%time%] Optic Trade bot started.
+echo Optic Trade bot started.
+
+call :check_status
+call C:\OpticTradeBot\config\botfiles\other\login.bat
+echo [%time%] [LOGIN] Logged in as %recentlogin_user% 
+echo [%time%] [LOGIN] Uid: %recentlogin_uid% 
 
 :: CYCLE
 :: Sets cycle value to 0, cycle lable and increments cycle value by 1.
