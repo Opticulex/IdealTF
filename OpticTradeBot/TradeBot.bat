@@ -4,12 +4,10 @@
 cd C:\OpticTradeBot
 title Optic Trade Bot
 echo Optic Trade bot started.
-
 call :check_status
 call C:\OpticTradeBot\config\botfiles\other\login.bat
 echo [%time%] [LOGIN] Logged in as %recentlogin_user% 
 echo [%time%] [LOGIN] Uid: %recentlogin_uid% 
-
 :: CYCLE
 :: Sets cycle value to 0, cycle lable and increments cycle value by 1.
 set cycle=0
@@ -17,13 +15,10 @@ set cycle=0
 echo.
 set /a cycle+=1
 set cycleid=%random%%random%%random%
-
 :: Prints cycle details
 echo [%time%] Cycle #%cycle% began at %time% %date%; cycleid %cycleid%
-
 :: Checks status
 call :check_status
-
 :: Resets Config Values
 set DebugMode=0
 set DebugModeSkip1=0
@@ -38,10 +33,8 @@ set varBotName=0
 set varScreenSize=0
 set ScreenSizeX=0
 set ScreenSizeY=0
-
 echo [%time%] [CONFIG] Set all Config Values to value "0" 
 echo [%time%] [CONFIG] Reading Config values...
-
 :: Calls all config values
 if exist C:\OpticTradeBot\config\DebugMode.txt set DebugMode=1
 if exist C:\OpticTradeBot\config\DebugModeSkip1.txt set DebugModeSkip1=1
@@ -78,10 +71,8 @@ if "%varScreenSize%"=="1024x768 " goto screensizeset
 goto err_config002
 :screensizeset
 echo [%time%] [CONFIG] Screen Resolution x:"%ScreenSizeX%" y:"%ScreenSizeY%" raw:"%varScreenSize%"
-
 :: Checks status again
 call :check_status
-
 :: Create TEMP shit in AHK. Messy stuff.
 echo CoordMode Pixel > C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
 echo ImageSearch, FoundX, FoundY, 0, 0, %ScreenSizeX%, %ScreenSizeY%, C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\#0100.bmp >> C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
@@ -178,68 +169,58 @@ if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeB
 :: If config for item exists.
 if exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat echo [%time%] [ITEMCHECK] Index entry '%itemid%' found.
 if exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
-
 :: If config for item doesn't exist.
 if not exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat goto item_checker
-
 set icloop=0
 :ic_loop
 echo [%time%] [CONFIG] Loading advancedconfig.bat..
 call C:\OpticTradeBot\config\advancedconfig.bat
-echo %1366768slot1X1%
-pause
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat
 set /a icloop+=1
-if "%icloop%"=="1" set coord1x=%1366x768slot1X1%
-if "%icloop%"=="1" set coord1y=%1366x768slot1Y1%
-if "%icloop%"=="1" set coord2x=%1366x768slot1X2%
-if "%icloop%"=="1" set coord2y=%1366x768slot1Y2%
-if "%icloop%"=="2" set coord1x=%1366x768slot2X1%
-if "%icloop%"=="2" set coord1y=%1366x768slot2Y1%
-if "%icloop%"=="2" set coord2x=%1366x768slot2X2%
-if "%icloop%"=="2" set coord2y=%1366x768slot2Y2%
-if "%icloop%"=="3" set coord1x=%1366x768slot3X1%
-if "%icloop%"=="3" set coord1y=%1366x768slot3Y1%
-if "%icloop%"=="3" set coord2x=%1366x768slot3X2%
-if "%icloop%"=="3" set coord2y=%1366x768slot3Y2%
-if "%icloop%"=="4" set coord1x=%1366x768slot4X1%
-if "%icloop%"=="4" set coord1y=%1366x768slot4Y1%
-if "%icloop%"=="4" set coord2x=%1366x768slot4X2%
-if "%icloop%"=="4" set coord2y=%1366x768slot4Y2%
-if "%icloop%"=="5" set coord1x=%1366x768slot5X1%
-if "%icloop%"=="5" set coord1y=%1366x768slot5Y1%
-if "%icloop%"=="5" set coord2x=%1366x768slot5X2%
-if "%icloop%"=="5" set coord2y=%1366x768slot5Y2%
-if "%icloop%"=="6" set coord1x=%1366x768slot6X1%
-if "%icloop%"=="6" set coord1y=%1366x768slot6Y1%
-if "%icloop%"=="6" set coord2x=%1366x768slot6X2%
-if "%icloop%"=="6" set coord2y=%1366x768slot6Y2%
-if "%icloop%"=="7" set coord1x=%1366x768slot7X1%
-if "%icloop%"=="7" set coord1y=%1366x768slot7Y1%
-if "%icloop%"=="7" set coord2x=%1366x768slot7X2%
-if "%icloop%"=="7" set coord2y=%1366x768slot7Y2%
-if "%icloop%"=="8" set coord1x=%1366x768slot8X1%
-if "%icloop%"=="8" set coord1y=%1366x768slot8Y1%
-if "%icloop%"=="8" set coord2x=%1366x768slot8X2%
-if "%icloop%"=="8" set coord2y=%1366x768slot8Y2%
+if "%icloop%"=="1" set coord1x=%slot1X1%
+if "%icloop%"=="1" set coord1y=%slot1Y1%
+if "%icloop%"=="1" set coord2x=%slot1X2%
+if "%icloop%"=="1" set coord2y=%slot1Y2%
+if "%icloop%"=="2" set coord1x=%slot2X1%
+if "%icloop%"=="2" set coord1y=%slot2Y1%
+if "%icloop%"=="2" set coord2x=%slot2X2%
+if "%icloop%"=="2" set coord2y=%slot2Y2%
+if "%icloop%"=="3" set coord1x=%slot3X1%
+if "%icloop%"=="3" set coord1y=%slot3Y1%
+if "%icloop%"=="3" set coord2x=%slot3X2%
+if "%icloop%"=="3" set coord2y=%slot3Y2%
+if "%icloop%"=="4" set coord1x=%slot4X1%
+if "%icloop%"=="4" set coord1y=%slot4Y1%
+if "%icloop%"=="4" set coord2x=%slot4X2%
+if "%icloop%"=="4" set coord2y=%slot4Y2%
+if "%icloop%"=="5" set coord1x=%slot5X1%
+if "%icloop%"=="5" set coord1y=%slot5Y1%
+if "%icloop%"=="5" set coord2x=%slot5X2%
+if "%icloop%"=="5" set coord2y=%slot5Y2%
+if "%icloop%"=="6" set coord1x=%slot6X1%
+if "%icloop%"=="6" set coord1y=%slot6Y1%
+if "%icloop%"=="6" set coord2x=%slot6X2%
+if "%icloop%"=="6" set coord2y=%slot6Y2%
+if "%icloop%"=="7" set coord1x=%slot7X1%
+if "%icloop%"=="7" set coord1y=%slot7Y1%
+if "%icloop%"=="7" set coord2x=%slot7X2%
+if "%icloop%"=="7" set coord2y=%slot7Y2%
+if "%icloop%"=="8" set coord1x=%slot8X1%
+if "%icloop%"=="8" set coord1y=%slot8Y1%
+if "%icloop%"=="8" set coord2x=%slot8X2%
+if "%icloop%"=="8" set coord2y=%slot8Y2%
 if %icloop% GEQ 9 goto item_checker
 echo [%time%] [ITEMCHECK] %coord1x% %coord1y% %coord2x% %coord2y%
 :: Create TEMP shit in AHK. Messy stuff.
 echo CoordMode Pixel > C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
 echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\OpticTradeBot\config\itemconfig\img_1366x768\%itemid%.bmp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo if ErrorLevel = 2 >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo else if ErrorLevel = 1 >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo if ErrorLevel >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
 echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
 echo else >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo     FileAppend, >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo ( >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo temp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo. >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo ), C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-
+echo     FileAppend, temp, C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
 :: Start the AHK checker and sees its output.
 start C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-
 set ic_waitforitem=0
 :ic_waitforitem
 set /a ic_waitforitem+=1
@@ -247,57 +228,43 @@ if %ic_waitforitem% GEQ %ic_timeout% goto ic_waitforitem_1
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat goto ic_waitforitem_2
 if not exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat goto ic_waitforitem
 goto ic_waitforitem
-
 :ic_waitforitem_1
 echo [%time%] [ITEMCHECK] itemid %itemid% not found in trade. (timed out)
-goto item_checker
-
+goto ic_loop
 :ic_waitforitem_2
 echo [%time%] [ITEMCHECK] itemid %itemid% found in trade.
 if exist C:\OpticTradeBot\config\itemconfig\%itemid%.bat call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
 set /a price1+=%val%
 echo [%time%] [ITEMCHECK] %itemid% value is %val% Total price: %price1%
 goto ic_loop
-
 :ic_waitforitem_3
 echo [%time%] [ITEMCHECK] Unknown or unspecified error.
 goto item_checker
-
 :item_checker_done
 echo [%time%] [ITEMCHECK] Item index checks complete.
-
 :item_price
 set itemid=0
 echo.
 echo [%time%] [ITEMPRICE] Total Price was: %price1%
 pause
-
-
-
-
 :: These are the skippng labels used to skip past unused item ID's and save like 10 mins of time.
 :ic_6060
 echo [%time%] [ITEMCHECK] Skipped to itemid 7999 from 6060.
 set loopcount=7999
 goto item_checker
-
 :ic_8248
 echo [%time%] [ITEMCHECK] Skipped to itemid 14999 from 8248.
 set loopcount=14999
 goto item_checker
-
 :ic_16000
 echo [%time%] [ITEMCHECK] Skipped to itemid 29999 from 16000.
 set loopcount=29999
 goto item_checker
-
-
 :cycle_return
 echo.
 echo [%time%] Cycle #%cycle% (%time% %date%; %cycleid%) finished.
 echo [%time%] Returning to start.
 goto cycle
-
 :err_launcher001
 echo [%time%] [WARNING] C:\OpticTradeBot\config\prgon.txt does not exist.
 echo.
@@ -305,7 +272,6 @@ echo [%time%] [WARNING] Please start the launcher.
 echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
 goto cycle
-
 :err_launcher002
 echo [%time%] [WARNING] C:\OpticTradeBot\config\prgrun.txt does not exist.
 echo.
@@ -313,25 +279,21 @@ echo [%time%] [WARNING] Please launch the program from the launcher "Start" butt
 echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
 goto cycle
-
 :err_config001
 echo [%time%] [WARNING] Config does not exist. Please log into the bot if you havent already.
 echo.
 timeout /t 4 /nobreak >nul
 exit
-
 :err_config002
 echo [%time%] [WARNING] Screen Size Config is corrupt.
 echo.
 timeout /t 2 /nobreak >nul
 exit
-
 :err_hold001
 echo [%time%] [WARNING] Trade Hold present. Fatal error.
 echo.
 timeout /t 2 /nobreak >nul
 exit
-
 :check_status
 echo [%time%] [STATUS] Checking status of TradeBotLauncher..
 if not exist C:\OpticTradeBot\config\prgon.txt goto err_launcher001

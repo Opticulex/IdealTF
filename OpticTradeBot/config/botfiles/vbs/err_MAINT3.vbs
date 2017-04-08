@@ -1,1 +1,0 @@
-x=msgbox("The server is not online. Please try again in 5 minutes.",0+16,"OpticTradeBot")
