@@ -1,35 +1,9 @@
-﻿Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Sleep, 1000
-Click 678, 699
-Click 678, 421
-Sleep, 1000
-Send, {enter}
+﻿Sleep, 5000
+Run, C:\OpticTradeBot\config\botfiles\ahk\OfferDown.ahk
+Sleep, 500
+Click 812, 713
+Sleep, 3000
+Send {enter}
+Sleep, 3000
+Run, C:\OpticTradeBot\config\botfiles\ahk\SwitchToOffers.ahk
+ExitApp

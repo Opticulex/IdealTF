@@ -1,57 +1,15 @@
-Sleep, 3000
-Click 641, 501
-Sleep, 1000
-Send, {enter}
-Sleep, 1000
-Click 641, 610
-Sleep, 1000
-Send, {enter}
-Sleep, 1000
-Click 641, 560
-Sleep, 1000
-Send, {enter}
-Sleep, 1000
-Click 641, 664
-Sleep, 1000
-Send, {enter}
-Sleep, 1000
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Click WheelDown
-Sleep, 1000
-Click 754, 295
-Sleep, 1000
-Click 754, 573
-Sleep, 1000
-Click 754, 394
 Sleep, 5000
-Send, {enter}
-Sleep, 1000
-Click 1012, 15
+Click 795, 433
+Sleep, 2000
+Send {enter}
+Sleep, 300
+Run, C:\OpticTradeBot\config\botfiles\ahk\OfferDown.ahk
+Sleep, 500
+Click 879, 604
+Sleep, 7000
+Send {enter}
+Sleep, 300
+Click 1339, 6
+Sleep, 300
+Run, C:\OpticTradeBot\config\botfiles\ahk\SwitchToOffers.ahk
+ExitApp

@@ -1,17 +1,16 @@
 :: Set status
 :: Server IP config
-if exist C:\OpticTradeBot\config\serverip.txt del C:\OpticTradeBot\config\serverip.txt
-(echo | set /p=^94.13.100.142)>>C:\OpticTradeBot\config\serverip.txt
 set down=0
 set maintenance=0
-
+if "%maintenance%"=="1" goto maintenance
+if "%down%"=="1" goto down
+if exist C:\OpticTradeBot\config\serverip.txt del C:\OpticTradeBot\config\serverip.txt
+(echo | set /p=^94.13.100.142)>>C:\OpticTradeBot\config\serverip.txt
 
 
 
 
 ::AutoUpdater for OpticTradeBot
-if "%maintenance%"=="1" goto maintenance
-if "%down%"=="1" goto down
 :: Autoupdate verification
 if exist C:\OpticTradeBot\config\prgaupd.txt del C:\OpticTradeBot\config\prgaupd.txt
 echo. > "C:\OpticTradeBot\config\prgaupd.txt"

@@ -144,47 +144,91 @@ echo [%time%] [TRADECHECK] Running "MaximiseWindow.ahk"
 start C:\OpticTradeBot\config\botfiles\ahk\MaximiseWindow.ahk
 timeout /t 2 /nobreak >nul
 :ic_pre
-:: Sets amount of times the bot has looped to 0
-set loopcount=0
+echo.
+echo echo [%time%] [ITEMCHECK] Began ItemCheck.
 :ic
-set /a loopcount+=1
 set price_bot=0
 set price_user=0
 
+:: =================================================================================================================================================================
+::  PLEASE PLACE ALL ITEM CHECKS IN BETWEEN THE TWO BOUNDARIES
+::
+:: How to set it up (advanced, use the free auto-config instead):
+::
+:: :ic_id_[YOUR ITEM ID]      ## SET WITH THE TF2 ITEM CONFIG VALUE OF THE ITEM (Must be the same as below)
+:: set itemid=[YOUR ITEM ID]     ## SET WITH THE TF2 ITEM CONFIG VALUE OF THE ITEM (Must be the same as above)
+:: call C:\OpticTradeBot\config\itemconfig\%itemid%.bat     ## Calls the config file. Leave as is.
+:: echo [%time%] [ITEMCHECK] Item Id: %itemid% Item Value: %val% Image: %img%    ## Outputs the data abou the item (read from config). Leave as is.
+:: call :itemchecker_bot   ## Remove bot our user depending on where the item will be coming from. If only the user will have the item, remove the "bot" check
+:: call :itemchecker_user  ## If only the bot has the item, remove the "user" check, this saves time and resorces and helps combat useless checking.
+:: echo [%time%] [ITEMCHECK] Final price: %price_bot% %price_user%    ## Outputs the final price after the bot is done checking. Leave as is.
+::
+:: PLACE ALL ITEM CONFIGS BELOW THIS LINE
+:: =================================================================================================================================================================
+
+
+:: Scrap metal check (only checks user)
 :ic_id_5000
 set itemid=5000
 call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
 echo [%time%] [ITEMCHECK] Item Id: %itemid% Item Value: %val% Image: %img%
-call :itemchecker_bot
 call :itemchecker_user
 echo [%time%] [ITEMCHECK] Final price: %price_bot% %price_user%
 
-
+:: Reclaimed metal check (only checks user)
 :ic_id_5001
 set itemid=5001
 call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
 echo [%time%] [ITEMCHECK] Item Id: %itemid% Item Value: %val% Image: %img%
-call :itemchecker_bot
+call :itemchecker_user
+echo [%time%] [ITEMCHECK] Final price: %price_bot% %price_user%
+
+:: Refined metal check (only checks user)
+:ic_id_5002
+set itemid=5001
+call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
+echo [%time%] [ITEMCHECK] Item Id: %itemid% Item Value: %val% Image: %img%
+call :itemchecker_user
+echo [%time%] [ITEMCHECK] Final price: %price_bot% %price_user%
+
+:: Key check (only checks user)
+:ic_id_5021
+set itemid=5001
+call C:\OpticTradeBot\config\itemconfig\%itemid%.bat
+echo [%time%] [ITEMCHECK] Item Id: %itemid% Item Value: %val% Image: %img%
 call :itemchecker_user
 echo [%time%] [ITEMCHECK] Final price: %price_bot% %price_user%
 
 
-
-
+:: =================================================================================================================================================================
+:: DONT PLACE ITEM CONFIGS BELOW THIS LINE
+:: =================================================================================================================================================================
 echo.
+echo [%time%] [OFFERCONFIRM] Running "OfferUp.ahk"
+start C:\OpticTradeBot\config\botfiles\ahk\OfferUp.ahk
 echo [%time%] [ITEMCHECK] Itemcheck is complete!
 echo [%time%] [ITEMCHECK] Bot price: %price_bot% User price: %price_user%
 set /a price_userl=%price_user%+5
 set /a price_useru=%price_user%-5
+if "%price_bot%"=="0" goto ic_noaccept
+if "%price_user%"=="0" goto ic_noaccept
 if %price_bot% lss %price_userl% goto ic_noaccept
 if %price_bot% gtr %price_useru% goto ic_noaccept
 if %price_userl% lss %price_bot% goto ic_noaccept
 if %price_useru% gtr %price_bot% goto ic_noaccept
 :ic_accept
-echo accept
-
+echo [%time%] [ITEMPRICE] Values correct. Accepting trade.
+echo [%time%] [OFFERCONFIRM] Running "OfferConfirm.ahk"
+start C:\OpticTradeBot\config\botfiles\ahk\OfferConfirm.ahk
+echo [%time%] [OFFERCONFIRM] Confirming offer...
+timeout /t 11 /nobreak >nul
+pause
 :ic_noaccept
-echo noaccept
+echo [%time%] [ITEMPRICE] Not accepting trade. Incrrect values.
+echo [%time%] [OFFERDECLINE] Running "OfferDecline.ahk"
+start C:\OpticTradeBot\config\botfiles\ahk\OfferDecline.ahk
+echo [%time%] [OFFERDECLINE] Declining offer...
+timeout /t 8 /nobreak >nul
 pause
 
 
@@ -196,7 +240,7 @@ pause
 set icloop=0
 :itemchecker_bot1
 set /a icloop+=1
-echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for bot
+echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for "bot"
 start C:\OpticTradeBot\config\botfiles\ahk\OfferUp.ahk
 call C:\OpticTradeBot\config\itm1config.bat
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
@@ -233,22 +277,32 @@ if "%icloop%"=="8" set coord1x=%slot8X1%
 if "%icloop%"=="8" set coord1y=%slot8Y1%
 if "%icloop%"=="8" set coord2x=%slot8X2%
 if "%icloop%"=="8" set coord2y=%slot8Y2%
-if %icloop% GEQ echo [%time%] [ITEMCHECK] [WARNING] slot9 is NOT valid. Exiting call.
-if %icloop% GEQ 9 GOTO:eof
+if %icloop% GEQ 9 echo [%time%] [ITEMCHECK] [WARNING] slot9 is NOT valid. Exiting call.
+if %icloop% GEQ 9 goto itemchecker_bot_done
+if not exist C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp call :ic_invalidimage
+if not exist C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp GOTO:eof
 echo CoordMode Pixel > C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\OpticTradeBot\config\itemconfig\img_1366x768\%itemid%.bmp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo if ErrorLevel >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo else >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo     FileAppend, temp, C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo if ErrorLevel >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo else >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo     FileAppend, temp, C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
 :: Start the AHK checker and sees its output.
-start C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-ping 1.1.1.1 -n 1 -w 1000 > nul
-if not exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat echo [%time%] [ITEMCHECK] Item not found in trade.
-if not exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat goto itemchecker_bot1
-set /a price_bot+=%val%
-echo [%time%] [ITEMCHECK] Found item in trade. Increased bot value by "%val%". Total: "%price_bot%"
+start C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
 goto itemchecker_bot1
+:itemchecker_bot_done
+ping 1.1.1.1 -n 1 -w 1000 > nul
+echo [%time%] [ITEMCHECK] Adding up prices...
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%1.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%2.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%3.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%4.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%5.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%6.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%7.bat set /a price_bot+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%8.bat set /a price_bot+=%val%
+echo [%time%] [ITEMCHECK] Total: "%price_bot%"
+GOTO:eof
 :itemchecker_user
 set icloop=0
 start C:\OpticTradeBot\config\botfiles\ahk\OfferUp.ahk
@@ -256,7 +310,7 @@ start C:\OpticTradeBot\config\botfiles\ahk\OfferDown.ahk
 timeout /t 1 /nobreak > nul
 :itemchecker_user1
 set /a icloop+=1
-echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for user
+echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for "user"
 call C:\OpticTradeBot\config\itm2config.bat
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat
@@ -292,22 +346,32 @@ if "%icloop%"=="8" set coord1x=%slot8X1%
 if "%icloop%"=="8" set coord1y=%slot8Y1%
 if "%icloop%"=="8" set coord2x=%slot8X2%
 if "%icloop%"=="8" set coord2y=%slot8Y2%
-if %icloop% GEQ echo [%time%] [ITEMCHECK] [WARNING] slot9 is NOT valid. Exiting call.
-if %icloop% GEQ 9 GOTO:eof
+if %icloop% GEQ 9 echo [%time%] [ITEMCHECK] [WARNING] slot9 is NOT valid. Exiting call.
+if %icloop% GEQ 9 goto itemchecker_user_done
+if not exist C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp call :ic_invalidimage
+if not exist C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp GOTO:eof
 echo CoordMode Pixel > C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\OpticTradeBot\config\itemconfig\img_1366x768\%itemid%.bmp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo if ErrorLevel >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo else >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-echo     FileAppend, temp, C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
+echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\OpticTradeBot\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo if ErrorLevel >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo     exit >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo else >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
+echo     FileAppend, temp, C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.bat >> C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
 :: Start the AHK checker and sees its output.
-start C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-ping 1.1.1.1 -n 1 -w 1000 > nul
-if not exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat echo [%time%] [ITEMCHECK] Item not found in trade.
-if not exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat goto itemchecker_user1
-set /a price_user+=%val%
-echo [%time%] [ITEMCHECK] Found item in trade. Increased bot value by "%val%". Total: "%price_user%"
+start C:\OpticTradeBot\config\itemconfig\temp\%itemid%%icloop%.ahk
 goto itemchecker_user1
+:itemchecker_user_done
+ping 1.1.1.1 -n 1 -w 1000 > nul
+echo [%time%] [ITEMCHECK] Adding up prices...
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%1.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%2.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%3.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%4.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%5.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%6.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%7.bat set /a price_user+=%val%
+if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%8.bat set /a price_user+=%val%
+echo [%time%] [ITEMCHECK] Total: "%price_user%"
+GOTO:eof
 :cycle_return
 echo.
 echo [%time%] Cycle #%cycle% (%time% %date%; %cycleid%) finished.
@@ -342,6 +406,16 @@ echo [%time%] [WARNING] Trade Hold present. Fatal error.
 echo.
 timeout /t 2 /nobreak >nul
 exit
+:ic_invalidcfg
+echo [%time%] [WARNING] Config for %itemid% is invalid or does not exist.
+echo.
+timeout /t 2 /nobreak >nul
+GOTO:eof
+:ic_invalidimage
+echo [%time%] [WARNING] Config image for %itemid% is invalid or does not exist.
+echo.
+timeout /t 2 /nobreak >nul
+GOTO:eof
 :check_status
 echo [%time%] [STATUS] Checking status of TradeBotLauncher..
 if not exist C:\OpticTradeBot\config\prgon.txt goto err_launcher001
