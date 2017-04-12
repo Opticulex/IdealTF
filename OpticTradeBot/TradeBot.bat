@@ -55,6 +55,8 @@ if not exist C:\OpticTradeBot\config\ScreenSize.bat goto err_config001
 echo [%time%] [CONFIG] Input Config values: "%varBotID%,%varBotName%,%varScreenSize%"
 echo [%time%] [CONFIG] Loading advancedconfig.bat..
 call C:\OpticTradeBot\config\advancedconfig.bat
+echo [%time%] [CONFIG] Loading screenresolution.bat..
+call C:\OpticTradeBot\config\screenresolution.bat
 :: Read Screen Resolution Settings
 if "%varScreenSize%"=="1366x768" set ScreenSizeX=1366
 if "%varScreenSize%"=="1366x768" set ScreenSizeY=768
@@ -68,6 +70,8 @@ if "%varScreenSize%"=="1024x768" goto screensizeset
 if "%varScreenSize%"=="1024x768 " set ScreenSizeX=1024
 if "%varScreenSize%"=="1024x768 " set ScreenSizeY=768
 if "%varScreenSize%"=="1024x768 " goto screensizeset
+if not "%screenresX%"=="%ScreenSizeX%" goto err_config003
+if not "%screenresY%"=="%ScreenSizeY%" goto err_config003
 goto err_config002
 :screensizeset
 echo [%time%] [CONFIG] Screen Resolution x:"%ScreenSizeX%" y:"%ScreenSizeY%" raw:"%varScreenSize%"
@@ -92,6 +96,7 @@ timeout /t 1 /nobreak >nul
 echo [%time%] [TRADECHECK] Running "PageRefresh.ahk"
 start C:\OpticTradeBot\config\botfiles\ahk\PageRefresh.ahk
 timeout /t 5 /nobreak >nul
+:: Checks for trade holds
 echo [%time%] [TRADECHECK] Running "holdcheck.ahk"
 start C:\OpticTradeBot\config\itemconfig\temp\holdcheck.ahk
 :tc_waitforhc_pre
@@ -120,6 +125,7 @@ echo else >> C:\OpticTradeBot\config\itemconfig\temp\tradecheck.ahk
 echo     FileAppend, temp, C:\OpticTradeBot\config\itemconfig\temp\TRADE.txt >> C:\OpticTradeBot\config\itemconfig\temp\tradecheck.ahk
 echo exit  >> C:\OpticTradeBot\config\itemconfig\temp\tradecheck.ahk
 start C:\OpticTradeBot\config\itemconfig\temp\tradecheck.ahk
+:: Checks for trade offer
 :tc_waitforto_pre
 set tc_waitforto=0
 :tc_waitforto
@@ -143,13 +149,13 @@ timeout /t 10 /nobreak >nul
 echo [%time%] [TRADECHECK] Running "MaximiseWindow.ahk"
 start C:\OpticTradeBot\config\botfiles\ahk\MaximiseWindow.ahk
 timeout /t 2 /nobreak >nul
+:: Begins itemchecker
 :ic_pre
 echo.
 echo echo [%time%] [ITEMCHECK] Began ItemCheck.
 :ic
 set price_bot=0
 set price_user=0
-
 :: =================================================================================================================================================================
 ::  PLEASE PLACE ALL ITEM CHECKS IN BETWEEN THE TWO BOUNDARIES
 ::
@@ -163,7 +169,7 @@ set price_user=0
 :: call :itemchecker_user  ## If only the bot has the item, remove the "user" check, this saves time and resorces and helps combat useless checking.
 :: echo [%time%] [ITEMCHECK] Final price: %price_bot% %price_user%    ## Outputs the final price after the bot is done checking. Leave as is.
 ::
-:: PLACE ALL ITEM CONFIGS BELOW THIS LINE
+:: PLACE ALL ITEM CONFIGS BELOW THIS LINE (find_item_config)
 :: =================================================================================================================================================================
 
 
@@ -222,29 +228,25 @@ echo [%time%] [OFFERCONFIRM] Running "OfferConfirm.ahk"
 start C:\OpticTradeBot\config\botfiles\ahk\OfferConfirm.ahk
 echo [%time%] [OFFERCONFIRM] Confirming offer...
 timeout /t 11 /nobreak >nul
-pause
+echo [%time%] [OFFERCONFIRM] Confirmed offer.
+goto cycle_return
 :ic_noaccept
 echo [%time%] [ITEMPRICE] Not accepting trade. Incrrect values.
 echo [%time%] [OFFERDECLINE] Running "OfferDecline.ahk"
 start C:\OpticTradeBot\config\botfiles\ahk\OfferDecline.ahk
 echo [%time%] [OFFERDECLINE] Declining offer...
 timeout /t 8 /nobreak >nul
-pause
-
-
-
-
-
-
+echo [%time%] [OFFERDECLINE] Declined offer.
+goto cycle_return
 :itemchecker_bot
 set icloop=0
+start C:\OpticTradeBot\config\botfiles\ahk\OfferUp.ahk
+del /Q C:\OpticTradeBot\config\itemconfig\temp\*.*
 :itemchecker_bot1
 set /a icloop+=1
 echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for "bot"
 start C:\OpticTradeBot\config\botfiles\ahk\OfferUp.ahk
 call C:\OpticTradeBot\config\itm1config.bat
-if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat
 if "%icloop%"=="1" set coord1x=%slot1X1%
 if "%icloop%"=="1" set coord1y=%slot1Y1%
 if "%icloop%"=="1" set coord2x=%slot1X2%
@@ -302,12 +304,14 @@ if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%6.bat set /a price_bot+
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%7.bat set /a price_bot+=%val%
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%8.bat set /a price_bot+=%val%
 echo [%time%] [ITEMCHECK] Total: "%price_bot%"
+del /Q C:\OpticTradeBot\config\itemconfig\temp\*.*
 GOTO:eof
 :itemchecker_user
 set icloop=0
 start C:\OpticTradeBot\config\botfiles\ahk\OfferUp.ahk
 start C:\OpticTradeBot\config\botfiles\ahk\OfferDown.ahk
 timeout /t 1 /nobreak > nul
+del /Q C:\OpticTradeBot\config\itemconfig\temp\*.*
 :itemchecker_user1
 set /a icloop+=1
 echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for "user"
@@ -371,12 +375,15 @@ if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%6.bat set /a price_user
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%7.bat set /a price_user+=%val%
 if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%8.bat set /a price_user+=%val%
 echo [%time%] [ITEMCHECK] Total: "%price_user%"
+del /Q C:\OpticTradeBot\config\itemconfig\temp\*.*
 GOTO:eof
+:: Finishes and returns cycle.
 :cycle_return
 echo.
 echo [%time%] Cycle #%cycle% (%time% %date%; %cycleid%) finished.
 echo [%time%] Returning to start.
 goto cycle
+:: Launcher error.
 :err_launcher001
 echo [%time%] [WARNING] C:\OpticTradeBot\config\prgon.txt does not exist.
 echo.
@@ -384,6 +391,7 @@ echo [%time%] [WARNING] Please start the launcher.
 echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
 goto cycle
+:: Launcher error.
 :err_launcher002
 echo [%time%] [WARNING] C:\OpticTradeBot\config\prgrun.txt does not exist.
 echo.
@@ -391,31 +399,43 @@ echo [%time%] [WARNING] Please launch the program from the launcher "Start" butt
 echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
 goto cycle
+:: Config is corrupt.
 :err_config001
 echo [%time%] [WARNING] Config does not exist. Please log into the bot if you havent already.
 echo.
 timeout /t 4 /nobreak >nul
 exit
+:: Invalid screen size.
 :err_config002
 echo [%time%] [WARNING] Screen Size Config is corrupt.
 echo.
 timeout /t 2 /nobreak >nul
 exit
+:: Invalid screen size.
+:err_config003
+echo [%time%] [WARNING] Screen Size Config doesn't match current screen size!
+echo.
+timeout /t 2 /nobreak >nul
+exit
+:: Trade hold is present.
 :err_hold001
 echo [%time%] [WARNING] Trade Hold present. Fatal error.
 echo.
 timeout /t 2 /nobreak >nul
 exit
+:: There was an error with an itemids config
 :ic_invalidcfg
 echo [%time%] [WARNING] Config for %itemid% is invalid or does not exist.
 echo.
 timeout /t 2 /nobreak >nul
 GOTO:eof
+:: Could not find image of itemid in config
 :ic_invalidimage
 echo [%time%] [WARNING] Config image for %itemid% is invalid or does not exist.
 echo.
 timeout /t 2 /nobreak >nul
 GOTO:eof
+:: Checks status of launcher.
 :check_status
 echo [%time%] [STATUS] Checking status of TradeBotLauncher..
 if not exist C:\OpticTradeBot\config\prgon.txt goto err_launcher001
