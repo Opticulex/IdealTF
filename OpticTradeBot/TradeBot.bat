@@ -1,13 +1,19 @@
 :start
 @echo off
 :: Sets directory and file title.
+set ver=null
+set build=null
 cd C:\OpticTradeBot
 title Optic Trade Bot
-echo Optic Trade bot started.
-call :check_status
+call C:\OpticTradeBot\config\version.bat
+call C:\OpticTradeBot\config\build.bat
+if "%ver%"=="null" goto err_config004
+if "%build%"=="null" goto err_config005
+echo Optic Trade bot started. You are running %ver% and build%build%.
 call C:\OpticTradeBot\config\botfiles\other\login.bat
-echo [%time%] [LOGIN] Logged in as %recentlogin_user% 
-echo [%time%] [LOGIN] Uid: %recentlogin_uid% 
+call :check_status
+echo [%time%] [LOGIN] Logged in as %recentlogin_user%
+echo [%time%] [LOGIN] Uid: %recentlogin_uid%
 :: CYCLE
 :: Sets cycle value to 0, cycle lable and increments cycle value by 1.
 set cycle=0
@@ -58,6 +64,7 @@ call C:\OpticTradeBot\config\advancedconfig.bat
 echo [%time%] [CONFIG] Loading screenresolution.bat..
 call C:\OpticTradeBot\config\screenresolution.bat
 :: Read Screen Resolution Settings
+echo [%time%] [CONFIG] Setting Screen resolution...
 if "%varScreenSize%"=="1366x768" set ScreenSizeX=1366
 if "%varScreenSize%"=="1366x768" set ScreenSizeY=768
 if "%varScreenSize%"=="1366x768" goto screensizeset
@@ -70,10 +77,19 @@ if "%varScreenSize%"=="1024x768" goto screensizeset
 if "%varScreenSize%"=="1024x768 " set ScreenSizeX=1024
 if "%varScreenSize%"=="1024x768 " set ScreenSizeY=768
 if "%varScreenSize%"=="1024x768 " goto screensizeset
-if not "%screenresX%"=="%ScreenSizeX%" goto err_config003
-if not "%screenresY%"=="%ScreenSizeY%" goto err_config003
 goto err_config002
 :screensizeset
+:: Downloads item coord config
+echo [%time%] [CONFIG] Downloading defaultcoords_%ScreenSizeX%x%ScreenSizeY%_1cfg.txt...
+echo [%time%] [CONFIG] Downloading defaultcoords_%ScreenSizeX%x%ScreenSizeY%_2cfg.txt...
+del C:\OpticTradeBot\config\dlscreenfiles1.ahk
+del C:\OpticTradeBot\config\dlscreenfiles2.ahk
+echo UrlDownloadToFile, https://optictradebot.neocities.org/data/defaultcoords_%ScreenSizeX%x%ScreenSizeY%_1cfg.txt, C:\OpticTradeBot\config\itm1config.bat > C:\OpticTradeBot\config\dlscreenfiles1.ahk
+echo UrlDownloadToFile, https://optictradebot.neocities.org/data/defaultcoords_%ScreenSizeX%x%ScreenSizeY%_2cfg.txt, C:\OpticTradeBot\config\itm2config.bat > C:\OpticTradeBot\config\dlscreenfiles2.ahk
+timeout /t 1 /nobreak >nul
+start C:\OpticTradeBot\config\dlscreenfiles1.ahk
+start C:\OpticTradeBot\config\dlscreenfiles2.ahk
+timeout /t 3 /nobreak >nul
 echo [%time%] [CONFIG] Screen Resolution x:"%ScreenSizeX%" y:"%ScreenSizeY%" raw:"%varScreenSize%"
 :: Checks status again
 call :check_status
@@ -417,6 +433,19 @@ echo [%time%] [WARNING] Screen Size Config doesn't match current screen size!
 echo.
 timeout /t 2 /nobreak >nul
 exit
+:: Invalid version
+:err_config004
+echo [%time%] [WARNING] Version config error.
+echo.
+timeout /t 2 /nobreak >nul
+exit
+:: Invalid build id
+:err_config005
+echo [%time%] [WARNING] Build ID config error.
+echo.
+timeout /t 2 /nobreak >nul
+exit
+
 :: Trade hold is present.
 :err_hold001
 echo [%time%] [WARNING] Trade Hold present. Fatal error.
