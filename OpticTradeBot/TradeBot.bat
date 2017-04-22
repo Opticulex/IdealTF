@@ -332,8 +332,6 @@ del /Q C:\OpticTradeBot\config\itemconfig\temp\*.*
 set /a icloop+=1
 echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for "user"
 call C:\OpticTradeBot\config\itm2config.bat
-if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.ahk
-if exist C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat del C:\OpticTradeBot\config\itemconfig\temp\%itemid%.bat
 if "%icloop%"=="1" set coord1x=%slot1X1%
 if "%icloop%"=="1" set coord1y=%slot1Y1%
 if "%icloop%"=="1" set coord2x=%slot1X2%
