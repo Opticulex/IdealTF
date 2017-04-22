@@ -1,7 +1,7 @@
 Optic Trade Bot
 ===============
 
-The Optic Trade bot is a free Steam trading bot for Windows. It does not use the Steam API and can be modified infinately and easily through a GUI and commandline interface.
+The Optic Trade bot is a free Steam trading bot for Windows. It does not use the Steam API and can be modified infinately and easily through a GUI, tools, mods, plugins and commandline interface.
 
 ## [Get Latest Release](https://github.com/Opticulex/OpticTradeBot/releases/)
 
