@@ -1,0 +1,8 @@
+:: Copy the code below into the trade offer category in TradeBot.bat
+:ic_id_5001
+set itemid=5001
+call C:\IdealTF\config\itemconfig\%itemid%.bat
+echo [%time%] [ITEMCHECK] Item Id: %itemid% Item Value: %val% Image: %img%
+if "%bot%"=="true" call :itemchecker_bot
+if "%user%"=="true" call :itemchecker_user
+echo [%time%] [ITEMCHECK] Final price - bot:%price_bot%, user:%price_user%
