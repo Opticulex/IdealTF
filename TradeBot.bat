@@ -7,23 +7,20 @@
 :: May be modified freely but only for personal use. Redistribution of any sort, 
 :: editied or unedited is strictly prohibited.
 ::
-:: Code designed for v2.0 build100517
+:: Code designed for v2.0.1 build100517
 ::
 :: =================================================================================
 ::
 ::               >>>>> FOR ITEM CONFIG SETTINGS GO TO LINE 209 <<<<<
 ::
 :: =================================================================================
-
-
-
 :start
 @echo off
 :: Sets version and build data to nulls.
 set ver=null
 set build=null
 :: Verifies program exists
-if not exist C:\IdealTF goto err_launch001
+if not exist C:\IdealTF\ goto err_launch001
 if not exist C:\IdealTF\config\ goto err_launch002
 :: Sets working directory to C:\IdealTF
 cd C:\IdealTF
@@ -37,10 +34,9 @@ if "%ver%"=="null" goto err_config004
 if "%build%"=="null" goto err_config005
 :: Outputs start data
 echo IdealTF started. You are running %ver% and build%build%.
-echo [%date% %time%] Launched %ver% build%build%. >> C:IdealTFog.txt
-
+echo [%date% %time%] Launched %ver% build%build%. >> C:\IdealTF\Log.txt
 :: Checks status
-call :check_status
+::call :check_status
 :: Resets Config Values
 set varSteamID=0
 set varSteamName=0
@@ -63,7 +59,7 @@ if not exist C:\IdealTF\config\settings\SteamName.bat goto err_config001
 if not exist C:\IdealTF\config\settings\ScreenSize.bat goto err_config001
 echo [%time%] [CONFIG] Input Config values: "%varSteamID%,%varSteamName%,%varScreenSize%"
 echo [%time%] [CONFIG] Loading advancedconfig.bat..
-call C:\IdealTF\config\advancedconfig.bat
+if exist C:\IdealTF\config\advancedconfig.bat call C:\IdealTF\config\advancedconfig.bat
 echo [%time%] [CONFIG] Loading screenresolution.bat..
 if exist C:\IdealTF\config\screenresolution.bat call C:\IdealTF\config\screenresolution.bat
 :: Read Screen Resolution Settings
@@ -104,7 +100,7 @@ set /a cycle+=1
 set tradeid=%random%%random%%random%
 :: Prints cycle details
 echo [%time%] Cycle #%cycle% began at %time% %date%; tradeid %tradeid%
-echo [%date% %time%] Cycle #%cycle% %time% %date%; %tradeid%. >> C:IdealTFog.txt
+echo [%date% %time%] Cycle #%cycle% %time% %date%; %tradeid%. >> C:\IdealTF\Log.txt
 :: Checks status
 call :check_status
 :: Create TEMP shit in AHK. Messy stuff.
@@ -173,14 +169,14 @@ if not exist C:\IdealTF\config\itemconfig\temp\TRADE.txt goto tc_waitforto
 goto tc_waitforto
 :: Trade offer not found
 :tc_waitforto_1
-echo [%date% %time%] Offer not found (#%cycle% %tradeid%). >> C:IdealTFog.txt
+echo [%date% %time%] Offer not found (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 echo [%time%] [TRADECHECK] Trade offer not found after %tc_waitforto% tries. (timed out)
 if exist C:\IdealTF\config\itemconfig\temp\tradecheck.ahk del C:\IdealTF\config\itemconfig\temp\tradecheck.ahk
 if exist C:\IdealTF\config\itemconfig\temp\TRADE.txt del C:\IdealTF\config\itemconfig\temp\TRADE.txt
 goto cycle_return
 :: Trade offer found
 :tc_waitforto_2
-echo [%date% %time%] Offer found (#%cycle% %tradeid%). >> C:IdealTFog.txt
+echo [%date% %time%] Offer found (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 :: Sets data for latest trade
 if exist C:\IdealTF\config\temp\data_02_001.txt del C:\IdealTF\config\temp\data_02_001.txt
 echo %date% %time% >> C:\IdealTF\config\temp\data_02_001.txt
@@ -270,7 +266,7 @@ if %price_user% lss %price_bot% goto ic_noaccept
 if %price_user% gtr %price_bot% goto ic_accept
 
 :ic_accept
-echo [%date% %time%] Offer accepted (#%cycle% %tradeid%). >> C:IdealTFog.txt
+echo [%date% %time%] Offer accepted (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 if exist C:\IdealTF\config\temp\data_02_004.txt del C:\IdealTF\config\temp\data_02_004.txt
 echo Accepted >> C:\IdealTF\config\temp\data_02_004.txt
 echo [%time%] [ITEMPRICE] Values correct. Accepting trade.
@@ -281,7 +277,7 @@ timeout /t 11 /nobreak >nul
 echo [%time%] [OFFERCONFIRM] Confirmed offer.
 goto cycle_return
 :ic_noaccept
-echo [%date% %time%] Offer declined (#%cycle% %tradeid%). >> C:IdealTFog.txt
+echo [%date% %time%] Offer declined (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 if exist C:\IdealTF\config\temp\data_02_004.txt del C:\IdealTF\config\temp\data_02_004.txt
 echo Declined >> C:\IdealTF\config\temp\data_02_004.txt
 echo [%time%] [ITEMPRICE] Not accepting trade. Incrrect values.
@@ -447,14 +443,14 @@ GOTO:eof
 :: Finishes and returns cycle.
 :cycle_return
 echo.
-echo [%date% %time%] Cycle finished (#%cycle% %tradeid%). >> C:IdealTFog.txt
+echo [%date% %time%] Cycle finished (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 echo [%time%] Cycle #%cycle% (%time% %date%; %tradeid%) finished.
 echo [%time%] Returning to start.
 goto cycle
 :: Launcher error.
 :err_launcher001
 echo.
-echo [%date% %time%] Launcher not started (err_launcher001). >> C:IdealTFog.txt
+echo [%date% %time%] Launcher not started (err_launcher001). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Please start the launcher and run the bot from there.
 echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
@@ -462,15 +458,15 @@ goto cycle
 :: Launcher error.
 :err_launcher002
 echo.
-echo [%date% %time%] Program not started (err_launcher002). >> C:IdealTFog.txt
-echo [%time%] [WARNING] Please launch the program from the launcher "Start" button.
+echo [%date% %time%] Program not started (err_launcher002). >> C:\IdealTF\Log.txt
+echo [%time%] [WARNING] Please launch the program from the launcher 'Start' button.
 echo [%time%] [WARNING] Please wait..
 timeout /t 5 /nobreak >nul
 goto cycle
 
 :err_launch001
 :err_launch002
-echo [%date% %time%] Install error (err_launch001/2). >> C:IdealTFog.txt
+echo [%date% %time%] Install error (err_launch001/2). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] IdealTF or IdealTF config is not installed.
 echo.
 echo Press any key to exit.
@@ -478,7 +474,7 @@ pause>nul
 exit
 :: Config is corrupt.
 :err_config001
-echo [%date% %time%] Config does not exist (err_config001). >> C:IdealTFog.txt
+echo [%date% %time%] Config does not exist (err_config001). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Config does not exist. Please log into the bot if you haven't already.
 echo.
 echo Press any key to exit.
@@ -486,7 +482,7 @@ pause>nul
 exit
 :: Invalid screen size.
 :err_config002
-echo [%date% %time%] Screen size config is corrupt (err_config002). >> C:IdealTFog.txt
+echo [%date% %time%] Screen size config is corrupt (err_config002). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Screen Size Config is corrupt.
 echo.
 echo Press any key to exit.
@@ -494,7 +490,7 @@ pause>nul
 exit
 :: Invalid screen size.
 :err_config003
-echo [%date% %time%] Screen size config is invalid (err_config003). >> C:IdealTFog.txt
+echo [%date% %time%] Screen size config is invalid (err_config003). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Screen Size Config doesn't match current screen size!
 echo.
 echo Press any key to exit.
@@ -502,7 +498,7 @@ pause>nul
 exit
 :: Invalid version
 :err_config004
-echo [%date% %time%] Version error (err_config004). >> C:IdealTFog.txt
+echo [%date% %time%] Version error (err_config004). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Version config error.
 echo.
 echo Press any key to exit.
@@ -510,20 +506,20 @@ pause>nul
 exit
 :: Invalid build id
 :err_config005
-echo [%date% %time%] Build error (err_config005). >> C:IdealTFog.txt
+echo [%date% %time%] Build error (err_config005). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Build ID config error.
 echo.
 echo Press any key to exit.
 pause>nul
 exit
 :err_config005
-echo [%date% %time%] Screen config error (err_config005). >> C:IdealTFog.txt
+echo [%date% %time%] Screen config error (err_config005). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Couldn't download screen data!
 echo.
 goto cycle
 :: Trade hold is present.
 :err_hold001
-echo [%date% %time%] Trade hold present (err_hold001). >> C:IdealTFog.txt
+echo [%date% %time%] Trade hold present (err_hold001). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Trade Hold present. Fatal error.
 echo.
 echo Press any key to exit.
@@ -531,14 +527,14 @@ pause>nul
 exit
 :: There was an error with an itemids config
 :ic_invalidcfg
-echo [%date% %time%] Inavlid or corrupt itemconfig (err_invalidcfg). >> C:IdealTFog.txt
+echo [%date% %time%] Inavlid or corrupt itemconfig (err_invalidcfg). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Config for %itemid% is invalid or does not exist.
 echo.
 timeout /t 2 /nobreak >nul
 GOTO:eof
 :: Could not find image of itemid in config
 :ic_invalidimage
-echo [%date% %time%] Itemconfig image is corrupt or does not exist (err_invalidimage). >> C:IdealTFog.txt
+echo [%date% %time%] Itemconfig image is corrupt or does not exist (err_invalidimage). >> C:\IdealTF\Log.txt
 echo [%time%] [WARNING] Config image for %itemid% is invalid or does not exist.
 echo.
 timeout /t 2 /nobreak >nul
