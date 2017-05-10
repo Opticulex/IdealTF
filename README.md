@@ -1,7 +1,7 @@
 IdealTF
 ===============
 
-IdealTF is a free steam trading bot for Windows offering plenty of customisation and features.
+IdealTF is a free steam trading bot for Windows programmed in C#, Batch and AutoHotKey allowing the automation of Steam Trading (Including Team Fortress 2 and CS:GO). It can accept trades in as little as 20 seconds! It offers plenty of customisation and features including open-source code and user accounts.
 
 ## [Get Latest Release](https://github.com/Opticulex/OpticTradeBot/releases/)
 
