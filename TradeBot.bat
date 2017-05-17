@@ -1,3 +1,4 @@
+@echo off
 :: =================================================================================
 ::                                        IdealTF
 :: =================================================================================
@@ -46,10 +47,12 @@ set ScreenSizeX=0
 set ScreenSizeY=0
 :: Runs settings ITFsettingsAgent
 if exist C:\IdealTF\config\ITFsettingsAgent.exe start C:\IdealTF\config\ITFsettingsAgent.exe
-timeout /t %execution_wait% /nobreak > nul
+if not exist C:\IdealTF\config\ITFsettingsAgent.exe goto err_file001
+timeout /t 2 /nobreak > nul
 :: Runs settings ITFsettingsCompiler
 if exist C:\IdealTF\config\ITFsettingsCompiler.exe start C:\IdealTF\config\ITFsettingsCompiler.exe
-timeout /t %execution_wait% /nobreak > nul
+if not exist C:\IdealTF\config\ITFsettingsCompiler.exe goto err_file002
+timeout /t 2 /nobreak > nul
 :: Sets config values
 echo [%time%] [CONFIG] Reading Input Config values...
 if exist C:\IdealTF\config\settings\SteamID.bat call C:\IdealTF\config\settings\SteamID.bat
@@ -61,8 +64,12 @@ if not exist C:\IdealTF\config\settings\ScreenSize.bat goto err_config001
 echo [%time%] [CONFIG] Input Config values: "%varSteamID%,%varSteamName%,%varScreenSize%"
 echo [%time%] [CONFIG] Loading advancedconfig.bat..
 if exist C:\IdealTF\config\advancedconfig.bat call C:\IdealTF\config\advancedconfig.bat
+if not exist C:\IdealTF\config\advancedconfig.bat goto err_file003
 echo [%time%] [CONFIG] Loading screenresolution.bat..
 if exist C:\IdealTF\config\screenresolution.bat call C:\IdealTF\config\screenresolution.bat
+:: Leave the below line commented out as the screenresolution file is not actually created
+:: any more.
+::if not exist C:\IdealTF\config\screenresolution.bat goto err_file004
 :: Read Screen Resolution Settings
 echo [%time%] [CONFIG] Setting Screen resolution...
 if "%varScreenSize%"=="1366x768" set ScreenSizeX=1366
@@ -80,14 +87,14 @@ if exist C:\IdealTF\config\dlscreenfiles1.ahk del C:\IdealTF\config\dlscreenfile
 if exist C:\IdealTF\config\dlscreenfiles2.ahk del C:\IdealTF\config\dlscreenfiles2.ahk
 echo UrlDownloadToFile, https://idealtf.neocities.org/data/defaultcoords_%ScreenSizeX%x%ScreenSizeY%_1cfg.txt, C:\IdealTF\config\itm1config.bat > C:\IdealTF\config\dlscreenfiles1.ahk
 echo UrlDownloadToFile, https://idealtf.neocities.org/data/defaultcoords_%ScreenSizeX%x%ScreenSizeY%_2cfg.txt, C:\IdealTF\config\itm2config.bat > C:\IdealTF\config\dlscreenfiles2.ahk
-timeout /t %execution_wait_short% /nobreak >nul
+timeout /t 1 /nobreak >nul
 if exist C:\IdealTF\config\dlscreenfiles1.ahk start C:\IdealTF\config\dlscreenfiles1.ahk
 if exist C:\IdealTF\config\dlscreenfiles2.ahk start C:\IdealTF\config\dlscreenfiles2.ahk
 if not exist C:\IdealTF\config\dlscreenfiles1.ahk echo [%time%] [WARNING] Could not download defaultcoords!
 if not exist C:\IdealTF\config\dlscreenfiles2.ahk echo [%time%] [WARNING] Could not download defaultcoords!
 if not exist C:\IdealTF\config\dlscreenfiles1.ahk goto err_config006
 if not exist C:\IdealTF\config\dlscreenfiles2.ahk goto err_config006
-timeout /t %execution_wait_long% /nobreak >nul
+timeout /t 8 /nobreak >nul
 echo [%time%] [CONFIG] Screen Resolution x:"%ScreenSizeX%" y:"%ScreenSizeY%" raw:"%varScreenSize%"
 :: CYCLE
 :: Sets cycle value to 0, cycle lable and increments cycle value by 1.
@@ -105,10 +112,12 @@ echo [%date% %time%] Cycle #%cycle% %time% %date%; %tradeid%. >> C:\IdealTF\Log.
 call :check_status
 echo [%time%] [TRADECHECK] Running "SwitchToOffers.ahk"
 if exist C:\IdealTF\config\botfiles\ahk\SwitchToOffers.ahk start C:\IdealTF\config\botfiles\ahk\SwitchToOffers.ahk
-timeout /t %execution_wait% /nobreak >nul
+if not exist C:\IdealTF\config\botfiles\ahk\SwitchToOffers.ahk goto err_file005
+timeout /t 2 /nobreak >nul
 echo [%time%] [TRADECHECK] Running "PageRefresh.ahk"
 if exist C:\IdealTF\config\botfiles\ahk\PageRefresh.ahk start C:\IdealTF\config\botfiles\ahk\PageRefresh.ahk
-timeout /t %refresh_time% /nobreak >nul
+if not exist C:\IdealTF\config\botfiles\ahk\PageRefresh.ahk goto err_file006
+timeout /t 5 /nobreak >nul
 :: DO NOT UNCOMMENT THIS. Useless and broken code.
 :: Checks for trade holds
 :: Create TEMP shit in AHK. Messy stuff.
@@ -157,7 +166,8 @@ echo     FileAppend, temp, C:\IdealTF\config\itemconfig\temp\TRADE.txt >> C:\Ide
 echo exit  >> C:\IdealTF\config\itemconfig\temp\tradecheck.ahk
 :: Starts tradecheck
 echo [%time%] [TRADECHECK] Checking for trade
-start C:\IdealTF\config\itemconfig\temp\tradecheck.ahk
+if exist C:\IdealTF\config\itemconfig\temp\tradecheck.ahk start C:\IdealTF\config\itemconfig\temp\tradecheck.ahk
+if not exist C:\IdealTF\config\itemconfig\temp\tradecheck.ahk goto err_file007
 :: Checks for trade offer
 :tc_waitforto_pre
 set tc_waitforto=0
@@ -189,11 +199,13 @@ if exist C:\IdealTF\config\itemconfig\temp\TRADE.txt del C:\IdealTF\config\itemc
 :: Opens offer
 echo [%time%] [TRADECHECK] Running "OpenOffer.ahk"
 if exist C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk start C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk
-timeout /t %load_time% /nobreak >nul
+if not exist C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk goto err_file008
+timeout /t 10 /nobreak >nul
 :: Maximises offer window
 echo [%time%] [TRADECHECK] Running "MaximiseWindow.ahk"
 if exist C:\IdealTF\config\botfiles\ahk\MaximiseWindow.ahk start C:\IdealTF\config\botfiles\ahk\MaximiseWindow.ahk
-timeout /t %execution_wait% /nobreak >nul
+if not exist C:\IdealTF\config\botfiles\ahk\MaximiseWindow.ahk goto err_file009
+timeout /t 2 /nobreak >nul
 :: Begins itemchecker
 :ic_pre
 echo.
@@ -205,6 +217,7 @@ if exist C:\IdealTF\config\settings\ButtonAcceptall.txt goto ic_accept
 if exist C:\IdealTF\config\settings\ButtonDeclineall.txt goto ic_noaccept
 goto ic_skip
 
+:: Itemcheck Begins
 :ic_skip
 echo echo [%time%] [ITEMCHECK] Began ItemCheck.
 :ic
@@ -259,18 +272,27 @@ echo [%time%] [ITEMCHECK] Final price - bot:%price_bot%, user:%price_user%
 :: =================================================================================================================================================================
 echo.
 echo [%time%] [OFFERCONFIRM] Running "OfferUp.ahk"
+:: Pulls offer back up to top
 start C:\IdealTF\config\botfiles\ahk\OfferUp.ahk
 echo [%time%] [ITEMCHECK] Itemcheck is complete!
 echo [%time%] [ITEMCHECK] Bot price: %price_bot% User price: %price_user%
+:: Sets the price margins (advancedconfig)
 set /a price_userl=%price_user%+%price_margin_hi%
 set /a price_useru=%price_user%-%price_margin_lo%
-if "%price_user%"=="0" goto ic_noaccept
+:: Maximum and minimum trade values (advancedconfig)
+if %price_user% gtr %price_maxuser% goto ic_noaccept
+if %price_user% lss %price_minuser% goto ic_noaccept
+if %price_bot% gtr %price_maxbot% goto ic_noaccept
+if %price_bot% lss %price_minbot% goto ic_noaccept
+:: High/Low Price margins (advancedconfig)
 if %price_bot% lss %price_userl% goto ic_noaccept
 if %price_bot% gtr %price_useru% goto ic_noaccept
 if %price_userl% lss %price_bot% goto ic_noaccept
 if %price_useru% gtr %price_bot% goto ic_noaccept
-if %price_user% lss %price_bot% goto ic_noaccept
+:: If user has a greater value than bot
 if %price_user% gtr %price_bot% goto ic_accept
+:: If all checks don't match critera accept trade. Not a good principal but
+:: should work. ehh.
 :ic_accept
 echo [%date% %time%] Offer accepted (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 if exist C:\IdealTF\config\temp\data_02_004.txt del C:\IdealTF\config\temp\data_02_004.txt
@@ -278,9 +300,11 @@ echo Accepted >> C:\IdealTF\config\temp\data_02_004.txt
 echo [%time%] [ITEMPRICE] Values correct. Accepting trade.
 echo [%time%] [OFFERCONFIRM] Running "OfferConfirm.ahk"
 if exist C:\IdealTF\config\botfiles\ahk\OfferConfirm.ahk start C:\IdealTF\config\botfiles\ahk\OfferConfirm.ahk
-echo [%time%] [OFFERCONFIRM] Confirming offer...
-timeout /t %execution_wait_verylong% /nobreak >nul
-echo [%time%] [OFFERCONFIRM] Confirmed offer.
+echo.
+call :c 0A "[%time%] [OFFERCONFIRM] Confirming offer..."
+timeout /t 11 /nobreak >nul
+echo.
+call :c 0A "[%time%] [OFFERCONFIRM] Confirmed offer."
 goto cycle_return
 :ic_noaccept
 echo [%date% %time%] Offer declined (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
@@ -289,18 +313,28 @@ echo Declined >> C:\IdealTF\config\temp\data_02_004.txt
 echo [%time%] [ITEMPRICE] Not accepting trade. Incorrect values.
 echo [%time%] [OFFERDECLINE] Running "OfferDecline.ahk"
 if exist C:\IdealTF\config\botfiles\ahk\OfferDecline.ahk start C:\IdealTF\config\botfiles\ahk\OfferDecline.ahk
-echo [%time%] [OFFERDECLINE] Declining offer...
-timeout /t %execution_wait_medium% /nobreak >nul
-echo [%time%] [OFFERDECLINE] Declined offer.
+echo.
+call :c 0C "[%time%] [OFFERDECLINE] Declining offer..."
+echo.
+timeout /t 8 /nobreak >nul
+echo.
+call :c 0C "[%time%] [OFFERDECLINE] Declined offer."
+echo.
 goto cycle_return
+:: itemchecker for bot
 :itemchecker_bot
+:: Set itemcheckloop to 0
 set icloop=0
+:: Starts offerUp.ahk and deletes all temp files
 start C:\IdealTF\config\botfiles\ahk\OfferUp.ahk
 del /Q C:\IdealTF\config\itemconfig\temp\*.*
 :itemchecker_bot1
+:: Increases itemcheckloop by 1
 set /a icloop+=1
 echo [%time%] [ITEMCHECK] Checking item slot: "%icloop%" for itemid "%itemid%" for "bot"
+:: Goes to top of offer
 start C:\IdealTF\config\botfiles\ahk\OfferUp.ahk
+:: Sets itemconfig values
 call C:\IdealTF\config\itm1config.bat
 if "%icloop%"=="1" (
     set coord1x=%slot1X1%
@@ -353,7 +387,7 @@ if "%icloop%"=="8" (
 if %icloop% GEQ 9 echo [%time%] [ITEMCHECK] [WARNING] slot9 is NOT valid. Exiting call.
 if %icloop% GEQ 9 goto itemchecker_bot_done
 if not exist C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp call :ic_invalidimage
-if not exist C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp GOTO:eof
+if not exist C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp GOTO ic_noaccept
 echo CoordMode Pixel > C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp >> C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 echo if ErrorLevel >> C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
@@ -364,7 +398,7 @@ echo     FileAppend, temp, C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ba
 start C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 goto itemchecker_bot1
 :itemchecker_bot_done
-timeout /t %execution_wait_short% /nobreak > nul
+timeout /t 1 /nobreak > nul
 echo [%time%] [ITEMCHECK] Adding up prices...
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%1.bat set /a price_bot+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%2.bat set /a price_bot+=%val%
@@ -389,7 +423,7 @@ GOTO:eof
 set icloop=0
 start C:\IdealTF\config\botfiles\ahk\OfferUp.ahk
 start C:\IdealTF\config\botfiles\ahk\OfferDown.ahk
-timeout /t %execution_wait_short% /nobreak > nul
+timeout /t 1 /nobreak > nul
 del /Q C:\IdealTF\config\itemconfig\temp\*.*
 :itemchecker_user1
 set /a icloop+=1
@@ -457,7 +491,7 @@ echo     FileAppend, temp, C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ba
 start C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 goto itemchecker_user1
 :itemchecker_user_done
-timeout /t %execution_wait_short% /nobreak > nul
+timeout /t 1 /nobreak > nul
 echo [%time%] [ITEMCHECK] Adding up prices...
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%1.bat set /a price_user+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%2.bat set /a price_user+=%val%
@@ -489,24 +523,29 @@ goto cycle
 :err_launcher001
 echo.
 echo [%date% %time%] Launcher not started (err_launcher001). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Please start the launcher and run the bot from there.
-echo [%time%] [WARNING] Please wait..
-timeout /t %error_wait% /nobreak >nul
+echo.
+call :c 0C "[%time%] [WARNING] Please start the launcher and run the bot from there."
+echo.
+call :c 0C "[%time%] [WARNING] Please wait.."
+timeout /t 3 /nobreak >nul
 if "%exit_on_stop%"=="true" exit
 if "%exit_on_stop%"=="false" goto cycle
 :: Launcher error.
 :err_launcher002
 echo.
 echo [%date% %time%] Program not started (err_launcher002). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Please launch the program from the launcher 'Start' button.
-echo [%time%] [WARNING] Please wait..
-timeout /t %error_wait% /nobreak >nul
+echo.
+call :c 0C "[%time%] [WARNING] Please launch the program from the launcher 'Start' button."
+echo.
+call :c 0C "[%time%] [WARNING] Please wait.."
+timeout /t 3 /nobreak >nul
 if "%exit_on_stop%"=="true" exit
 if "%exit_on_stop%"=="false" goto cycle
 :err_launch001
 :err_launch002
 echo [%date% %time%] Install error (err_launch001/2). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] IdealTF or IdealTF config is not installed.
+echo.
+call :c 0C "[%time%] [WARNING] IdealTF or IdealTF config is not installed."
 echo.
 echo Press any key to exit.
 if "%continue_on_fatal%"=="true" goto start
@@ -516,7 +555,8 @@ exit
 :: Config is corrupt.
 :err_config001
 echo [%date% %time%] Config does not exist (err_config001). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Config does not exist. Please log into the bot if you haven't already.
+echo.
+call :c 0C "[%time%] [WARNING] Config does not exist. Please log into the bot if you haven't already."
 echo.
 echo Press any key to exit.
 if "%continue_on_fatal%"=="true" goto start
@@ -526,7 +566,8 @@ exit
 :: Invalid screen size.
 :err_config002
 echo [%date% %time%] Screen size config is corrupt (err_config002). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Screen Size Config is corrupt.
+echo.
+call :c 0C "[%time%] [WARNING] Screen Size Config is corrupt."
 echo.
 echo Press any key to exit.
 if "%continue_on_fatal%"=="true" goto start
@@ -536,7 +577,8 @@ exit
 :: Invalid screen size.
 :err_config003
 echo [%date% %time%] Screen size config is invalid (err_config003). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Screen Size Config doesn't match current screen size!
+echo.
+call :c 0C "[%time%] [WARNING] Screen Size Config doesn't match current screen size!"
 echo.
 echo Press any key to exit.
 if "%continue_on_fatal%"=="true" goto start
@@ -546,7 +588,8 @@ exit
 :: Invalid version
 :err_config004
 echo [%date% %time%] Version error (err_config004). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Version config error.
+echo.
+call :c 0C "[%time%] [WARNING] Version config error."
 echo.
 echo Press any key to exit.
 if "%continue_on_fatal%"=="true" goto start
@@ -556,7 +599,8 @@ exit
 :: Invalid build id
 :err_config005
 echo [%date% %time%] Build error (err_config005). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Build ID config error.
+echo.
+call :c 0C "[%time%] [WARNING] Build ID config error."
 echo.
 echo Press any key to exit.
 if "%continue_on_fatal%"=="true" goto start
@@ -565,9 +609,103 @@ pause>nul
 exit
 :err_config005
 echo [%date% %time%] Screen config error (err_config005). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Couldn't download screen data!
+echo.
+call :c 0C "[%time%] [WARNING] Couldn't download screen data!"
 echo.
 goto cycle
+
+
+
+::err_file001
+echo [%date% %time%] ITFsettingsAgent.exe missing (err_file001). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting ITFsettingsAgent.exe. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file002
+echo [%date% %time%] ITFsettingsCompiler.exe missing (err_file002). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting ITFsettingsCompiler.exe. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file003
+echo [%date% %time%] advancedconfig missing (err_file003). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error reading advancedconfig. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file004
+echo [%date% %time%] screenresolution settings missing (err_file004). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error reading screenresolution. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file005
+echo [%date% %time%] SwitchToOffers.ahk missing (err_file005). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting SwitchToOffers.ahk. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file006
+echo [%date% %time%] PageRefresh.ahk missing (err_file006). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting PageRefresh.ahk. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file007
+echo [%date% %time%] tradecheck.ahk missing (err_file007). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting tradecheck.ahk. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file008
+echo [%date% %time%] OpenOffer.ahk missing (err_file008). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting OpenOffer.ahk. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
+::err_file009
+echo [%date% %time%] MaximiseWindow.ahk missing (err_file009). >> C:\IdealTF\Log.txt
+echo.
+call :c 0C "[%time%] [WARNING] Error starting MaximiseWindow.ahk. Missing or corrupt file."
+echo.
+echo Press any key to exit.
+if "%continue_on_fatal%"=="true" goto start
+if "%exit_on_fatal%"=="true" exit
+pause>nul
+exit
 :: Trade hold is present.
 :err_hold001
 echo [%date% %time%] Trade hold present (err_hold001). >> C:\IdealTF\Log.txt
@@ -581,20 +719,86 @@ exit
 :: There was an error with an itemids config
 :ic_invalidcfg
 echo [%date% %time%] Inavlid or corrupt itemconfig (err_invalidcfg). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Config for %itemid% is invalid or does not exist.
 echo.
-timeout /t %error_wait% /nobreak >nul
+call :c 0C "[%time%] [WARNING] Config for %itemid% is invalid or does not exist."
+echo.
+timeout /t 3 /nobreak >nul
 GOTO:eof
 :: Could not find image of itemid in config
 :ic_invalidimage
 echo [%date% %time%] Itemconfig image is corrupt or does not exist (err_invalidimage). >> C:\IdealTF\Log.txt
-echo [%time%] [WARNING] Config image for %itemid% is invalid or does not exist.
 echo.
-timeout /t %error_wait% /nobreak >nul
+call :c 0C "[%time%] [WARNING] Config image for %itemid% is invalid or does not exist."
+echo.
+timeout /t 3 /nobreak >nul
 GOTO:eof
+
 :: Checks status of launcher.
 :check_status
 if not exist C:\IdealTF\config\prgon.txt goto err_launcher001
 if not exist C:\IdealTF\config\prgrun.txt goto err_launcher002
-echo [%time%] [STATUS] Checked status.
+echo.
+call :c 0A "[%time%] [STATUS] Passed status check."
+echo.
 GOTO:eof
+
+:: Color settings DO NOT MODIFY
+:: This code has been horribly stolen from this post: http://stackoverflow.com/a/10407642/3001831
+:: All credits go to dbenham. May be super slow to print on some old systems so support for
+:: AwesomeBatch will be added soon. (https://github.com/Opticulex/AwesomeBatch/)
+:c
+setlocal enableDelayedExpansion
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:colorPrint Color  Str  [/n]
+setlocal
+set "s=%~2"
+call :colorPrintVar %1 s %3
+exit /b
+
+:colorPrintVar  Color  StrVar  [/n]
+if not defined DEL call :initColorPrint
+setlocal enableDelayedExpansion
+pushd .
+':
+cd \
+set "s=!%~2!"
+
+for %%n in (^"^
+
+^") do (
+  set "s=!s:\=%%~n\%%~n!"
+  set "s=!s:/=%%~n/%%~n!"
+  set "s=!s::=%%~n:%%~n!"
+)
+for /f delims^=^ eol^= %%s in ("!s!") do (
+  if "!" equ "" setlocal disableDelayedExpansion
+  if %%s==\ (
+    findstr /a:%~1 "." "\'" nul
+    <nul set /p "=%DEL%%DEL%%DEL%"
+  ) else if %%s==/ (
+    findstr /a:%~1 "." "/.\'" nul
+    <nul set /p "=%DEL%%DEL%%DEL%%DEL%%DEL%"
+  ) else (
+    >colorPrint.txt (echo %%s\..\')
+    findstr /a:%~1 /f:colorPrint.txt "."
+    <nul set /p "=%DEL%%DEL%%DEL%%DEL%%DEL%%DEL%%DEL%"
+  )
+)
+if /i "%~3"=="/n" echo(
+popd
+exit /b
+
+
+:initColorPrint
+for /f %%A in ('"prompt $H&for %%B in (1) do rem"') do set "DEL=%%A %%A"
+<nul >"%temp%\'" set /p "=."
+subst ': "%temp%" >nul
+exit /b
+
+
+:cleanupColorPrint
+2>nul del "%temp%\'"
+2>nul del "%temp%\colorPrint.txt"
+>nul subst ': /d
+exit /b
