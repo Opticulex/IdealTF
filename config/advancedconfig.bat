@@ -9,13 +9,6 @@
 :: =================================================================================
 ::                                                               TIMEOUTS AND DELAYS
 
-:: Time (in seconds) the bot should wait when the incoming offer page refreshes.
-:: Default 5. Increase if page takes longer to load.
-set refresh_time=5
-
-:: Time (in seconds) the bot should wait when the trade offer page loads.
-:: Default 10. Increase if page takes longer to load.
-set load_time=10
 
 :: Tries the bot should do when checking for an item in a trade before timing out.
 :: Default 200. Increase if the bot does not detect items in trade.
@@ -25,22 +18,11 @@ set ic_timeout=100
 :: Default 250. Increase if the bot does not detect offers.
 set tc_timeout=250
 
-:: Time (in seconds) the bot should wait when performing light operations.
-:: Default 2, 1, 3, 5, 8 and 11. Usually no need to change for any reason.
-set execution_wait=2
-set execution_wait_short=1
-set execution_wait_long=3
-set execution_wait_medium=8
-set execution_wait_verylong=11
-
-
 :: =================================================================================
 ::                                                                    ERROR HANDLING
 
-:: Time (in seconds) for errors to return. Default 3. Do not change.
-set error_wait=3
 
-:: Exit when launchr status is set to stopped or launcher is closed down.
+:: Exit when launcher status is set to stopped or launcher is closed down.
 :: Default false but change to true if you want to.
 set exit_on_stop=false
 
@@ -62,6 +44,19 @@ set allow_all=true
 :: Do not set this above 11 in normal conditions as it may trigger losses.
 set price_margin_hi=9
 set price_margin_lo=9
+
+:: Maximim and minimum prices that bot can lose in a trade. If you are a single craft 
+:: hat in your trade it is reccomended to set this to the price you are selling the hat 
+:: for (e.g. 133). Leave the minimum at zero.
+:: This feature is designed to stop people scamming the bot with overflows of items.
+set price_maxbot=9999
+set price_minbot=0
+
+:: Maximum and minimum prices the user can place in the trade. It is reccomended you
+:: set the maximum value to a high value (e.g 9999999) and a minimum value of either
+:: the cheapest item you are selling or 0. (0 reccomended).
+set price_maxuser=9999999
+set price_minuser=0
 
 
 :: =================================================================================
