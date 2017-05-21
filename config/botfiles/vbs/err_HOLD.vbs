@@ -1,1 +1,0 @@
-x=msgbox("An outstanding trade hold is present. Please wait for the trade to complete or cancel it.",0+48,"OpticTradeBot")

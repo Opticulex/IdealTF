@@ -1,1 +1,1 @@
-log
+## IDEALTF LOG FILE

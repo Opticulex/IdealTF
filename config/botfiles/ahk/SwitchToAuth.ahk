@@ -1,1 +1,0 @@
-WinActivate, ahk_class WindowsForms10.Window.8.app.0.1ca0192_r11_ad1
