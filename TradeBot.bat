@@ -8,7 +8,7 @@
 :: May be modified freely but only for personal use. Redistribution of any sort, 
 :: editied or unedited is strictly prohibited.
 ::
-:: Code designed for v2.1.0 build200517
+:: Code designed for v2.1.1 build220517
 ::
 :: =================================================================================
 ::
@@ -152,14 +152,11 @@ echo ExitApp >> C:\IdealTF\config\botfiles\ahk\OfferDecline.ahk
 echo [%time%] [LAUNCH] Making 'C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk'
 if exist C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk del C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk
 echo Click %OpenOfferX%, %OpenOfferY% > C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk
-
 echo.
 echo [%time%] [CONFIG] Launch ID: "%launchid%", Launch Time: "%launchtime%"
 echo [%time%] [CONFIG] Steam Name: "%varSteamName%"
 echo [%time%] [CONFIG] Steam ID: "%varSteamName%"
 echo [%time%] [CONFIG] Screen Resolution: "%varScreenSize%"
-
-
 :: CYCLE
 :: Sets cycle value to 0, cycle lable and increments cycle value by 1.
 set cycle=0
