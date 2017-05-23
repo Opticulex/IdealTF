@@ -2,10 +2,10 @@
 ::           IdealTF Autoupdate file
 :: ===============================================
 ::
-:: Server Public: 94.13.103.47
+:: Server Public: 176.255.33.100
 :: Public: 192.168.56.1 Local: 192.168.0.102
-:: Date: 18/05/2017; Time: 21:46:13
-:: Mouse pos: -165, 407; Screen: 1366, 768
+:: Date: 22/05/2017; Time: 21:29:42
+:: Mouse pos: -30995, -31374; Screen: 1366, 768
 :: Admin: 0; Username: AUTHORFILMS/AUTHORFILMS
 :: Live: True; Plugged in: True; Battery: 100%
 ::
@@ -25,7 +25,7 @@ if exist C:\IdealTF\config\itemconfig\5021.bat del C:\IdealTF\config\itemconfig\
 ::
 :: ===============================================
 del /Q C:\IdealTF\config\serverip.txt
-(echo | set /p=^94.13.103.47)>>C:\IdealTF\config\serverip.txt
+(echo | set /p=^176.255.33.100)>>C:\IdealTF\config\serverip.txt
 set down=0
 set maintenance=0
 if "%maintenance%"=="1" goto maintenance

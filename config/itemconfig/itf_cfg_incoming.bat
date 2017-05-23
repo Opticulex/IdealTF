@@ -1,4 +1,5 @@
 :: Config file for config - incoming offers
  
-set amount=1
-set img=0010.bmp
+:: this is a placeholder for future support btw
+:: don't remove it.. at the moment it might or might not be used idk
+:: (this is a really unprofessional comment)
