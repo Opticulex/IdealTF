@@ -8,11 +8,11 @@
 :: May be modified freely but only for personal use. Redistribution of any sort, 
 :: editied or unedited is strictly prohibited.
 ::
-:: Code designed for v2.1.1 build220517
+:: Code designed for v2.1.3 build270517
 ::
 :: =================================================================================
 ::
-::               >>>>> FOR ITEM CONFIG SETTINGS GO TO LINE 209 <<<<<
+::               >>>>> FOR ITEM CONFIG SETTINGS GO TO LINE 300 <<<<<
 ::
 :: =================================================================================
 :start
@@ -164,7 +164,7 @@ set cycle=0
 echo.
 :: Cycle value +1
 set /a cycle+=1
-:: Sets traei to a random numeric value
+:: Sets tradeid to a random numeric value
 set tradeid=%random%%random%%random%
 :: Prints cycle details
 echo [%time%] Cycle #%cycle% began at %time% %date%; tradeid %tradeid%
