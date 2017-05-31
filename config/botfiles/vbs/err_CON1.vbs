@@ -1,1 +1,1 @@
-x=msgbox("Could not connect to server or internet. Please check your internet connection and try again.",0+16,"OpticTradeBot")
+x=msgbox("Could not connect to server or internet. Please check your internet connection and try again.",0+16,"IdealTF")

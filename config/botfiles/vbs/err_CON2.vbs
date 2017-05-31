@@ -1,1 +1,1 @@
-x=msgbox("Could not connect to server. Try again later.",0+16,"OpticTradeBot")
+x=msgbox("Could not connect to server. Try again later.",0+16,"IdealTF")

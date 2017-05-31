@@ -8,11 +8,14 @@
 :: May be modified freely but only for personal use. Redistribution of any sort, 
 :: editied or unedited is strictly prohibited.
 ::
-:: Code designed for v2.1.1 build220517
+:: This code is slowly being ported over to C# for a more powerful and stable
+:: software so you may see some redundant changes/aditions/removals here.
+::
+:: Code designed for v2.1.4 build310517
 ::
 :: =================================================================================
 ::
-::               >>>>> FOR ITEM CONFIG SETTINGS GO TO LINE 209 <<<<<
+::               >>>>> FOR ITEM CONFIG SETTINGS GO TO LINE 300 <<<<<
 ::
 :: =================================================================================
 :start
@@ -49,14 +52,14 @@ set ScreenSizeX=0
 set ScreenSizeY=0
 :: Runs settings ITFsettingsAgent
 echo [%time%] [LAUNCH] Running 'C:\IdealTF\config\ITFsettingsAgent.exe'
-if exist C:\IdealTF\config\ITFsettingsAgent.exe start C:\IdealTF\config\ITFsettingsAgent.exe
-if not exist C:\IdealTF\config\ITFsettingsAgent.exe goto err_file001
-timeout /t 2 /nobreak > nul
+::if exist C:\IdealTF\config\ITFsettingsAgent.exe start C:\IdealTF\config\ITFsettingsAgent.exe
+::if not exist C:\IdealTF\config\ITFsettingsAgent.exe goto err_file001
+::timeout /t 2 /nobreak > nul
 :: Runs settings ITFsettingsCompiler
 echo [%time%] [LAUNCH] Running 'C:\IdealTF\config\ITFsettingsCompiler.exe'
-if exist C:\IdealTF\config\ITFsettingsCompiler.exe start C:\IdealTF\config\ITFsettingsCompiler.exe
-if not exist C:\IdealTF\config\ITFsettingsCompiler.exe goto err_file002
-timeout /t 2 /nobreak > nul
+::if exist C:\IdealTF\config\ITFsettingsCompiler.exe start C:\IdealTF\config\ITFsettingsCompiler.exe
+::if not exist C:\IdealTF\config\ITFsettingsCompiler.exe goto err_file002
+::timeout /t 2 /nobreak > nul
 :: Sets config values
 echo [%time%] [LAUNCH] Reading 'C:\IdealTF\config\settings\SteamID.bat'
 if exist C:\IdealTF\config\settings\SteamID.bat call C:\IdealTF\config\settings\SteamID.bat
@@ -419,10 +422,13 @@ if "%icloop%"=="8" (
 	set coord2x=%slot8X2%
 	set coord2y=%slot8Y2%
 )
+:: Exits the call if it reaches the 9th item slot
 if %icloop% GEQ 9 echo [%time%] [ITEMCHECK] [WARNING] slot9 is NOT valid. Exiting call.
 if %icloop% GEQ 9 goto itemchecker_bot_done
+:: Declines the trade if it detects an invalid or missing config image for safety.
 if not exist C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp call :ic_invalidimage
 if not exist C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp GOTO ic_noaccept
+:: Makes the AHK checker file based on the resolution, itemid and current item slot
 echo CoordMode Pixel > C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 echo ImageSearch, FoundX, FoundY, %coord1x%, %coord1y%, %coord2x%, %coord2y%, C:\IdealTF\config\itemconfig\img_%ScreenSizeX%x%ScreenSizeY%\%itemid%.bmp >> C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 echo if ErrorLevel >> C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
@@ -432,9 +438,11 @@ echo     FileAppend, temp, C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ba
 :: Start the AHK checker and sees its output.
 start C:\IdealTF\config\itemconfig\temp\%itemid%%icloop%.ahk
 goto itemchecker_bot1
+:: Once all 9 itemchecks have been done
 :itemchecker_bot_done
 timeout /t 1 /nobreak > nul
 echo [%time%] [ITEMCHECK] Adding up prices...
+:: Sees if the itemid temp files for each slot exist and adds that items value to the overall value
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%1.bat set /a price_bot+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%2.bat set /a price_bot+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%3.bat set /a price_bot+=%val%
@@ -443,6 +451,7 @@ if exist C:\IdealTF\config\itemconfig\temp\%itemid%5.bat set /a price_bot+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%6.bat set /a price_bot+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%7.bat set /a price_bot+=%val%
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%8.bat set /a price_bot+=%val%
+:: Outputs the result for debugging purposes
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%1.bat echo [%time%] [ITEMCHECK] %itemid% found in slot "1"
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%2.bat echo [%time%] [ITEMCHECK] %itemid% found in slot "2"
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%3.bat echo [%time%] [ITEMCHECK] %itemid% found in slot "3"
@@ -452,8 +461,10 @@ if exist C:\IdealTF\config\itemconfig\temp\%itemid%6.bat echo [%time%] [ITEMCHEC
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%7.bat echo [%time%] [ITEMCHECK] %itemid% found in slot "7"
 if exist C:\IdealTF\config\itemconfig\temp\%itemid%8.bat echo [%time%] [ITEMCHECK] %itemid% found in slot "8"
 echo [%time%] [ITEMCHECK] Total: "%price_bot%"
+:: Deletes temps and exits call
 del /Q C:\IdealTF\config\itemconfig\temp\*.*
 GOTO:eof
+:: DOES THE SAME AD itemchecker_bot BUT IN THE USERS TRADE AREA
 :itemchecker_user
 set icloop=0
 start C:\IdealTF\config\botfiles\ahk\OfferUp.ahk
