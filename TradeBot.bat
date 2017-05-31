@@ -8,14 +8,10 @@
 :: May be modified freely but only for personal use. Redistribution of any sort, 
 :: editied or unedited is strictly prohibited.
 ::
-<<<<<<< HEAD
 :: This code is slowly being ported over to C# for a more powerful and stable
 :: software so you may see some redundant changes/aditions/removals here.
 ::
 :: Code designed for v2.1.4 build310517
-=======
-:: Code designed for v2.1.3 build270517
->>>>>>> origin/master
 ::
 :: =================================================================================
 ::
@@ -171,7 +167,7 @@ set cycle=0
 echo.
 :: Cycle value +1
 set /a cycle+=1
-:: Sets tradeid to a random numeric value
+:: Sets traei to a random numeric value
 set tradeid=%random%%random%%random%
 :: Prints cycle details
 echo [%time%] Cycle #%cycle% began at %time% %date%; tradeid %tradeid%
