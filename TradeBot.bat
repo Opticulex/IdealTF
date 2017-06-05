@@ -11,7 +11,11 @@
 :: This code is slowly being ported over to C# for a more powerful and stable
 :: software so you may see some redundant changes/aditions/removals here.
 ::
+<<<<<<< HEAD
 :: Code designed for v2.1.5 build050617
+=======
+:: Code designed for v2.1.4 build310517
+>>>>>>> origin/master
 ::
 :: =================================================================================
 ::
