@@ -8,14 +8,10 @@
 :: May be modified freely but only for personal use. Redistribution of any sort, 
 :: editied or unedited is strictly prohibited.
 ::
-<<<<<<< HEAD
 :: This code is slowly being ported over to C# for a more powerful and stable
 :: software so you may see some redundant changes/aditions/removals here.
 ::
-:: Code designed for v2.1.4 build310517
-=======
-:: Code designed for v2.1.3 build270517
->>>>>>> origin/master
+:: Code designed for v2.1.5 build050617
 ::
 :: =================================================================================
 ::
@@ -112,7 +108,7 @@ if exist C:\IdealTF\config\%ScreenSize%_3cfg.bat call C:\IdealTF\config\%ScreenS
 ::if not exist C:\IdealTF\config\dlscreenfiles2.ahk echo [%time%] [WARNING] Could not download defaultcoords!
 ::if not exist C:\IdealTF\config\dlscreenfiles1.ahk goto err_config006
 ::if not exist C:\IdealTF\config\dlscreenfiles2.ahk goto err_config006
-timeout /t 8 /nobreak >nul
+::timeout /t 8 /nobreak >nul
 :: Creates tradecheck file
 echo [%time%] [LAUNCH] Making 'C:\IdealTF\config\tradecheck.ahk'
 if exist C:\IdealTF\config\tradecheck.ahk del C:\IdealTF\config\tradecheck.ahk
@@ -159,10 +155,9 @@ echo ExitApp >> C:\IdealTF\config\botfiles\ahk\OfferDecline.ahk
 echo [%time%] [LAUNCH] Making 'C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk'
 if exist C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk del C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk
 echo Click %OpenOfferX%, %OpenOfferY% > C:\IdealTF\config\botfiles\ahk\OpenOffer.ahk
-echo.
 echo [%time%] [CONFIG] Launch ID: "%launchid%", Launch Time: "%launchtime%"
+echo [%time%] [CONFIG] Steam ID: "%varSteamID%"
 echo [%time%] [CONFIG] Steam Name: "%varSteamName%"
-echo [%time%] [CONFIG] Steam ID: "%varSteamName%"
 echo [%time%] [CONFIG] Screen Resolution: "%varScreenSize%"
 :: CYCLE
 :: Sets cycle value to 0, cycle lable and increments cycle value by 1.
@@ -171,7 +166,7 @@ set cycle=0
 echo.
 :: Cycle value +1
 set /a cycle+=1
-:: Sets tradeid to a random numeric value
+:: Sets traei to a random numeric value
 set tradeid=%random%%random%%random%
 :: Prints cycle details
 echo [%time%] Cycle #%cycle% began at %time% %date%; tradeid %tradeid%
@@ -299,9 +294,9 @@ if "%user%"=="true" call :itemchecker_user
 :: ======================================= /CURRENCY ========================================
 ::
 :: =================================================================================================================================================================
-:: PLACE ALL ITEM CONFIGS BELOW THIS LINE (find_item_config)
+:: The higher up the item's code the higher its priority. Keep custom currencies at the top for best performance.
 ::
-:: The higher up the item's code the higher its priority. Keep currency at the top.
+:: PLACE ALL ITEM CONFIGS BELOW THIS LINE (find_item_config)
 :: =================================================================================================================================================================
 
 
@@ -327,17 +322,24 @@ if %price_user% lss %price_minuser% goto ic_noaccept
 if %price_bot% gtr %price_maxbot% goto ic_noaccept
 if %price_bot% lss %price_minbot% goto ic_noaccept
 :: High/Low Price margins (advancedconfig)
+:: Code idea provided by reddit user /u/Kojeger
 if %price_bot% lss %price_userl% goto ic_noaccept
 if %price_bot% gtr %price_useru% goto ic_noaccept
 if %price_userl% lss %price_bot% goto ic_noaccept
 if %price_useru% gtr %price_bot% goto ic_noaccept
 :: If user has a greater value than bot
 if %price_user% gtr %price_bot% goto ic_accept
-:: If all checks don't match critera accept trade. Not a good principal but
-:: should work. ehh.
+:: If all checks don't match critera accept trade. Not a good principal but should work in 95% of cases. ehh.
 :ic_accept
 echo [%date% %time%] Offer accepted (#%cycle% %tradeid%). >> C:\IdealTF\Log.txt
 if exist C:\IdealTF\config\temp\data_02_004.txt del C:\IdealTF\config\temp\data_02_004.txt
+echo Accepted >> C:\IdealTF\config\temp\data_02_004.txt
+set trade_value1=0
+if exist C:\IdealTF\config\temp\data_02_005.txt set /p trade_value1=<C:\IdealTF\config\temp\data_02_005.txt
+if exist C:\IdealTF\config\temp\data_02_005.txt del C:\IdealTF\config\temp\data_02_005.txt
+set /a trade_value3=price_user-price_bot
+set /a trade_value2=trade_value1+trade_value3
+(echo | set /p=%trade_value2%)>>C:\IdealTF\config\temp\data_02_005.txt
 echo Accepted >> C:\IdealTF\config\temp\data_02_004.txt
 echo [%time%] [ITEMPRICE] Values correct. Accepting trade.
 echo [%time%] [OFFERCONFIRM] Running "OfferConfirm.ahk"
@@ -791,9 +793,7 @@ GOTO:eof
 :check_status
 if not exist C:\IdealTF\config\prgon.txt goto err_launcher001
 if not exist C:\IdealTF\config\prgrun.txt goto err_launcher002
-echo.
 echo [%time%] [STATUS] Passed status check.
-echo.
 GOTO:eof
 
 :: OLD Color settings DO NOT MODIFY
